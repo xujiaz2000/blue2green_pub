@@ -22,6 +22,7 @@ archive/                         历史管理记录
 | BF16 月度吞吐 | [统计与折线图](ci/20260908-20261008/bf16/README.md) |
 | W8A8 月度吞吐 | [统计与折线图](ci/20260908-20261008/w8a8/README.md) |
 | 排除 PR 触发的月度吞吐 | [BF16 / W8A8 统计](ci/20260909-20261009/non-pr/README.md) |
+| MRV1 / MRV2 八组完整对比 | [2026-10-09 总报告](experiments/20261009/README.md) |
 | MRV1 四组实验 | [结果、分析与完整 profiling](experiments/20261009/mrv1/README.md) · [绑核证据](experiments/20261009/mrv1/cpu-binding.md) |
 | MRV2 四组 BF16 / W8A8 实验 | [结果与分析](experiments/20261009/mrv2/README.md) · [BF16 绑核证据](experiments/20261009/mrv2/cpu-binding.md) |
 
