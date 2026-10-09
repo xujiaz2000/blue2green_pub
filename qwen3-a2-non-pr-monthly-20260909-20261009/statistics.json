@@ -1,0 +1,219 @@
+{
+  "bf16": {
+    "valid_job_attempts": 31,
+    "unique_runs": 30,
+    "mean": 771.575264516129,
+    "median": 772.8905,
+    "min": 735.4414,
+    "max": 798.6856,
+    "first": {
+      "head_sha": "c5055c8086d56ea1b2714b0f555ba67edd05e945",
+      "head_branch": "main",
+      "event": "workflow_dispatch",
+      "created_at": "2026-09-10T15:45:02Z",
+      "run_id": 34497670513,
+      "run_attempt": 1,
+      "job_id": 102981142073,
+      "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+      "conclusion": "success",
+      "started_at": "2026-09-10T17:52:10Z",
+      "completed_at": "2026-09-10T18:12:56Z",
+      "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/34497670513/job/102981142073",
+      "throughput": 794.4989,
+      "throughput_values": [
+        794.4989
+      ],
+      "error": null,
+      "metric_log_line": 1160,
+      "metric_log_excerpt": "2026-09-10T18:12:07.4388022Z │ Output Token Throughput  │ total   │ 794.4989 token/s  │",
+      "Total Requests": "180",
+      "Failed Requests": "0",
+      "Success Requests": "180",
+      "Total Generated Tokens": "270000",
+      "Benchmark Duration": "339836.8625 ms",
+      "images": [
+        "swr.cn-southwest-2.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+      ],
+      "tested_head_sha": "7e0ad39fd1f4f9c55e5743fe45784fc6447399a1",
+      "workflow_head_sha": "c5055c8086d56ea1b2714b0f555ba67edd05e945",
+      "workflow_title": "Nightly-A2",
+      "request_id": "",
+      "classification": "non-PR: run title/event and empty/zero request_id",
+      "cann_version": "9.1.0",
+      "cann_innerversion": "V100R001C25B114",
+      "cann_evidence_log_line": 112,
+      "model": "bf16",
+      "time_beijing": "2026-09-11T01:52:10+08:00"
+    },
+    "latest": {
+      "head_sha": "6fd763c2844f22c7355e5442a4f2e64c8e68e6d2",
+      "head_branch": "main",
+      "event": "workflow_dispatch",
+      "created_at": "2026-10-08T15:45:02Z",
+      "run_id": 37803306965,
+      "run_attempt": 1,
+      "job_id": 113449976673,
+      "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+      "conclusion": "failure",
+      "started_at": "2026-10-08T18:17:26Z",
+      "completed_at": "2026-10-08T18:36:12Z",
+      "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37803306965/job/113449976673",
+      "throughput": 765.4649,
+      "throughput_values": [
+        765.4649
+      ],
+      "error": null,
+      "metric_log_line": 1165,
+      "metric_log_excerpt": "2026-10-08T18:35:28.3976090Z │ Output Token Throughput  │ total   │ 765.4649 token/s  │",
+      "Total Requests": "180",
+      "Failed Requests": "0",
+      "Success Requests": "180",
+      "Total Generated Tokens": "270000",
+      "Benchmark Duration": "352726.8006 ms",
+      "images": [
+        "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+      ],
+      "tested_head_sha": "a50eb57f19974bcaeb10aedc074f24ba5dec98e6",
+      "workflow_head_sha": "6fd763c2844f22c7355e5442a4f2e64c8e68e6d2",
+      "workflow_title": "Nightly-A2 (scheduled)",
+      "request_id": "",
+      "classification": "non-PR: run title/event and empty/zero request_id",
+      "cann_version": "9.2.0",
+      "cann_innerversion": "V100R001C25B114",
+      "cann_evidence_log_line": 116,
+      "model": "bf16",
+      "time_beijing": "2026-10-09T02:17:26+08:00"
+    },
+    "cann_version_counts": {
+      "9.1.0": 18,
+      "9.2.0": 13
+    },
+    "by_cann": {
+      "9.1.0": {
+        "count": 18,
+        "mean": 783.2399833333334,
+        "median": 785.75395,
+        "min": 757.0391,
+        "max": 798.6856
+      },
+      "9.2.0": {
+        "count": 13,
+        "mean": 755.4241153846153,
+        "median": 762.0028,
+        "min": 735.4414,
+        "max": 765.4649
+      }
+    }
+  },
+  "w8a8": {
+    "valid_job_attempts": 31,
+    "unique_runs": 30,
+    "mean": 777.971435483871,
+    "median": 784.1192,
+    "min": 722.166,
+    "max": 811.7645,
+    "first": {
+      "head_sha": "c5055c8086d56ea1b2714b0f555ba67edd05e945",
+      "head_branch": "main",
+      "event": "workflow_dispatch",
+      "created_at": "2026-09-10T15:45:02Z",
+      "workflow_title": "Nightly-A2",
+      "workflow_head_sha": "c5055c8086d56ea1b2714b0f555ba67edd05e945",
+      "run_id": 34497670513,
+      "run_attempt": 1,
+      "job_id": 102981142060,
+      "job_name": "single-node (main, qwen3-30b-a3b-w8a8-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-W8A8-A2... / qwen3-30b-a3b-w8a8-a2-performance",
+      "conclusion": "success",
+      "started_at": "2026-09-10T17:48:59Z",
+      "completed_at": "2026-09-10T18:10:19Z",
+      "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/34497670513/job/102981142060",
+      "throughput": 793.2474,
+      "throughput_values": [
+        793.2474
+      ],
+      "error": null,
+      "tested_head_sha": "7e0ad39fd1f4f9c55e5743fe45784fc6447399a1",
+      "pr_number": null,
+      "pr_url": null,
+      "metric_log_line": 1179,
+      "metric_log_excerpt": "2026-09-10T18:09:32.5587481Z │ Output Token Throughput  │ total   │ 793.2474 token/s  │",
+      "Total Requests": "180",
+      "Failed Requests": "0",
+      "Success Requests": "180",
+      "Total Generated Tokens": "270000",
+      "Benchmark Duration": "340373.0169 ms",
+      "images": [
+        "swr.cn-southwest-2.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+      ],
+      "request_id": "",
+      "classification": "non-PR: run title/event and empty/zero request_id",
+      "cann_version": "9.1.0",
+      "cann_innerversion": "V100R001C25B114",
+      "cann_evidence_log_line": 112,
+      "model": "w8a8",
+      "time_beijing": "2026-09-11T01:48:59+08:00"
+    },
+    "latest": {
+      "head_sha": "6fd763c2844f22c7355e5442a4f2e64c8e68e6d2",
+      "head_branch": "main",
+      "event": "workflow_dispatch",
+      "created_at": "2026-10-08T15:45:02Z",
+      "workflow_title": "Nightly-A2 (scheduled)",
+      "workflow_head_sha": "6fd763c2844f22c7355e5442a4f2e64c8e68e6d2",
+      "run_id": 37803306965,
+      "run_attempt": 1,
+      "job_id": 113449976574,
+      "job_name": "single-node (main, qwen3-30b-a3b-w8a8-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-W8A8-A2... / qwen3-30b-a3b-w8a8-a2-performance",
+      "conclusion": "failure",
+      "started_at": "2026-10-08T18:25:22Z",
+      "completed_at": "2026-10-08T18:44:56Z",
+      "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37803306965/job/113449976574",
+      "throughput": 771.2839,
+      "throughput_values": [
+        517.8406,
+        771.2839
+      ],
+      "error": null,
+      "tested_head_sha": "a50eb57f19974bcaeb10aedc074f24ba5dec98e6",
+      "pr_number": null,
+      "pr_url": null,
+      "metric_log_line": 1393,
+      "metric_log_excerpt": "2026-10-08T18:44:15.5862486Z │ Output Token Throughput  │ total   │ 771.2839 token/s  │",
+      "Total Requests": "180",
+      "Failed Requests": "0",
+      "Success Requests": "180",
+      "Total Generated Tokens": "270000",
+      "Benchmark Duration": "350065.6299 ms",
+      "images": [
+        "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+      ],
+      "request_id": "",
+      "classification": "non-PR: run title/event and empty/zero request_id",
+      "cann_version": "9.2.0",
+      "cann_innerversion": "V100R001C25B114",
+      "cann_evidence_log_line": 116,
+      "model": "w8a8",
+      "time_beijing": "2026-10-09T02:25:22+08:00"
+    },
+    "cann_version_counts": {
+      "9.1.0": 18,
+      "9.2.0": 13
+    },
+    "by_cann": {
+      "9.1.0": {
+        "count": 18,
+        "mean": 791.3208,
+        "median": 791.3318999999999,
+        "min": 776.6258,
+        "max": 811.7645
+      },
+      "9.2.0": {
+        "count": 13,
+        "mean": 759.4877,
+        "median": 764.0632,
+        "min": 722.166,
+        "max": 773.3767
+      }
+    }
+  }
+}

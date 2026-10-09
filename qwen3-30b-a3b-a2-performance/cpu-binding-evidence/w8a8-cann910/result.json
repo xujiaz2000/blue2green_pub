@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "E2EL": "74696.3 ms",
+    "TTFT": "46640.3 ms",
+    "TPOT": "18.7 ms",
+    "ITL": "18.7 ms",
+    "InputTokens": "3648.85",
+    "OutputTokens": "1500.0",
+    "OutputTokenThroughput": "22.585 token/s",
+    "Benchmark Duration": "341070.5729 ms",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Concurrency": "39.421",
+    "Max Concurrency": "45",
+    "Request Throughput": "0.5278 req/s",
+    "Total Input Tokens": "656793",
+    "Prefill Token Throughput": "78.2339 token/s",
+    "Total Generated Tokens": "270000",
+    "Input Token Throughput": "1925.6806 token/s",
+    "Output Token Throughput": "791.625 token/s",
+    "Total Token Throughput": "2717.3057 token/s"
+  },
+  "profile": {
+    "server_metric_before_start": "(APIServer pid=534) INFO 10-09 08:11:27 [loggers.py:315] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 899.0 tokens/s, Running: 16 reqs, Waiting: 29 reqs, NPU KV cache usage: 3.5%, Prefix cache hit rate: 37.6%",
+    "start": {
+      "status": 200,
+      "body": "",
+      "started": 1791533488.9320545,
+      "completed": 1791533489.0704656
+    },
+    "stop": {
+      "status": 200,
+      "body": "",
+      "started": 1791533490.0715134,
+      "completed": 1791533490.9159155
+    },
+    "hold_seconds": 1.0010478496551514
+  },
+  "ascend_commit": "bbb5672af80b1972c301852aa505b13374fa6355",
+  "vllm_commit": "ced6857afa0ea7b2e3f0846a62e1394e90f15607"
+}

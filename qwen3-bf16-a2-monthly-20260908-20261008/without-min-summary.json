@@ -1,0 +1,59 @@
+{
+  "excluded_job": {
+    "head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-03T14:26:09Z",
+    "run_id": 37129575273,
+    "run_attempt": 1,
+    "job_id": 111247072388,
+    "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+    "conclusion": "failure",
+    "started_at": "2026-10-03T16:50:19Z",
+    "completed_at": "2026-10-03T18:03:49Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37129575273/job/111247072388",
+    "throughput": 177.5466,
+    "throughput_values": [
+      111.6456,
+      177.5466
+    ],
+    "error": null,
+    "metric_log_line": 22728,
+    "metric_log_excerpt": "2026-10-03T18:00:04.1491712Z │ Output Token Throughput  │ total   │ 177.5466 token/s │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "1520727.7521 ms",
+    "images": [
+      "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "time_beijing": "2026-10-04T00:50:19+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-69nsc-runner-w6htz",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.1.0",
+    "cann_innerversion": "V100R001C11SPC001B243",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 116,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": true,
+    "tested_head_sha": "fb813d8482b4c8d1e2db5f820e28ebddcb55471d",
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "workflow_head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649"
+  },
+  "remaining_points": 52,
+  "mean": 772.2712903846154,
+  "median": 773.641,
+  "min": 720.2423,
+  "max": 806.9539,
+  "plot_y_range": [
+    700,
+    830
+  ],
+  "cann_version_counts": {
+    "9.1.0": 36,
+    "9.2.0": 16
+  }
+}

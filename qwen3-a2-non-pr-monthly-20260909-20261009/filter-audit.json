@@ -1,0 +1,50 @@
+{
+  "period_start_utc": "2026-09-08T16:00:00+00:00",
+  "collected_at_utc": "2026-10-09T11:58:42+00:00",
+  "all_run_count": 179,
+  "non_pr_candidate_run_count": 90,
+  "excluded_pr_run_count": 89,
+  "excluded_positive_request_id": [
+    {
+      "job_id": 106026667217,
+      "request_id": "35485783399"
+    },
+    {
+      "job_id": 105598117731,
+      "request_id": "35343850227"
+    },
+    {
+      "job_id": 105576419718,
+      "request_id": "35337122202"
+    },
+    {
+      "job_id": 105475587767,
+      "request_id": "35304707968"
+    },
+    {
+      "job_id": 102316151689,
+      "request_id": "34303328313"
+    },
+    {
+      "job_id": 102315760542,
+      "request_id": "34303186887"
+    },
+    {
+      "job_id": 106026667233,
+      "request_id": "35485783399"
+    },
+    {
+      "job_id": 102315760633,
+      "request_id": "34303186887"
+    },
+    {
+      "job_id": 102316151466,
+      "request_id": "34303328313"
+    }
+  ],
+  "errors": [],
+  "valid_counts": {
+    "bf16": 31,
+    "w8a8": 31
+  }
+}

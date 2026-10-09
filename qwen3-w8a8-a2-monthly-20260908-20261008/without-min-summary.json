@@ -1,0 +1,62 @@
+{
+  "excluded_job": {
+    "head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-03T14:26:09Z",
+    "workflow_title": "Nightly-A2 (PR) 17681",
+    "workflow_head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649",
+    "run_id": 37129575273,
+    "run_attempt": 1,
+    "job_id": 111247072312,
+    "job_name": "single-node (main, qwen3-30b-a3b-w8a8-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-W8A8-A2... / qwen3-30b-a3b-w8a8-a2-performance",
+    "conclusion": "failure",
+    "started_at": "2026-10-03T16:49:51Z",
+    "completed_at": "2026-10-03T18:17:00Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37129575273/job/111247072312",
+    "throughput": 154.9978,
+    "throughput_values": [
+      95.0001,
+      154.9978
+    ],
+    "error": null,
+    "tested_head_sha": "fb813d8482b4c8d1e2db5f820e28ebddcb55471d",
+    "pr_number": 17681,
+    "pr_url": "https://github.com/vllm-project/vllm-ascend/pull/17681",
+    "metric_log_line": 22770,
+    "metric_log_excerpt": "2026-10-03T18:13:08.1927351Z │ Output Token Throughput  │ total   │ 154.9978 token/s │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "1741959.9915 ms",
+    "images": [
+      "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "time_beijing": "2026-10-04T00:49:51+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-69nsc-runner-t2cr5",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.1.0",
+    "cann_innerversion": "V100R001C11SPC001B243",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 116,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": true
+  },
+  "remaining_points": 46,
+  "mean": 782.9515217391304,
+  "median": 787.1919,
+  "min": 722.166,
+  "max": 822.4807,
+  "plot_y_range": [
+    700,
+    830
+  ],
+  "cann_version_counts": {
+    "9.1.0": 32,
+    "9.2.0": 14
+  }
+}

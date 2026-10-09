@@ -1,0 +1,200 @@
+{
+  "period_beijing": [
+    "2026-09-08T00:00:00+08:00",
+    "2026-10-08T23:59:59+08:00"
+  ],
+  "workflow": ".github/workflows/schedule_nightly_test_a2.yaml",
+  "branch": "main",
+  "valid_measurements": 53,
+  "valid_conclusion_counts": {
+    "success": 24,
+    "failure": 29
+  },
+  "mean": 761.0500698113208,
+  "median": 772.8905,
+  "min": 177.5466,
+  "max": 806.9539,
+  "first": {
+    "head_sha": "8ac532e62c9953203b10a66624acd85e06f93937",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-09-08T12:12:17Z",
+    "run_id": 34224770167,
+    "run_attempt": 1,
+    "job_id": 102057924729,
+    "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+    "conclusion": "success",
+    "started_at": "2026-09-08T12:18:57Z",
+    "completed_at": "2026-09-08T12:57:55Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/34224770167/job/102057924729",
+    "throughput": 800.5221,
+    "throughput_values": [
+      800.5221
+    ],
+    "error": null,
+    "metric_log_line": 20273,
+    "metric_log_excerpt": "2026-09-08T12:56:49.8723327Z │ Output Token Throughput  │ total   │ 800.5221 token/s  │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "337279.8802 ms",
+    "images": [
+      "swr.cn-southwest-2.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "time_beijing": "2026-09-08T20:18:57+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-2h6bk-runner-pr9cd",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.1.0",
+    "cann_innerversion": "V100R001C25B114",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 111,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": true,
+    "tested_head_sha": "17a2b63e3b3f644f7b5b079fe0b88b5bf9565423",
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "workflow_head_sha": "8ac532e62c9953203b10a66624acd85e06f93937"
+  },
+  "latest": {
+    "head_sha": "cb9d5563aa79e2feb9a4d0319f3a2b5808566d6a",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-08T09:23:10Z",
+    "run_id": 37756272166,
+    "run_attempt": 1,
+    "job_id": 113252531808,
+    "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+    "conclusion": "success",
+    "started_at": "2026-10-08T09:56:48Z",
+    "completed_at": "2026-10-08T10:41:26Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37756272166/job/113252531808",
+    "throughput": 802.7341,
+    "throughput_values": [
+      545.5477,
+      802.7341
+    ],
+    "error": null,
+    "metric_log_line": 22546,
+    "metric_log_excerpt": "2026-10-08T10:37:49.4264831Z │ Output Token Throughput  │ total   │ 802.7341 token/s  │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "336350.468 ms",
+    "images": [
+      "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "time_beijing": "2026-10-08T17:56:48+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-69nsc-runner-4dqlj",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.2.0",
+    "cann_innerversion": "V100R001C25B114",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 116,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": false,
+    "tested_head_sha": "42d309a2b504c931dbd8dc6e3c0e191e3a59a390",
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "workflow_head_sha": "cb9d5563aa79e2feb9a4d0319f3a2b5808566d6a"
+  },
+  "minimum_record": {
+    "head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-03T14:26:09Z",
+    "run_id": 37129575273,
+    "run_attempt": 1,
+    "job_id": 111247072388,
+    "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+    "conclusion": "failure",
+    "started_at": "2026-10-03T16:50:19Z",
+    "completed_at": "2026-10-03T18:03:49Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/37129575273/job/111247072388",
+    "throughput": 177.5466,
+    "throughput_values": [
+      111.6456,
+      177.5466
+    ],
+    "error": null,
+    "metric_log_line": 22728,
+    "metric_log_excerpt": "2026-10-03T18:00:04.1491712Z │ Output Token Throughput  │ total   │ 177.5466 token/s │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "1520727.7521 ms",
+    "images": [
+      "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "time_beijing": "2026-10-04T00:50:19+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-69nsc-runner-w6htz",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.1.0",
+    "cann_innerversion": "V100R001C11SPC001B243",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 116,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": true,
+    "tested_head_sha": "fb813d8482b4c8d1e2db5f820e28ebddcb55471d",
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "workflow_head_sha": "4ebb3090fc3c13c26557dcaae353882e70246649"
+  },
+  "maximum_record": {
+    "head_sha": "5c0470d907dfe8581211f14d29cc5152688442dc",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "created_at": "2026-09-22T11:21:01Z",
+    "run_id": 35720949164,
+    "run_attempt": 1,
+    "job_id": 106725244296,
+    "job_name": "single-node (main, qwen3-30b-a3b-bf16-a2-performance, linux-aarch64-a2b3-4, Qwen3-30B-A3B-BF16-A2... / qwen3-30b-a3b-bf16-a2-performance",
+    "conclusion": "success",
+    "started_at": "2026-09-22T11:27:44Z",
+    "completed_at": "2026-09-22T12:08:17Z",
+    "job_url": "https://github.com/vllm-project/vllm-ascend/actions/runs/35720949164/job/106725244296",
+    "throughput": 806.9539,
+    "throughput_values": [
+      541.4815,
+      806.9539
+    ],
+    "error": null,
+    "metric_log_line": 21842,
+    "metric_log_excerpt": "2026-09-22T12:07:26.2904483Z │ Output Token Throughput  │ total   │ 806.9539 token/s  │",
+    "Total Requests": "180",
+    "Failed Requests": "0",
+    "Success Requests": "180",
+    "Total Generated Tokens": "270000",
+    "Benchmark Duration": "334591.6024 ms",
+    "images": [
+      "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2"
+    ],
+    "time_beijing": "2026-09-22T19:27:44+08:00",
+    "runner_name": "linux-aarch64-a2b3-4-xwddq-runner-8tlwq",
+    "runner_labels": [
+      "linux-aarch64-a2b3-4"
+    ],
+    "cann_version": "9.1.0",
+    "cann_innerversion": "V100R001C11SPC001B243",
+    "cann_version_source": "ascend_toolkit_install.info / version",
+    "cann_evidence_log_line": 112,
+    "requested_cann_tag": "9.1.0_20260731131545",
+    "cann_tag_matches_installed": true,
+    "tested_head_sha": "41fc1a16c4072772066790181dbb5099b34ed332",
+    "tested_sha_evidence": "vLLM-Ascend Git information / Commit hash",
+    "workflow_head_sha": "5c0470d907dfe8581211f14d29cc5152688442dc"
+  },
+  "cann_version_counts": {
+    "9.1.0": 37,
+    "9.2.0": 16
+  },
+  "commit_fields": {
+    "tested_head_sha": "Actual tested vLLM-Ascend commit verified from job log",
+    "workflow_head_sha": "Workflow controlling commit; may differ for PR tests"
+  }
+}

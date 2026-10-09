@@ -1,0 +1,17 @@
+(Worker_TP0 pid=617) INFO 10-09 10:56:41 [cpu_binding.py:539] [cpu_bind_mode] mode=topo_affinity rank=0 visible_npus=[0, 1, 2, 3]
+(Worker_TP0 pid=617) INFO 10-09 10:56:41 [cpu_binding.py:623] The CPU allocation plan is as follows:
+(Worker_TP0 pid=617) INFO 10-09 10:56:41 [cpu_binding.py:637] NPU0: main=[194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221]  acl=[222]  release=[[223]]
+(Worker_TP0 pid=617) INFO 10-09 10:56:41 [cpu_binding.py:663] [migrate] NPU:0 -> NUMA [6]
+(Worker_TP1 pid=618) INFO 10-09 10:56:41 [cpu_binding.py:539] [cpu_bind_mode] mode=topo_affinity rank=1 visible_npus=[0, 1, 2, 3]
+(Worker_TP1 pid=618) INFO 10-09 10:56:41 [cpu_binding.py:623] The CPU allocation plan is as follows:
+(Worker_TP1 pid=618) INFO 10-09 10:56:41 [cpu_binding.py:637] NPU1: main=[226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253]  acl=[254]  release=[[255]]
+(Worker_TP2 pid=619) INFO 10-09 10:56:41 [cpu_binding.py:539] [cpu_bind_mode] mode=topo_affinity rank=2 visible_npus=[0, 1, 2, 3]
+(Worker_TP2 pid=619) INFO 10-09 10:56:41 [cpu_binding.py:623] The CPU allocation plan is as follows:
+(Worker_TP2 pid=619) INFO 10-09 10:56:41 [cpu_binding.py:637] NPU2: main=[130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157]  acl=[158]  release=[[159]]
+(Worker_TP1 pid=618) INFO 10-09 10:56:41 [cpu_binding.py:663] [migrate] NPU:1 -> NUMA [7]
+(Worker_TP2 pid=619) INFO 10-09 10:56:41 [cpu_binding.py:663] [migrate] NPU:2 -> NUMA [4]
+(Worker_TP3 pid=620) INFO 10-09 10:56:41 [cpu_binding.py:539] [cpu_bind_mode] mode=topo_affinity rank=3 visible_npus=[0, 1, 2, 3]
+(Worker_TP3 pid=620) INFO 10-09 10:56:41 [cpu_binding.py:623] The CPU allocation plan is as follows:
+(Worker_TP3 pid=620) INFO 10-09 10:56:41 [cpu_binding.py:637] NPU3: main=[162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189]  acl=[190]  release=[[191]]
+(Worker_TP3 pid=620) INFO 10-09 10:56:41 [cpu_binding.py:663] [migrate] NPU:3 -> NUMA [5]
+(Worker_TP0 pid=617) WARNING 10-09 10:56:49 [cpu_binding.py:699] /proc/irq is not writable. If running in Docker, start the container with '--privileged=true'.
