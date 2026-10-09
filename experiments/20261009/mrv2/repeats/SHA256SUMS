@@ -1,0 +1,14 @@
+df836a9681d8023985c72b4cb24443fa675885c7de19ca43dd746d67fe6df7b7  README.md
+cdf0dacb88ab90c38456f8498a9ad3e51392855fa06e8a7971860020c4641ecc  results.json
+d7f2bb6c80991a475856fb8defd56919544edaea5f92c0e54abb1ccc45a8ecc8  round-01/logs/bf16-cann910-aisbench-final-result.log
+6a1f556affa050c0bea88cf2f7a2b676e737f083505f6e2401f1e41197db3571  round-01/logs/bf16-cann920-aisbench-final-result.log
+910f079816346d70dfa06e8c648edf9d3921563e2a4577474a05bfe981f243d3  round-01/logs/w8a8-cann910-aisbench-final-result.log
+8826ee26c7e0d246f5d1d26c3a934ccfff15dc901912585971ab4ef9432e001c  round-01/logs/w8a8-cann920-aisbench-final-result.log
+2385d6d158a38164dd13b4e47b3ee2fd4f44d0a06866bd7421b5e6760019a467  round-02/logs/bf16-cann910-aisbench-final-result.log
+ebc443500014c041b98532e4509ff2ff24f065f015c5fbd8258fe91b89ba4edc  round-02/logs/bf16-cann920-aisbench-final-result.log
+c33b0a30954cdaebe68193dc52d339187a338fb1a06dae8504af20017177637f  round-02/logs/w8a8-cann910-aisbench-final-result.log
+d7618a1fccb474897deae62869c7d079f4f3f3e2bd4fc0d48fb595d6a4d718ec  round-02/logs/w8a8-cann920-aisbench-final-result.log
+3263a042b089ffd48ae1cb52fe3f6e8ab6f4fb594a16033163fa742d475c1efb  round-03/logs/bf16-cann910-aisbench-final-result.log
+b2327b4bf9e759805bd6ce0224ff8cef017d39c2861773201fce034cfe5df204  round-03/logs/bf16-cann920-aisbench-final-result.log
+07649c7a869f400c48c9067c430ddb689b7df7809ae3aa28d55193dd7bea1f7c  round-03/logs/w8a8-cann910-aisbench-final-result.log
+c1eb68165839e6d1a848713310f14b1a594902604dc27aa4ed58ff4956688190  round-03/logs/w8a8-cann920-aisbench-final-result.log

@@ -325,3 +325,7 @@ CANN 9.1 输出吞吐 **800.3532 token/s**，CANN 9.2 **799.0187 token/s**，9.2
 
 - [CANN 9.1](logs/w8a8-cann910-aisbench-final-result.log)
 - [CANN 9.2](logs/w8a8-cann920-aisbench-final-result.log)
+
+## 三轮重复稳定性复测
+
+在上述单轮之后，新增 12 组 MRV2 正式 profiling 实验，结果和离散程度见 [三轮重复报告](repeats/README.md)。
