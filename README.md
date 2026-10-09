@@ -12,7 +12,7 @@ ci/                              CI 吞吐统计
 experiments/                     本机对比实验
   20261009/
     mrv1/                        BF16、W8A8 × CANN 9.1 / 9.2
-    mrv2/                        BF16 × CANN 9.1 / 9.2
+    mrv2/                        BF16 / W8A8 × CANN 9.1 / 9.2
 archive/                         历史管理记录
   repo-merge/
 ```
@@ -23,7 +23,7 @@ archive/                         历史管理记录
 | W8A8 月度吞吐 | [统计与折线图](ci/20260908-20261008/w8a8/README.md) |
 | 排除 PR 触发的月度吞吐 | [BF16 / W8A8 统计](ci/20260909-20261009/non-pr/README.md) |
 | MRV1 四组实验 | [结果、分析与完整 profiling](experiments/20261009/mrv1/README.md) · [绑核证据](experiments/20261009/mrv1/cpu-binding.md) |
-| MRV2 两组 BF16 实验 | [结果与分析](experiments/20261009/mrv2/README.md) · [绑核证据](experiments/20261009/mrv2/cpu-binding.md) |
+| MRV2 四组 BF16 / W8A8 实验 | [结果与分析](experiments/20261009/mrv2/README.md) · [BF16 绑核证据](experiments/20261009/mrv2/cpu-binding.md) |
 
 目录采用小写英文与短横线；CI 按统计区间归档，实验按测试日期归档。各实验目录的 README 记录模型、代码节点、CANN 版本和完整运行条件。服务器上的原始实验路径保留在报告中。
 
