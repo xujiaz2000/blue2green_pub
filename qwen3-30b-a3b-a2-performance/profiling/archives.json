@@ -1,0 +1,91 @@
+[
+  {
+    "label": "bf16-cann910",
+    "source": "/mnt/share/z00943141/qwen-cibbb-bf16-profile-20261009-184820/cann910-bf16-profile/profiling",
+    "file": "bf16-cann910.tar.gz",
+    "bytes": 132430525,
+    "sha256": "04c30647f253aece07501c4846f02430853db54845fe0ba22d49a4af31f0325f",
+    "original_bytes": 916064376,
+    "original_files": 584,
+    "parts": [
+      {
+        "file": "bf16-cann910.tar.gz.part000",
+        "bytes": 94371840,
+        "sha256": "ddf72a5c1eb488556bbfd63061ef9f78eff54f3733608236467b6325a8587be3"
+      },
+      {
+        "file": "bf16-cann910.tar.gz.part001",
+        "bytes": 38058685,
+        "sha256": "8633f9415fb8b01477be0453d921df0eaaefd37cda109c4c250950eb18bb3677"
+      }
+    ]
+  },
+  {
+    "label": "bf16-cann920",
+    "source": "/mnt/share/z00943141/qwen-cibbb-bf16-profile-20261009-184820/cann920-bf16-profile/profiling",
+    "file": "bf16-cann920.tar.gz",
+    "bytes": 165981317,
+    "sha256": "093fedc896ee01e434f32a0b8c8dbd293a9e58ecb7eb4600e142aa3175a7e8e2",
+    "original_bytes": 966926518,
+    "original_files": 558,
+    "parts": [
+      {
+        "file": "bf16-cann920.tar.gz.part000",
+        "bytes": 94371840,
+        "sha256": "66f9bc8b0a62c8654a6114dfd9bee69969cb66e65b0802d6af43e02fabc29bbf"
+      },
+      {
+        "file": "bf16-cann920.tar.gz.part001",
+        "bytes": 71609477,
+        "sha256": "29fda78493f15fc0324ee7223c90653fb1c1ff025e44c6c93a6b349a1d181b1c"
+      }
+    ]
+  },
+  {
+    "label": "w8a8-cann910",
+    "source": "/mnt/share/z00943141/qwen-cibbb-w8a8-profile-20261009-153616/cann910-w8a8-profile/profiling",
+    "file": "w8a8-cann910.tar.gz",
+    "bytes": 170979973,
+    "sha256": "7c050b82ec71e42edd57dbaf43c12131252111c89a02f1daa4b1b3cd2b99d748",
+    "original_bytes": 1101449084,
+    "original_files": 704,
+    "parts": [
+      {
+        "file": "w8a8-cann910.tar.gz.part000",
+        "bytes": 94371840,
+        "sha256": "f6f5e99cf706ee3c446897cb2f311311d2fb3842d56c9b3b088da66c87e7e180"
+      },
+      {
+        "file": "w8a8-cann910.tar.gz.part001",
+        "bytes": 76608133,
+        "sha256": "8c3030a173388e89353f9893c5a609fb90af28a1ba52bb719de5e85240720f80"
+      }
+    ]
+  },
+  {
+    "label": "w8a8-cann920",
+    "source": "/mnt/share/z00943141/qwen-cibbb-w8a8-profile-20261009-153616/cann920-w8a8-profile/profiling",
+    "file": "w8a8-cann920.tar.gz",
+    "bytes": 197587892,
+    "sha256": "b65a666c65315040c7a70fda4046564f5d30c492946c0a81bcd9a2c054d1b5a5",
+    "original_bytes": 1108853959,
+    "original_files": 672,
+    "parts": [
+      {
+        "file": "w8a8-cann920.tar.gz.part000",
+        "bytes": 94371840,
+        "sha256": "08a2b6b46881400edc6a1a9aa8bbca008900868006bd58719c8b04aa2bba5e04"
+      },
+      {
+        "file": "w8a8-cann920.tar.gz.part001",
+        "bytes": 94371840,
+        "sha256": "0029eb3f99300bb4da1e2f4b54ff26249d3a8e38acafa7218d92963e66dd089e"
+      },
+      {
+        "file": "w8a8-cann920.tar.gz.part002",
+        "bytes": 8844212,
+        "sha256": "633a6d27ba8e16daa59ad9d7843c17b647ba675d0efed16149dac0ede19d0230"
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "ascend_commit": "bbb5672af80b1972c301852aa505b13374fa6355",
+  "vllm_commit": "ced6857afa0ea7b2e3f0846a62e1394e90f15607",
+  "vllm_version": "0.30.0+empty",
+  "extra_18_request_warmup": false,
+  "root": "/mnt/share/z00943141/qwen-cibbb-bf16-profile-20261009-184820",
+  "cards": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "port": 8007,
+  "model_runner": "MRV1",
+  "containers": {
+    "cann910": "qwen-cibbb-bf16-cann910-20261009-184820",
+    "cann920": "qwen-cibbb-bf16-cann920-20261009-184820"
+  },
+  "created_beijing": "2026-10-09T18:48:20.400305+08:00",
+  "model": "bf16",
+  "num_prompts": 180,
+  "client_warmups": 1,
+  "profiling_only": true,
+  "scope": "BF16 CI: 180 formal requests, 1 internal warmup, 1 second profiling per CANN",
+  "previous_containers_0123": {
+    "cann910": "qwen-ci989-w8a8-cann910-20261009-143129",
+    "cann920": "qwen-ci989-w8a8-cann920-20261009-143129"
+  },
+  "baseline": 802.4382,
+  "threshold": 0.97,
+  "parent_experiment": "/mnt/share/z00943141/qwen-cibbb-w8a8-profile-20261009-153616",
+  "log_stats_interval_seconds": 10,
+  "weights": "/mnt/share/z00943141/qwen-a2-profiling-kit-20261008-022415/models/bf16",
+  "reference_job": "https://github.com/vllm-project/vllm-ascend/actions/runs/36225208422/job/108372470704",
+  "reference_throughput": 783.3198
+}

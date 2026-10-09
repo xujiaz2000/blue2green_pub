@@ -1,0 +1,35 @@
+{
+  "reference_job": "https://github.com/vllm-project/vllm-ascend/actions/runs/36225208422/job/108372470597",
+  "ascend_commit": "bbb5672af80b1972c301852aa505b13374fa6355",
+  "vllm_commit": "ced6857afa0ea7b2e3f0846a62e1394e90f15607",
+  "vllm_version": "0.30.0+empty",
+  "extra_18_request_warmup": true,
+  "root": "/mnt/share/z00943141/qwen-cibbb-w8a8-profile-20261009-153616",
+  "cards": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "port": 8007,
+  "model_runner": "MRV1",
+  "containers": {
+    "cann910": "qwen-cibbb-w8a8-cann910-20261009-153616",
+    "cann920": "qwen-cibbb-w8a8-cann920-20261009-153616"
+  },
+  "created_beijing": "2026-10-09T13:30:09.146719+08:00",
+  "model": "w8a8",
+  "num_prompts": 180,
+  "client_warmups": 1,
+  "profiling_only": true,
+  "scope": "two CI-aligned 180-request profiling rounds with 18-request extra warmup",
+  "previous_containers_0123": {
+    "cann910": "qwen-ci989-w8a8-cann910-20261009-143129",
+    "cann920": "qwen-ci989-w8a8-cann920-20261009-143129"
+  },
+  "reference_throughput": 784.1192,
+  "baseline": 805.872,
+  "threshold": 0.97,
+  "parent_experiment": "/mnt/share/z00943141/qwen-ci989-w8a8-profile-20261009-143129",
+  "log_stats_interval_seconds": 10
+}
