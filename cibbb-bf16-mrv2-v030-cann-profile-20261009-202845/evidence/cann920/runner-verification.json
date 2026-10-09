@@ -1,0 +1,17 @@
+{
+  "runner": "MRV2",
+  "confirmed_ranks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "workers": {
+    "3": 612,
+    "2": 611,
+    "1": 610,
+    "0": 609
+  },
+  "source": "vllm/v1/worker/gpu/model_runner.py",
+  "config_env": "1"
+}

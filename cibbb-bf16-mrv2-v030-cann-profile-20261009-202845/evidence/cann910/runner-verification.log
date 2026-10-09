@@ -1,0 +1,9 @@
+(Worker_TP0 pid=617) INFO 10-09 12:42:29 [model_runner.py:396] Loading model from scratch...
+(Worker_TP3 pid=620) INFO 10-09 12:42:47 [model_runner.py:428] Model loading took 14.31 GiB memory and 18.483950 seconds
+(Worker_TP1 pid=618) INFO 10-09 12:42:47 [model_runner.py:428] Model loading took 14.31 GiB memory and 18.684091 seconds
+(Worker_TP0 pid=617) INFO 10-09 12:42:47 [model_runner.py:428] Model loading took 14.31 GiB memory and 18.873774 seconds
+(Worker_TP2 pid=619) INFO 10-09 12:42:47 [model_runner.py:428] Model loading took 14.31 GiB memory and 19.205565 seconds
+(Worker_TP2 pid=619) INFO 10-09 12:44:34 [model_runner.py:1066] Graph capturing finished in 17 secs, took 0.32 GiB
+(Worker_TP3 pid=620) INFO 10-09 12:44:34 [model_runner.py:1066] Graph capturing finished in 17 secs, took 0.32 GiB
+(Worker_TP0 pid=617) INFO 10-09 12:44:34 [model_runner.py:1066] Graph capturing finished in 16 secs, took 0.32 GiB
+(Worker_TP1 pid=618) INFO 10-09 12:44:34 [model_runner.py:1066] Graph capturing finished in 17 secs, took 0.32 GiB

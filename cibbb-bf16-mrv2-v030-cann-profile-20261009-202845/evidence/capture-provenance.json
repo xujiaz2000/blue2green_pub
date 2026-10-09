@@ -1,0 +1,20 @@
+{
+  "cann910": {
+    "source": "/mnt/share/z00943141/qwen-cibbb-bf16-mrv2-profile-20261009-202845/cann910-bf16-profile/worker-affinity-verified.json",
+    "source_sha256": "ee68510c2048733f9478a09cca45143d7420f410564362ffc053a898644006df",
+    "saved_epoch": 1791550044.86,
+    "saved_beijing": "2026-10-09T20:47:24.860000+08:00",
+    "profile_start_epoch": 1791550044.8661602,
+    "affinity_saved_before_profile": true,
+    "capture_method": "run.py reads /proc/<worker_pid>/status during formal benchmark, using Worker_TP rank/PID mapping from server.log, then starts profiling"
+  },
+  "cann920": {
+    "source": "/mnt/share/z00943141/qwen-cibbb-bf16-mrv2-profile-20261009-202845/cann920-bf16-profile/worker-affinity-verified.json",
+    "source_sha256": "a6884e88c252a102db247094bcf8b99e805f24ffab5e3216102ec9fdecd81315",
+    "saved_epoch": 1791550909.528,
+    "saved_beijing": "2026-10-09T21:01:49.528000+08:00",
+    "profile_start_epoch": 1791550909.53426,
+    "affinity_saved_before_profile": true,
+    "capture_method": "run.py reads /proc/<worker_pid>/status during formal benchmark, using Worker_TP rank/PID mapping from server.log, then starts profiling"
+  }
+}

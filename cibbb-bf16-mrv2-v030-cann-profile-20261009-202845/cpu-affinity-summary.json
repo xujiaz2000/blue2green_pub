@@ -1,0 +1,74 @@
+[
+  {
+    "cann": "cann910",
+    "rank": 0,
+    "pid": 617,
+    "cpus_allowed_list": "194-221",
+    "plan_line": 286,
+    "mode_line": 284,
+    "snapshot_beijing": "2026-10-09T20:47:24.860000+08:00"
+  },
+  {
+    "cann": "cann910",
+    "rank": 1,
+    "pid": 618,
+    "cpus_allowed_list": "226-253",
+    "plan_line": 290,
+    "mode_line": 288,
+    "snapshot_beijing": "2026-10-09T20:47:24.860000+08:00"
+  },
+  {
+    "cann": "cann910",
+    "rank": 2,
+    "pid": 619,
+    "cpus_allowed_list": "130-157",
+    "plan_line": 278,
+    "mode_line": 276,
+    "snapshot_beijing": "2026-10-09T20:47:24.860000+08:00"
+  },
+  {
+    "cann": "cann910",
+    "rank": 3,
+    "pid": 620,
+    "cpus_allowed_list": "162-189",
+    "plan_line": 282,
+    "mode_line": 280,
+    "snapshot_beijing": "2026-10-09T20:47:24.860000+08:00"
+  },
+  {
+    "cann": "cann920",
+    "rank": 0,
+    "pid": 609,
+    "cpus_allowed_list": "194-221",
+    "plan_line": 286,
+    "mode_line": 284,
+    "snapshot_beijing": "2026-10-09T21:01:49.528000+08:00"
+  },
+  {
+    "cann": "cann920",
+    "rank": 1,
+    "pid": 610,
+    "cpus_allowed_list": "226-253",
+    "plan_line": 290,
+    "mode_line": 288,
+    "snapshot_beijing": "2026-10-09T21:01:49.528000+08:00"
+  },
+  {
+    "cann": "cann920",
+    "rank": 2,
+    "pid": 611,
+    "cpus_allowed_list": "130-157",
+    "plan_line": 282,
+    "mode_line": 280,
+    "snapshot_beijing": "2026-10-09T21:01:49.528000+08:00"
+  },
+  {
+    "cann": "cann920",
+    "rank": 3,
+    "pid": 612,
+    "cpus_allowed_list": "162-189",
+    "plan_line": 278,
+    "mode_line": 276,
+    "snapshot_beijing": "2026-10-09T21:01:49.528000+08:00"
+  }
+]
