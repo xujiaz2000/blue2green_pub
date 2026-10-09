@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-09",
+  "before_commit": "c1f13a189a3636c98e132eef08cb0b542ec52bee",
+  "directories": {
+    "qwen3-bf16-a2-monthly-20260908-20261008": "ci/20260908-20261008/bf16",
+    "qwen3-w8a8-a2-monthly-20260908-20261008": "ci/20260908-20261008/w8a8",
+    "qwen3-a2-non-pr-monthly-20260909-20261009": "ci/20260909-20261009/non-pr",
+    "qwen3-30b-a3b-a2-performance": "experiments/20261009/mrv1",
+    "cibbb-bf16-mrv2-v030-cann-profile-20261009-202845": "experiments/20261009/mrv2",
+    "repository-merge": "archive/repo-merge"
+  },
+  "additional_renames": {
+    "experiments/20261009/mrv1/cpu-binding-evidence": "experiments/20261009/mrv1/evidence",
+    "*/CPU_BINDING_EVIDENCE.md": "*/cpu-binding.md"
+  },
+  "preserved": "Original logs, snapshots, controllers, absolute host paths, profiling archives and historical merge manifests retain their original content."
+}

@@ -67,7 +67,7 @@ BF16 模型为 `Qwen/Qwen3-30B-A3B`，dtype=bfloat16、quantization=None；权�
 
 ## CPU 绑核实测证据
 
-四组全部 16 个 worker 主线程的实际 CPU 亲和性与 topo_affinity 计划一致；[完整日志、内核快照、证据链及校验方法](CPU_BINDING_EVIDENCE.md)。IRQ 调整未执行。
+四组全部 16 个 worker 主线程的实际 CPU 亲和性与 topo_affinity 计划一致；[完整日志、内核快照、证据链及校验方法](cpu-binding.md)。IRQ 调整未执行。
 
 ## 性能结果
 

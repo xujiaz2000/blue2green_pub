@@ -4,7 +4,7 @@ CANN 9.1 输出吞吐 **800.3532 token/s**，CANN 9.2 **799.0187 token/s**，9.2
 
 ## CPU 绑核验证
 
-两组实际 worker 主线程亲和性均与 topo_affinity 计划一致；[完整证据链与校验方法](CPU_BINDING_EVIDENCE.md)。IRQ 亲和性调整未执行。
+两组实际 worker 主线程亲和性均与 topo_affinity 计划一致；[完整证据链与校验方法](cpu-binding.md)。IRQ 亲和性调整未执行。
 
 ## 唯一的配置变化
 
@@ -52,7 +52,7 @@ CANN 9.1 输出吞吐 **800.3532 token/s**，CANN 9.2 **799.0187 token/s**，9.2
 | CANN 9.1 | 781.8579 | 800.3532 | +2.37% |
 | CANN 9.2 | 769.1510 | 799.0187 | +3.88% |
 
-[上一轮 MRV1 报告](../qwen3-30b-a3b-a2-performance/README.md)。上述下限来自 bbb5672 的 BF16 YAML：baseline=802.4382、threshold=0.97。历史 BF16 CI 实际使用 MRV1；MRV2 是否超过同一下限只表示本次观测结果，不等于原 MRV1 CI 配置的验证。
+[上一轮 MRV1 报告](../mrv1/README.md)。上述下限来自 bbb5672 的 BF16 YAML：baseline=802.4382、threshold=0.97。历史 BF16 CI 实际使用 MRV1；MRV2 是否超过同一下限只表示本次观测结果，不等于原 MRV1 CI 配置的验证。
 
 ## 版本与 CANN 构建
 
