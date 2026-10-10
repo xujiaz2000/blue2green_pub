@@ -1,0 +1,22 @@
+[
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp0_dcp0_ep0_rank0_2969_20261010101537101_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp1_dcp0_ep1_rank1_3043_20261010101536993_ascend_pt",
+    "kernel_rows": 32843
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp2_dcp0_ep2_rank2_3211_20261010101537073_ascend_pt",
+    "kernel_rows": 27583
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp3_dcp0_ep3_rank3_3376_20261010101537078_ascend_pt",
+    "kernel_rows": 27429
+  }
+]

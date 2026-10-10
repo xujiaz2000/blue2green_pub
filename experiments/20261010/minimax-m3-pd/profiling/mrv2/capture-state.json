@@ -1,0 +1,11 @@
+{
+  "runner": "mrv2",
+  "bench_run": "/mnt/share/z00943141/minimax_m3_performance_mrv2/logs/bench/mrv2/20261010_101428_YJbSNN",
+  "decode_running_requests": {
+    "31060": 9.0,
+    "31061": 9.0,
+    "31062": 8.0,
+    "31063": 8.0
+  },
+  "capture_started_at": "2026-10-10T10:15:36.058615+00:00"
+}

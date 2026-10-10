@@ -83,3 +83,7 @@ Runner 选择：MRV2 为 `VLLM_USE_V2_MODEL_RUNNER=1`，MRV1 为 `VLLM_USE_V2_MO
 | 输入数据哈希 | [SHA-256](mrv2/dataset-sha256.txt) | [SHA-256](mrv1/dataset-sha256.txt) |
 
 JSON、CSV、完整日志和汇总 JSON 均保留原始字节；最终结果日志截取原始日志最后一组性能表及其后内容。原始日志时间为 UTC，实验日期说明采用北京时间。文件校验清单见 [SHA256SUMS](SHA256SUMS)。
+
+## Decode profiling
+
+[MRV1 / MRV2 Decode DP0 profiling](profiling/README.md): 每轮仅上传一个 Decode 实例（DP0），包含全部 4 个 worker 的 1 秒原始数据及解析结果。压缩包见仓库 Release；本次 AISBench 在采集成功后提前结束。
