@@ -1,0 +1,82 @@
+[
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp0_dcp0_ep0_rank0_2969_20261010101537101_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp1_dcp0_ep1_rank1_3043_20261010101536993_ascend_pt",
+    "kernel_rows": 32843
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp2_dcp0_ep2_rank2_3211_20261010101537073_ascend_pt",
+    "kernel_rows": 27583
+  },
+  {
+    "decode": "decode-dp0",
+    "trace": "mrv2/decode-dp0/dp0_pp0_tp3_dcp0_ep3_rank3_3376_20261010101537078_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp1",
+    "trace": "mrv2/decode-dp1/dp1_pp0_tp0_dcp0_ep4_rank0_2970_20261010101537083_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp1",
+    "trace": "mrv2/decode-dp1/dp1_pp0_tp1_dcp0_ep5_rank1_3047_20261010101537083_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp1",
+    "trace": "mrv2/decode-dp1/dp1_pp0_tp2_dcp0_ep6_rank2_3215_20261010101537083_ascend_pt",
+    "kernel_rows": 27429
+  },
+  {
+    "decode": "decode-dp1",
+    "trace": "mrv2/decode-dp1/dp1_pp0_tp3_dcp0_ep7_rank3_3390_20261010101537056_ascend_pt",
+    "kernel_rows": 27583
+  },
+  {
+    "decode": "decode-dp2",
+    "trace": "mrv2/decode-dp2/dp2_pp0_tp0_dcp0_ep8_rank0_2971_20261010101536569_ascend_pt",
+    "kernel_rows": 34218
+  },
+  {
+    "decode": "decode-dp2",
+    "trace": "mrv2/decode-dp2/dp2_pp0_tp1_dcp0_ep9_rank1_3044_20261010101536592_ascend_pt",
+    "kernel_rows": 34218
+  },
+  {
+    "decode": "decode-dp2",
+    "trace": "mrv2/decode-dp2/dp2_pp0_tp2_dcp0_ep10_rank2_3213_20261010101536585_ascend_pt",
+    "kernel_rows": 34217
+  },
+  {
+    "decode": "decode-dp2",
+    "trace": "mrv2/decode-dp2/dp2_pp0_tp3_dcp0_ep11_rank3_3389_20261010101536585_ascend_pt",
+    "kernel_rows": 34218
+  },
+  {
+    "decode": "decode-dp3",
+    "trace": "mrv2/decode-dp3/dp3_pp0_tp0_dcp0_ep12_rank0_2972_20261010101536559_ascend_pt",
+    "kernel_rows": 34690
+  },
+  {
+    "decode": "decode-dp3",
+    "trace": "mrv2/decode-dp3/dp3_pp0_tp1_dcp0_ep13_rank1_3057_20261010101536583_ascend_pt",
+    "kernel_rows": 34691
+  },
+  {
+    "decode": "decode-dp3",
+    "trace": "mrv2/decode-dp3/dp3_pp0_tp2_dcp0_ep14_rank2_3212_20261010101536588_ascend_pt",
+    "kernel_rows": 34691
+  },
+  {
+    "decode": "decode-dp3",
+    "trace": "mrv2/decode-dp3/dp3_pp0_tp3_dcp0_ep15_rank3_3379_20261010101536588_ascend_pt",
+    "kernel_rows": 34691
+  }
+]

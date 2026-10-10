@@ -86,4 +86,4 @@ JSON、CSV、完整日志和汇总 JSON 均保留原始字节；最终结果日�
 
 ## Decode profiling
 
-[MRV1 / MRV2 Decode DP0 profiling](profiling/README.md): 每轮仅上传一个 Decode 实例（DP0），包含全部 4 个 worker 的 1 秒原始数据及解析结果。压缩包见仓库 Release；本次 AISBench 在采集成功后提前结束。
+[MRV1 / MRV2 全部 Decode profiling](profiling/README.md)：每轮 DP0–DP3 四个实例、16 个 worker，共 32 份原始数据及解析结果，压缩包位于仓库 Release。之前的 DP0 子集仍保留。本次 AISBench 在采集成功后提前结束。

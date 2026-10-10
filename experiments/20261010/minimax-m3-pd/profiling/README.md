@@ -1,37 +1,53 @@
 # MiniMax M3 MRV1 / MRV2 Decode profiling
 
-Captured on 2026-10-10 (Asia/Shanghai). Each archive contains **one Decode instance, decode-dp0**, with all four TP workers: original profiling data and parsed outputs.
+Captured on 2026-10-10 (Asia/Shanghai). Full archives contain all four Decode instances (DP0-DP3), with four TP workers per instance: **16 workers per runner, 32 in total**. Both original profiling data and parsed outputs are included.
 
-| Runner | Capture start (Asia/Shanghai) | Workers | Download |
+## Download
+
+[Release and SHA256SUMS](https://github.com/xujiaz2000/blue2green_pub/releases/tag/minimax-m3-decode-profiling-20261010)
+
+| Runner | Instances | Workers | Archive |
 | --- | --- | --- | --- |
-| MRV1 | 17:57:16 | 4 | [MRV1 DP0 archive](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv1-decode-dp0-profiling.tar.gz) |
-| MRV2 | 18:15:36 | 4 | [MRV2 DP0 archive](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv2-decode-dp0-profiling.tar.gz) |
+| MRV1 | DP0-DP3 | 16 | [All Decode instances, about 731 MiB](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv1-decode-profiling.tar.gz) |
+| MRV2 | DP0-DP3 | 16 | [All Decode instances, about 642 MiB](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv2-decode-profiling.tar.gz) |
+| MRV1 | DP0 only | 4 | [Previously uploaded DP0 archive](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv1-decode-dp0-profiling.tar.gz) |
+| MRV2 | DP0 only | 4 | [Previously uploaded DP0 archive](https://github.com/xujiaz2000/blue2green_pub/releases/download/minimax-m3-decode-profiling-20261010/minimax-m3-mrv2-decode-dp0-profiling.tar.gz) |
 
-[Release](https://github.com/xujiaz2000/blue2green_pub/releases/tag/minimax-m3-decode-profiling-20261010) includes both archives and SHA256SUMS. Archives exceed GitHub's normal Git file size limit and are stored as Release assets.
+These archives exceed GitHub's normal Git file size limit and are stored as Release assets. The DP0-only archives are subsets of the full archives, not additional captures.
 
 ## Capture
 
+| Runner | Capture trigger (Asia/Shanghai) | Running requests at trigger, DP0/1/2/3 |
+| --- | --- | --- |
+| MRV1 | 2026-10-10 17:57:16 | 9 / 8 / 8 / 8 |
+| MRV2 | 2026-10-10 18:15:36 | 9 / 9 / 8 / 8 |
+
 The service uses P DP2/TP4/PP2 and D DP4/TP4/PP1. Both rounds use the experiment environment documented in the [parent README](../README.md). Only the runner flag changed. Both dedicated containers were stopped before restarting MRV2.
 
-AISBench generated load with concurrency 144, input length 131072, output length 1024 and prefix caching. Capture waited until all four D APIs had at least eight running requests, then invoked their start_profile endpoints in parallel, waited one second, and invoked stop_profile in parallel. The uploaded subset is DP0 only; capture-state.json records the full-service trigger state.
+AISBench was configured for concurrency 144, input length 131072, output length 1024 and prefix caching. Capture started after service warmup and prefix-cache warmup, during the formal benchmark stage. It waited until all four D APIs had at least eight running requests, invoked start_profile in parallel, waited one second after those calls succeeded, then invoked stop_profile in parallel.
 
-Each benchmark was intentionally stopped immediately after successful capture. No final performance result is expected, and these runs are separate from the earlier complete AISBench baselines.
+The workload was still ramping up at capture time; this was not a verified steady 144-concurrency interval. Actual worker trace spans can exceed one second due to API, worker and device timing. These captures can diagnose the observed execution paths, but should not alone establish a steady-state performance comparison.
 
-## Open the data
+Each benchmark was intentionally stopped after successful capture. No final performance result is expected; these runs are separate from the earlier complete AISBench baselines.
+
+## Extract and inspect
+
+Download the two full archives and SHA256SUMS from the Release. Verify each downloaded archive:
 
 ~~~bash
-sha256sum -c SHA256SUMS
-tar -xzf minimax-m3-mrv1-decode-dp0-profiling.tar.gz
-tar -xzf minimax-m3-mrv2-decode-dp0-profiling.tar.gz
+grep '  minimax-m3-mrv1-decode-profiling.tar.gz$' SHA256SUMS | sha256sum -c -
+grep '  minimax-m3-mrv2-decode-profiling.tar.gz$' SHA256SUMS | sha256sum -c -
+tar -xzf minimax-m3-mrv1-decode-profiling.tar.gz
+tar -xzf minimax-m3-mrv2-decode-profiling.tar.gz
 ~~~
 
 Parsed files are under:
 
 ~~~text
-mrv1/decode-dp0/*_ascend_pt/ASCEND_PROFILER_OUTPUT/
-mrv2/decode-dp0/*_ascend_pt/ASCEND_PROFILER_OUTPUT/
+mrv1/decode-dp{0,1,2,3}/*_ascend_pt/ASCEND_PROFILER_OUTPUT/
+mrv2/decode-dp{0,1,2,3}/*_ascend_pt/ASCEND_PROFILER_OUTPUT/
 ~~~
 
-All eight uploaded worker traces were validated: trace_view.json is readable and contains complete events; kernel_details.csv contains actual NPU operator records. Import trace_view.json into a trace viewer to inspect the timeline.
+All 32 worker traces were validated: trace_view.json is readable and contains complete events; kernel_details.csv contains actual NPU operator records. Import the worker trace_view.json files into a trace viewer to inspect timelines.
 
-Per-run directories contain the capture trigger state, uploaded-worker validation records, effective Decode service script and profiling/analysis scripts.
+Per-run directories contain all-workers.json (all 16 workers), validated_workers.json (the original DP0 subset), the capture trigger state, effective Decode service script and profiling/analysis scripts.
