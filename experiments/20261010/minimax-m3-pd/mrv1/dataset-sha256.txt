@@ -1,0 +1,2 @@
+236f742da836d44bd52f739036c31e784918e4626b9bc974e096723b5a0aab26  GSM8K-in131072-num576-Eco-Tech_MiniMax-M3-w8a8-0626-repeatRate1.0.jsonl
+76f803844c9a6d8a8e4a13d13a488b5892d5ffc9f74baea4014868af115a2bc5  prefix-GSM8K-in131072-num2-Eco-Tech_MiniMax-M3-w8a8-0626.jsonl

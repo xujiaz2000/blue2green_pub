@@ -1,0 +1,90 @@
+{
+  "runner": "MRV1",
+  "common_metrics": {
+    "Benchmark Duration": {
+      "total": "211325.1511 ms"
+    },
+    "Total Requests": {
+      "total": 576
+    },
+    "Failed Requests": {
+      "total": 0
+    },
+    "Success Requests": {
+      "total": 576
+    },
+    "Concurrency": {
+      "total": 130.88
+    },
+    "Max Concurrency": {
+      "total": 144
+    },
+    "Request Throughput": {
+      "total": "2.7257 req/s"
+    },
+    "Total Input Tokens": {
+      "total": 75598848
+    },
+    "Total Generated Tokens": {
+      "total": 589824
+    },
+    "Input Token Throughput": {
+      "total": "357737.106 token/s"
+    },
+    "Output Token Throughput": {
+      "total": "2791.0734 token/s"
+    },
+    "Total Token Throughput": {
+      "total": "360528.1794 token/s"
+    }
+  },
+  "request_metrics": {
+    "E2EL": {
+      "Average": "48017.8 ms",
+      "P90": "60923.7 ms",
+      "P99": "68285.9 ms"
+    },
+    "TTFT": {
+      "Average": "5776.5 ms",
+      "P90": "16517.7 ms",
+      "P99": "24660.6 ms"
+    },
+    "TPOT": {
+      "Average": "41.3 ms",
+      "P90": "44.5 ms",
+      "P99": "57.9 ms"
+    },
+    "ITL": {
+      "Average": "128.8 ms",
+      "P90": "167.1 ms",
+      "P99": "244.7 ms"
+    },
+    "InputTokens": {
+      "Average": "131248.0",
+      "P90": "131248.0",
+      "P99": "131248.0"
+    },
+    "OutputTokens": {
+      "Average": "1024.0",
+      "P90": "1024.0",
+      "P99": "1024.0"
+    },
+    "OutputTokenThroughput": {
+      "Average": "21.804 token/s",
+      "P90": "25.1085 token/s",
+      "P99": "26.9101 token/s"
+    },
+    "PrefillTokenThroughput": {
+      "Average": "37676.5673 token/s",
+      "P90": "56417.0716 token/s",
+      "P99": "63678.9687 token/s"
+    }
+  },
+  "p_prefix_cache": {
+    "hit_tokens": 75497472,
+    "query_tokens": 75598848,
+    "hit_rate_percent": 99.86590271851762
+  },
+  "service_health": "all 6 APIs and proxy healthy",
+  "bench_exit_code": 0
+}

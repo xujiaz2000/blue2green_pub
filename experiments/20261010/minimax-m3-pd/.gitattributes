@@ -1,0 +1,7 @@
+*.log -text whitespace=-trailing-space
+*.csv -text whitespace=cr-at-eol
+*.json -text
+*.md text eol=lf
+*.txt text eol=lf
+SHA256SUMS text eol=lf
+.gitattributes text eol=lf
