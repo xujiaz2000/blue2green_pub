@@ -1,123 +1,66 @@
-# 2026-10-14：Qwen3-30B-A3B 的 MRV、CANN 与 CPU 绑核汇总分析
+# Qwen3-30B-A3B：全部 26 组实验与环境核验
 
-结合 [20261009 原八组报告](../20261009/README.md)、[MRV2 三轮复测](../20261009/mrv2/repeats/README.md) 与 [20261014 关闭绑核四组](mrv2/cpu-binding-off-156/README.md)，再补充 [MRV1 关闭绑核 BF16 两组](mrv1/cpu-binding-off-156/README.md)，共计 26 组已完成的正式 profiling 实验。不同批次的单轮与三轮结果分别展示。
+以下是同一历史 main 节点下已完成的 26 组正式实验：原单轮 8 组、MRV2 三轮复测 12 组、MRV2 关闭绑核 4 组、MRV1 关闭绑核 BF16 2 组。没有重新跑性能测试。
 
-**当前最明确的观测是：MRV2 相对 MRV1 的吞吐提升在原开启绑核的四个组合中方向一致；开启绑核时，MRV2 三轮均显示 CANN 9.2 略低于 9.1；关闭绑核后变化并不一致，尚不能认定绑核失效或关闭绑核是 CANN 性能差异的统一解释。**
+## 全部结果
 
-## BF16 补充：MRV1 关闭绑核
+输出吞吐单位 token/s；每个数值都是独立的一轮测试，点击数值查看 AISBench 最终日志。差异 = CANN 9.2 / 9.1 − 1；三轮复测逐轮展示。日期为 Asia/Shanghai 下实际 profiling 的日期。
 
-新增两组后，BF16 的 MRV1/MRV2 × 开启/关闭绑核 × CANN 9.1/9.2 条件均已有观测。MRV2 开启列使用三轮均值，其他列各为单次；单位 token/s。
+| 批次（日期） | 模型 | Runner | CPU 绑核 | CANN 9.1.0 | CANN 9.2.0 | 9.2 相对 9.1 |
+| --- | --- | --- | --- | ---: | ---: | ---: |
+| 原单轮（10-09） | BF16 | MRV1 | 开 | [781.8579](../20261009/mrv1/logs/bf16-cann910-aisbench-final-result.log) | [769.1510 †](../20261009/mrv1/logs/bf16-cann920-aisbench-final-result.log) | -1.63% |
+| 原单轮（10-09） | W8A8 | MRV1 | 开 | [791.6250](../20261009/mrv1/logs/w8a8-cann910-aisbench-final-result.log) | [775.0892 †](../20261009/mrv1/logs/w8a8-cann920-aisbench-final-result.log) | -2.09% |
+| 原单轮（10-09） | BF16 | MRV2 | 开 | [800.3532](../20261009/mrv2/logs/bf16-cann910-aisbench-final-result.log) | [799.0187](../20261009/mrv2/logs/bf16-cann920-aisbench-final-result.log) | -0.17% |
+| 原单轮（10-09） | W8A8 | MRV2 | 开 | [824.7901](../20261009/mrv2/logs/w8a8-cann910-aisbench-final-result.log) | [813.6934](../20261009/mrv2/logs/w8a8-cann920-aisbench-final-result.log) | -1.35% |
+| 复测第1轮（10-09） | BF16 | MRV2 | 开 | [806.9349](../20261009/mrv2/repeats/round-01/logs/bf16-cann910-aisbench-final-result.log) | [799.3618](../20261009/mrv2/repeats/round-01/logs/bf16-cann920-aisbench-final-result.log) | -0.94% |
+| 复测第1轮（10-09） | W8A8 | MRV2 | 开 | [826.4111](../20261009/mrv2/repeats/round-01/logs/w8a8-cann910-aisbench-final-result.log) | [814.4012](../20261009/mrv2/repeats/round-01/logs/w8a8-cann920-aisbench-final-result.log) | -1.45% |
+| 复测第2轮（10-10） | BF16 | MRV2 | 开 | [808.3401](../20261009/mrv2/repeats/round-02/logs/bf16-cann910-aisbench-final-result.log) | [801.9841](../20261009/mrv2/repeats/round-02/logs/bf16-cann920-aisbench-final-result.log) | -0.79% |
+| 复测第2轮（10-10） | W8A8 | MRV2 | 开 | [818.0495](../20261009/mrv2/repeats/round-02/logs/w8a8-cann910-aisbench-final-result.log) | [811.9460](../20261009/mrv2/repeats/round-02/logs/w8a8-cann920-aisbench-final-result.log) | -0.75% |
+| 复测第3轮（10-10） | BF16 | MRV2 | 开 | [806.1744](../20261009/mrv2/repeats/round-03/logs/bf16-cann910-aisbench-final-result.log) | [802.3243](../20261009/mrv2/repeats/round-03/logs/bf16-cann920-aisbench-final-result.log) | -0.48% |
+| 复测第3轮（10-10） | W8A8 | MRV2 | 开 | [817.3749](../20261009/mrv2/repeats/round-03/logs/w8a8-cann910-aisbench-final-result.log) | [812.7597](../20261009/mrv2/repeats/round-03/logs/w8a8-cann920-aisbench-final-result.log) | -0.56% |
+| 关绑核补测（10-14） | BF16 | MRV2 | 关 | [805.5155](../20261014/mrv2/cpu-binding-off-156/logs/bf16-cann910-aisbench-final-result.log) | [795.8386](../20261014/mrv2/cpu-binding-off-156/logs/bf16-cann920-aisbench-final-result.log) | -1.20% |
+| 关绑核补测（10-14） | W8A8 | MRV2 | 关 | [803.6051](../20261014/mrv2/cpu-binding-off-156/logs/w8a8-cann910-aisbench-final-result.log) | [813.5922](../20261014/mrv2/cpu-binding-off-156/logs/w8a8-cann920-aisbench-final-result.log) | +1.24% |
+| 关绑核补测（10-14） | BF16 | MRV1 | 关 | [782.0327](../20261014/mrv1/cpu-binding-off-156/logs/bf16-cann910-aisbench-final-result.log) | [770.0517 †](../20261014/mrv1/cpu-binding-off-156/logs/bf16-cann920-aisbench-final-result.log) | -1.53% |
 
-| CANN | MRV1 开绑核 n=1 | MRV1 关绑核 n=1 | MRV1 关/开变化 | MRV2 开绑核三轮均值 | MRV2 关绑核 n=1 | 关绑核 MRV2/MRV1 变化 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 9.1 | 781.8579 | 782.0327 | +0.02% | 807.1498 | 805.5155 | +3.00% |
-| 9.2 | 769.1510 | 770.0517 | +0.12% | 801.2234 | 795.8386 | +3.35% |
+† 低于原 CI 下限：BF16 778.365054、W8A8 781.695840 token/s。共 **23/26** 个观测值达到下限。
 
-MRV1 关闭绑核本轮，CANN 9.2 相对 9.1 为 **-1.53%**。相对历史 MRV1 开启绑核，9.1 为 **+0.02%**、9.2 为 **+0.12%**，与原结果接近；本轮关闭绑核后 CANN 9.2 仍低于 9.1、未达到 BF16 原 CI 下限，尚未观察到关闭绑核消除该差距。
+所有 26 组均为 **180 正式请求、失败 0、生成 270000 tokens**，均采约 **1 秒 profiling**，各组 **4 个 rank 解析完成**。正式请求总计 4680、生成 tokens 7020000。MRV1 关闭绑核的 W8A8 尚未测试。
 
-与上一组 MRV2 关闭绑核 BF16 的脚本逐文件比对，唯一变化是 `VLLM_USE_V2_MODEL_RUNNER=1` → `0`；完整 Python 包列表及代码节点在同一 CANN 内保持一致。实际四 rank 均运行 model_runner_v1.py，八个 worker 与所有采集线程均为 0–255，确认关闭绑核。
+## 环境是否相同
 
-MRV1 开启数据来自 10 月 9 日，关闭数据来自 10 月 14 日；各关闭组合一次，MRV1/MRV2 也非交错配对。上述百分比为观测差异，尚未建立开关的稳定因果效应。[两份最终日志、环境证据与 profiling 路径](mrv1/cpu-binding-off-156/README.md)。以下旧批次表保留各自单轮/三轮口径。
+**固定基础条件一致，但所有实验的完整环境并非完全相同。** 已逐组复核保存的版本与源码证据、运行日志，并只读核对原测试主机上的脚本、容器镜像和扩展库。
 
-## 合并吞吐表
+一致的条件：
 
-单位 token/s。三轮列为均值 ± 样本标准差（n−1）；其余各列为单次结果。最后一列=本次关闭绑核/此前开启绑核三轮均值−1。
+- 所有组使用同一台原 A2 测试主机，Ascend 910B3、driver 25.5.1、Kunpeng-920；均隔离物理 NPU **0–3**，Ascend runtime、非特权容器，容器 npu-smi 仅见四卡，无 Docker CPU cpuset 限制。
+- vLLM **0.30.0+empty**，commit `ced6857afa0ea7b2e3f0846a62e1394e90f15607`；vllm-ascend **0.19.1rc2.dev2433+gbbb5672af**，commit `bbb5672af80b1972c301852aa505b13374fa6355`。每组保存的核验记录中，7159 个 vLLM、4280 个 Ascend tracked 文件均无修改。
+- torch **2.10.0+cpu**、torch_npu **2.10.0.post4**、triton_ascend **3.2.2**、transformers **5.14.1**、AISBench **3.1.20260609**。同一 CANN 内，13 组的**完整 Python 包版本清单一致**。
+- TP4、async scheduling、max-num-seqs=16、max-model-len/max-num-batched-tokens=16384、gpu-memory-utilization=0.9；端口 8007；**非 eager**，FULL_DECODE_ONLY，capture sizes=[1,2,4,8,16]。
+- GSM8K 数据和正式客户端参数一致：180 请求、batch_size=45、rate=0、temperature=0、ignore_eos=true、每请求输出 1500 tokens；每组输入 tokens 均为 656793。同模型复用同一路径的只读权重。
+- 同模型全部脚本在归一化 **VLLM_USE_V2_MODEL_RUNNER** 与 **enable_cpu_binding** 两个值后逐字节一致，客户端和数据配置未变。实际四 rank Runner 日志与开关一致；开绑核主线程每 rank 28 CPU，关绑核为 0–255。
 
-| 模型 | CANN | MRV1 开启绑核 n=1 | MRV2 开启绑核原单轮 n=1 | MRV2 开启绑核三轮 n=3 | MRV2 关闭绑核 n=1 | 关闭相对三轮均值 |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| BF16 | 9.1 | 781.8579 | 800.3532 | 807.1498 ± 1.0987 | 805.5155 | -0.20% |
-| BF16 | 9.2 | 769.1510 † | 799.0187 | 801.2234 ± 1.6211 | 795.8386 | -0.67% |
-| W8A8 | 9.1 | 791.6250 | 824.7901 | 820.6118 ± 5.0336 | 803.6051 | -2.07% |
-| W8A8 | 9.2 | 775.0892 † | 813.6934 | 813.0356 ± 1.2506 | 813.5922 | +0.07% |
+需要保留的差别：
 
-† 低于对应原 CI YAML 下限：BF16 778.365054、W8A8 781.695840 token/s。MRV1 开启绑核 2/4 组达到下限；MRV2 开启绑核原单轮 4/4、三轮 12/12、本次关闭绑核 4/4，另补充 MRV1 关闭绑核 BF16 1/2 组，共 23/26 组达到下限。所有 26 组均完成 180 请求、失败 0，正式请求总计 4680，正式生成 tokens 共 7020000。内部预热及 W8A8 的 18 请求预热轮不计入这些总数。
+- **实验变量**：CANN 9.1/9.2、MRV1/MRV2、绑核开/关、BF16/W8A8。CANN runtime/ops/compiler 构建标记分别为 `20260730_231653901`、`20260930_161523958`。跨 CANN 有 **13 项附带 Python 包/工具的版本或安装状态差异**，详细记录保留本地；现有公开的各组环境证据见下方链接。所以跨 CANN 比较的是两套 CANN 软件栈。
+- **镜像**：原 W8A8 MRV1 的两个 Image ID 与后续组不同；同 CANN 下完整 Python 包清单、tracked 源码和核验的 **6 个 Ascend 扩展 .so 哈希一致**。其余组按 CANN 复用同一 Image ID。没有据此声称整个镜像文件系统完全相同。
+- **模型与预热**：BF16 内部预热 1 请求；W8A8 先额外跑 18 请求 perf-warm，两次 AISBench 调用各内部预热 1 请求。W8A8 使用独立权重和 `--quantization ascend`。同模型内预热协议一致，跨模型不同。
+- **批次状态**：测试日期、顺序、主机 CPU/IO 背景不同；关闭绑核组额外读取全部线程亲和性。各组新服务、独立编译缓存，但没有清空系统页缓存。1 秒窗口的 KV 长度和专家路由也未逐 step 对齐；每轮吞吐均包含 profiling 开销。
 
-上述达标只表示带 profiling 的观测吞吐达到原 YAML 下限，不能替代无 profiler 的原 CI 验证。
+因此：**同模型、同 CANN 的服务脚本只差 MRV/绑核开关；核心软件版本已拉齐。所有组不能称为完全相同的运行环境，也不能把跨日期单轮的全部差异归因于某一个开关。**
 
-## 1. 开启绑核时 Runner 的影响：提升方向一致，幅度仍是有限样本观测
+## 结果解读
 
-| 模型 | CANN | 原 MRV2 单轮相对 MRV1 单轮 | MRV2 三轮均值相对 MRV1 单轮 |
-| --- | --- | ---: | ---: |
-| BF16 | 9.1 | +2.37% | +3.23% |
-| BF16 | 9.2 | +3.88% | +4.17% |
-| W8A8 | 9.1 | +4.19% | +3.66% |
-| W8A8 | 9.2 | +4.98% | +4.90% |
+原开启绑核四个组合中，MRV2 相对 MRV1 均更快；MRV2 开绑核三轮中，CANN 9.2 每轮均略低于 9.1，均值差约 BF16 −0.73%、W8A8 −0.92%。MRV1 BF16 关闭绑核相对原开启仅 +0.02% / +0.12%，CANN 9.2 仍未达到原 CI 下限。MRV2 关闭绑核的 W8A8 则出现 CANN 排序反转，不能认定关闭绑核能统一解决 CANN 性能差异。
 
-原八组中，只切换 MRV 开关后四个组合都提高 2.37%–4.98%，TPOT 也下降；MRV2 的三轮均值仍全部高于 MRV1 单轮。这支持在本节点、这些配置下，MRV2 有助于改善整轮性能。
+每个关闭组合仅一次。上述达标仅指带 profiling 的吞吐观测达到 YAML 下限；稳定因果收益仍需同日交错重复测试。
 
-MRV1 每个已测配置只有单次样本，三轮 MRV2 与它也不是交错配对执行，所以这些提升不能解释成已精确测定的长期收益。MRV2 已达标也不等于原 MRV1 CI 的性能问题已修复。
+## 证据与 profiling 路径
 
-## 2. CANN 的影响：开启绑核三轮有一致方向，关闭绑核的 W8A8 排序反转
+- 完整逐组审计记录保留本地；各组 profiling 路径沿用下列已发布报告。
+- [原八组完整报告](../20261009/README.md)
+- [MRV2 三轮报告](../20261009/mrv2/repeats/README.md)
+- [MRV2 关闭绑核四组](mrv2/cpu-binding-off-156/README.md)
+- [MRV1 关闭绑核 BF16 两组](mrv1/cpu-binding-off-156/README.md)
+- [此前完整汇总分析与 kernel 排查方向](https://github.com/xujiaz2000/blue2green_pub/blob/dde1f9e1c64ed3d0378a824f81885cbd59ffc939/experiments/20261014/README.md)
 
-下面均为同一行对应运行条件内的 CANN 9.2/9.1−1；三轮列使用均值之比。
-
-| 模型 | MRV1 开启绑核单轮 | MRV2 开启绑核原单轮 | MRV2 开启绑核三轮均值 | MRV2 关闭绑核本轮 |
-| --- | ---: | ---: | ---: | ---: |
-| BF16 | -1.63% | -0.17% | -0.73% | -1.20% |
-| W8A8 | -2.09% | -1.35% | -0.92% | +1.24% |
-
-MRV2 开启绑核三轮中，BF16 每轮 9.2 都低于 9.1，差异范围 −0.94% 至 −0.48%；W8A8 也每轮都低，范围 −1.45% 至 −0.56%。这比只看原单轮更能支持“该组合下存在小幅、方向一致的 CANN 版本差异”。目前量级约 1%，并非此前约 177 token/s 那种大幅下降。
-
-关闭绑核后，BF16 仍是 9.2 较低，但 W8A8 变成 9.2 较高。W8A8 排序反转主要伴随 9.1 关闭绑核本轮变低，9.2 则基本维持原水平。可以考虑版本与 CPU 调度/内存放置之间存在交互，但目前每个关闭配置只有一次，不能确认这个交互，更不能说关闭绑核已经解决 CANN 9.2 的性能问题。
-
-## 3. CPU 绑核的影响：已确认关闭，性能变化不是统一方向
-
-| 模型 | CANN | 开启绑核三轮范围 token/s | 开启绑核 CV | 关闭绑核本轮 | 相对历史三轮范围 |
-| --- | --- | --- | ---: | ---: | --- |
-| BF16 | 9.1 | 806.1744–808.3401 | 0.14% | 805.5155 | 低于历史三轮最小值 |
-| BF16 | 9.2 | 799.3618–802.3243 | 0.20% | 795.8386 | 低于历史三轮最小值 |
-| W8A8 | 9.1 | 817.3749–826.4111 | 0.61% | 803.6051 | 低于历史三轮最小值 |
-| W8A8 | 9.2 | 811.9460–814.4012 | 0.15% | 813.5922 | 落在历史三轮范围内 |
-
-- BF16/9.1 低 0.20%，与历史结果接近。原 MRV2 单轮是 800.3532，三轮均值为 807.1498，二者已差 0.85%；若选原单轮作基准，关闭绑核反而呈现 +0.65%。基准批次的选择会影响小幅变化的解读。
-- BF16/9.2 低 0.67%，低于历史三轮的最小值。相对变化虽小于 1%，仍值得复测，不能直接把它全部归为随机噪声。
-- W8A8/9.1 低 2.07%，也低于历史三轮最小值，且超过历史 CV 0.61% 所描述的典型离散程度，是关闭绑核后最需要复核的组合。
-- W8A8/9.2 高 0.07%，落在历史三轮范围内，当前基本持平。
-
-三次历史样本不足以建立可靠的分布或置信区间。上面的范围/CV 比较是描述性证据，没有进行显著性检验，不能将“低于历史最小值”等同于因果已确认。
-
-关闭绑核不是仅从配置推断：MRV2 关闭绑核批次的 16 个 worker 主线程以及采集的 1400 条线程亲和性记录均为 0–255，服务日志没有 `mode=topo_affinity` 执行记录。此前开启绑核主线程则分别为 194–221、226–253、130–157、162–189，每 rank 28 CPU。具体配置差异、PID 和线程证据见 [关闭绑核报告](mrv2/cpu-binding-off-156/README.md) 与 [结构化证据](mrv2/cpu-binding-off-156/results.json)。
-
-这个配置同时跳过绑定流程中的 NUMA 内存迁移，所以实验测的是整套 CPU binding 优化开关；不能把变化进一步拆成“线程亲和性”或“内存迁移”各自的纯效果。现已补充 MRV1 关闭绑核 BF16 两组，见上方完整 BF16 表；MRV1 关闭绑核 W8A8 尚未测试。
-
-## 4. Profiling 提供排查方向，尚未定位唯一根因
-
-原八组报告已经记录 MRV2 开启绑核下的局部 kernel 均值变化（四 rank 合并、按调用数加权，9.2 相对 9.1）：
-
-| 热点类型 | BF16 | W8A8 |
-| --- | ---: | ---: |
-| FusedInferAttentionScore | +8.56% | +10.71% |
-| GroupedMatmul | +0.77% | +5.65% |
-| hcom_allReduce_ | −3.10% | +3.40% |
-| GroupedMatmulSwigluQuant | 不适用 | −1.13% |
-
-有的类型变慢，有的变快；attention 的局部均值变化也大于整轮吞吐变化。因此不能认定单个 kernel 解释所有性能差异。原报告还记录 BF16 MRV1 的 kernel 时间轴未覆盖比例约 8.01%→9.55%，可以作为检查图提交、同步和 host 间隔的线索；该比例不等于硬件完全空闲。
-
-这些是原单轮 profiling 的观测，未重新计算成三轮或关闭绑核的 kernel 均值。1 秒窗口中 KV 长度、token 位置、专家路由、调用数和通信等待不完全配对，kernel 均值不能直接相加来替代整轮吞吐，也不能据此确认 CANN 内部改动的唯一根因。
-
-原八组同模型的最终 Prefix Cache 命中率一致：BF16 为 0.5%，W8A8 为 9.9%，与对应参考 CI 相符；已记录的 MRV2 KV 布局为 LBNHC。没有证据把当前约 1% 量级差异直接归因于 Prefix Cache 关闭或 KV 布局切换；最终命中率一致仍不保证完整请求时间线相同。
-
-## 控制条件与解释边界
-
-所有这些正式实验都在 192.168.9.156 的物理 NPU 0–3；同一 910B3、driver 25.5.1、vLLM 0.30.0+empty（ced6857afa0ea7b2e3f0846a62e1394e90f15607）、vllm-ascend bbb5672af80b1972c301852aa505b13374fa6355。CANN runtime/ops/compiler 构建标记为 9.1.0/20260730_231653901 与 9.2.0/20260930_161523958。
-
-TP4、async scheduling、max-num-seqs=16、max-model-len/max-num-batched-tokens=16384、gpu-memory-utilization=0.9；非 eager，FULL_DECODE_ONLY，[1,2,4,8,16]。180 正式请求，batch_size=45、rate=0、temperature=0、ignore_eos=true、输出 1500 tokens。每组新服务和独立 vLLM/Triton 编译缓存，稳定 decode 阶段采约 1 秒 profiling，四 rank 均解析。
-
-本次关闭绑核复用原固定 Image ID、原路径只读权重和原客户端脚本，模型服务配置只将 enable_cpu_binding=true 改为 false；另增加了现场线程亲和性读取用于确认开关生效，它不修改模型配置，但诊断时段同样处于性能轮内。开启和关闭批次分别在 10 月 9–10 日、10 月 14 日完成；宿主机 CPU/IO 共享，NPU 隔离也不能排除主机调度、存储、时间和 NUMA 内存放置的影响。
-
-BF16 内部预热 1 请求；W8A8 先额外 18 请求 perf-warm，两次调用各内部预热 1 请求。两个模型的预热/缓存协议不同，不能从并列表直接量化纯量化加速收益。所有吞吐包含 profiling 开关、导出和现场采样开销，没有无 profiler 的对照，也没有每轮清空系统页缓存。
-
-## 优先复测方向
-
-优先对 W8A8/CANN 9.1、BF16/CANN 9.2 在同一天、同卡、同镜像下交错执行开启/关闭绑核，至少三对，轮间重新启动服务并保留相同预热。W8A8/CANN 9.2 可作为当前基本持平的对照。
-
-若再分析 profiling，应匹配 batch size、token 位置/KV 长度、专家路由和 decode step，比较 CPU 图提交/同步间隔、NPU kernel 覆盖与通信等待。要拆分 CPU affinity 与 NUMA 内存迁移，需要单独的后续实验，本次资料还不能完成这一拆分。本汇总只分析现有结果，没有启动这些后续测试。
-
-## 原始报告和日志
-
-- [MRV1/MRV2 原八组、完整指标与原 profiling 分析](../20261009/README.md)
-- [MRV2 三轮：12 份最终日志、统计与 profiling 路径](../20261009/mrv2/repeats/README.md)
-- [MRV2 关闭绑核四组：4 份最终日志、亲和性证据与 profiling 路径](mrv2/cpu-binding-off-156/README.md)
-- [MRV1 关闭绑核 BF16 两组：2 份最终日志、实际 runner 与 profiling 路径](mrv1/cpu-binding-off-156/README.md)
-
-本报告从 26 份最终 AISBench 日志核对成功/失败数、token 数和吞吐公式，三轮及关闭轮同时与各自 results.json 核对。原始日志、已发布 profiling 证据和哈希清单不改动。
+本表重新核对 26 份最终日志与各组结构化结果；环境核验只读进行，没有启动模型服务。所有本批测试容器当前均已停止。核验范围包括包版本、tracked 源码、同模型脚本、6 个 Ascend 扩展库与只读权重挂载；没有重新全量计算模型权重张量哈希或全镜像哈希。
