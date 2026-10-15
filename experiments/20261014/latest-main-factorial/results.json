@@ -1,0 +1,227 @@
+{
+  "ascend_commit": "1e15410985615b468f10c9c2dfef3adb7be63deb",
+  "vllm_commit": "ced6857afa0ea7b2e3f0846a62e1394e90f15607",
+  "core_versions": {
+    "vllm": "0.30.0+empty",
+    "vllm_ascend": "0.19.1rc2.dev2798+g1e1541098",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post4",
+    "triton_ascend": "3.2.2",
+    "transformers": "5.14.1",
+    "ais_bench_benchmark": "3.1.20260609"
+  },
+  "configuration": {
+    "ascend_commit": "1e15410985615b468f10c9c2dfef3adb7be63deb",
+    "vllm_commit": "ced6857afa0ea7b2e3f0846a62e1394e90f15607",
+    "vllm_version": "0.30.0+empty",
+    "formal_requests": 180,
+    "extra_warm_requests": 18,
+    "aisbench_num_warmups": 1,
+    "physical_cards": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "server_port": 8007,
+    "tensor_parallel_size": 4,
+    "max_num_seqs": 16,
+    "max_model_len": 16384,
+    "max_num_batched_tokens": 16384,
+    "gpu_memory_utilization": 0.9,
+    "eager": false,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "cudagraph_capture_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "client_batch_size": 45,
+    "request_rate": 0,
+    "output_tokens_per_request": 1500,
+    "ignore_eos": true,
+    "temperature": 0,
+    "dataset_file": "GSM8K-in3500-bs400.jsonl",
+    "profiler_enabled": false
+  },
+  "results": [
+    {
+      "case": 1,
+      "model": "bf16",
+      "runner": "MRV1",
+      "binding": true,
+      "cann": "cann910",
+      "throughput": 176.9164,
+      "tpot": 84.7,
+      "log": "mrv1/cpu-binding-on/logs/bf16-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 2,
+      "model": "bf16",
+      "runner": "MRV1",
+      "binding": true,
+      "cann": "cann920",
+      "throughput": 789.9205,
+      "tpot": 19.0,
+      "log": "mrv1/cpu-binding-on/logs/bf16-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 3,
+      "model": "bf16",
+      "runner": "MRV1",
+      "binding": false,
+      "cann": "cann920",
+      "throughput": 786.4353,
+      "tpot": 19.0,
+      "log": "mrv1/cpu-binding-off/logs/bf16-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 4,
+      "model": "bf16",
+      "runner": "MRV1",
+      "binding": false,
+      "cann": "cann910",
+      "throughput": 176.833,
+      "tpot": 84.8,
+      "log": "mrv1/cpu-binding-off/logs/bf16-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 5,
+      "model": "bf16",
+      "runner": "MRV2",
+      "binding": false,
+      "cann": "cann910",
+      "throughput": 178.6686,
+      "tpot": 83.9,
+      "log": "mrv2/cpu-binding-off/logs/bf16-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 6,
+      "model": "bf16",
+      "runner": "MRV2",
+      "binding": false,
+      "cann": "cann920",
+      "throughput": 813.0797,
+      "tpot": 18.3,
+      "log": "mrv2/cpu-binding-off/logs/bf16-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 7,
+      "model": "bf16",
+      "runner": "MRV2",
+      "binding": true,
+      "cann": "cann920",
+      "throughput": 815.3556,
+      "tpot": 18.3,
+      "log": "mrv2/cpu-binding-on/logs/bf16-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 8,
+      "model": "bf16",
+      "runner": "MRV2",
+      "binding": true,
+      "cann": "cann910",
+      "throughput": 178.8631,
+      "tpot": 83.8,
+      "log": "mrv2/cpu-binding-on/logs/bf16-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 9,
+      "model": "w8a8",
+      "runner": "MRV2",
+      "binding": true,
+      "cann": "cann910",
+      "throughput": 155.787,
+      "tpot": 96.0,
+      "log": "mrv2/cpu-binding-on/logs/w8a8-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 10,
+      "model": "w8a8",
+      "runner": "MRV2",
+      "binding": true,
+      "cann": "cann920",
+      "throughput": 825.2207,
+      "tpot": 18.0,
+      "log": "mrv2/cpu-binding-on/logs/w8a8-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 11,
+      "model": "w8a8",
+      "runner": "MRV2",
+      "binding": false,
+      "cann": "cann920",
+      "throughput": 823.9977,
+      "tpot": 18.0,
+      "log": "mrv2/cpu-binding-off/logs/w8a8-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 12,
+      "model": "w8a8",
+      "runner": "MRV2",
+      "binding": false,
+      "cann": "cann910",
+      "throughput": 155.9398,
+      "tpot": 95.9,
+      "log": "mrv2/cpu-binding-off/logs/w8a8-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 13,
+      "model": "w8a8",
+      "runner": "MRV1",
+      "binding": false,
+      "cann": "cann910",
+      "throughput": 153.996,
+      "tpot": 97.1,
+      "log": "mrv1/cpu-binding-off/logs/w8a8-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 14,
+      "model": "w8a8",
+      "runner": "MRV1",
+      "binding": false,
+      "cann": "cann920",
+      "throughput": 789.2985,
+      "tpot": 18.8,
+      "log": "mrv1/cpu-binding-off/logs/w8a8-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 15,
+      "model": "w8a8",
+      "runner": "MRV1",
+      "binding": true,
+      "cann": "cann920",
+      "throughput": 791.0612,
+      "tpot": 18.7,
+      "log": "mrv1/cpu-binding-on/logs/w8a8-cann920-aisbench-final-result.log",
+      "input_tokens": "656793"
+    },
+    {
+      "case": 16,
+      "model": "w8a8",
+      "runner": "MRV1",
+      "binding": true,
+      "cann": "cann910",
+      "throughput": 154.1893,
+      "tpot": 97.0,
+      "log": "mrv1/cpu-binding-on/logs/w8a8-cann910-aisbench-final-result.log",
+      "input_tokens": "656793"
+    }
+  ]
+}

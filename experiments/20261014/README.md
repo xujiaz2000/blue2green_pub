@@ -66,3 +66,5 @@
 - [此前完整汇总分析与 kernel 排查方向](https://github.com/xujiaz2000/blue2green_pub/blob/dde1f9e1c64ed3d0378a824f81885cbd59ffc939/experiments/20261014/README.md)
 
 本表重新核对 26 份最终日志与各组结构化结果；环境核验只读进行，没有启动模型服务。所有本批测试容器当前均已停止。核验范围包括包版本、tracked 源码、同模型脚本、6 个 Ascend 扩展库与只读权重挂载；没有重新全量计算模型权重张量哈希或全镜像哈希。
+
+- [最新 main：16 组纯性能实验](latest-main-factorial/README.md)（180 请求，统一预热，不采 profiling）
