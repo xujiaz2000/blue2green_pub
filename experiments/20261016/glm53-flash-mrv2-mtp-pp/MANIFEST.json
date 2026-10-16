@@ -1,0 +1,10 @@
+{
+  "source_commit": "eaa7247d77aa2cbc42e5d9827c451ee80c6c8b41",
+  "baseline": "6560f4af2b1daa3b10a1fb3d78655aa40982b969",
+  "paired_vllm": "c4df37dfcc7f72ca41cd43801a468526ecf99a2b",
+  "upstream_pr": "https://github.com/vllm-project/vllm-ascend/pull/18931",
+  "files": {
+    "README.md": "64795b63beaa33f411f270aea0ee052e2c5b12414ed1c51b2935b17d34aaa45a",
+    "glm53-mrv2-mtp-pp.patch": "9117b7792a0c8e0e7fb066980d42a5fe4066566faf4bd90fdbfebd443228fdc3"
+  }
+}
