@@ -1,0 +1,78 @@
+{
+  "started_at": 1793703236.8627353,
+  "folders": [
+    "ci_pinned03",
+    "ci_pinned04"
+  ],
+  "phase": "complete",
+  "completed": [
+    {
+      "folder": "ci_pinned03",
+      "returncode": 0,
+      "metrics": {
+        "E2EL": 71981.7,
+        "TTFT": 44949.2,
+        "TPOT": 18.0,
+        "ITL": 18.0,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.4497,
+        "Benchmark Duration": 329248.8936,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.3523,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5467,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 81.1772,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 1994.8222,
+        "Output Token Throughput": 820.0483,
+        "Total Token Throughput": 2814.8705
+      },
+      "raw_copy_returncode": 0
+    },
+    {
+      "folder": "ci_pinned04",
+      "returncode": 0,
+      "metrics": {
+        "E2EL": 71249.4,
+        "TTFT": 44496.4,
+        "TPOT": 17.8,
+        "ITL": 17.8,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.6779,
+        "Benchmark Duration": 326318.3858,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.3018,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5516,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 82.0033,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 2012.7367,
+        "Output Token Throughput": 827.4128,
+        "Total Token Throughput": 2840.1495
+      },
+      "raw_copy_returncode": 0
+    }
+  ],
+  "updated_at": 1793705198.0029113,
+  "initial_states": {
+    "z00943141_qwen3_nightly_test": "running",
+    "z00943141_qwen3_nightly_ci_pinned": "exited"
+  },
+  "current_folder": "ci_pinned04",
+  "current_started_at": 1793704215.5309353,
+  "pid": 185400,
+  "restored_npu_check": "{\"torch\": \"2.10.0+cpu\", \"torch_npu\": \"2.10.0.post7\", \"visible_count\": 4, \"names\": [\"Ascend910B3\", \"Ascend910B3\", \"Ascend910B3\", \"Ascend910B3\"]}\n",
+  "final_states": {
+    "z00943141_qwen3_nightly_test": "running",
+    "z00943141_qwen3_nightly_ci_pinned": "exited"
+  },
+  "finished_at": 1793705198.00291
+}

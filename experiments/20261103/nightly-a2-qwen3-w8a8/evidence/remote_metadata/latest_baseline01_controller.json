@@ -1,0 +1,12 @@
+{
+  "pid": 150213,
+  "command": [
+    "docker",
+    "exec",
+    "z00943141_qwen3_nightly_test",
+    "bash",
+    "-elc",
+    "python3 -u /setup/inside_runner_latest.py --output /results/latest_baseline01"
+  ],
+  "start_time": 1793696962.6561272
+}

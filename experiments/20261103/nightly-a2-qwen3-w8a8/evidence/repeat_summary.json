@@ -1,0 +1,80 @@
+{
+  "image": "sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df",
+  "scope": "Local A2 only; the actual GitHub CI runner was not rerun",
+  "cpu_policy": "Same 256-CPU host, 28 main CPUs per rank, unchanged ondemand governor; no manual clock lock",
+  "n": 3,
+  "expected_n": 3,
+  "rows": [
+    {
+      "folder": "ci_pinned02",
+      "output_token_throughput": 818.2533,
+      "duration_ms": 329971.1644,
+      "mean_tpot_ms": 18.0,
+      "mean_ttft_ms": 44953.3,
+      "mean_e2el_ms": 72004.3,
+      "success_requests": 180.0,
+      "failed_requests": 0.0,
+      "input_tokens": 656793.0,
+      "output_tokens": 270000.0,
+      "verified_mrv2_ranks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binding_failures": 0
+    },
+    {
+      "folder": "ci_pinned03",
+      "output_token_throughput": 820.0483,
+      "duration_ms": 329248.8936,
+      "mean_tpot_ms": 18.0,
+      "mean_ttft_ms": 44949.2,
+      "mean_e2el_ms": 71981.7,
+      "success_requests": 180.0,
+      "failed_requests": 0.0,
+      "input_tokens": 656793.0,
+      "output_tokens": 270000.0,
+      "verified_mrv2_ranks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binding_failures": 0
+    },
+    {
+      "folder": "ci_pinned04",
+      "output_token_throughput": 827.4128,
+      "duration_ms": 326318.3858,
+      "mean_tpot_ms": 17.8,
+      "mean_ttft_ms": 44496.4,
+      "mean_e2el_ms": 71249.4,
+      "success_requests": 180.0,
+      "failed_requests": 0.0,
+      "input_tokens": 656793.0,
+      "output_tokens": 270000.0,
+      "verified_mrv2_ranks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "binding_failures": 0
+    }
+  ],
+  "statistics": {
+    "mean": 821.9048,
+    "median": 820.0483,
+    "min": 818.2533,
+    "max": 827.4128,
+    "sample_sd": 4.853767016452248,
+    "cv_percent": 0.5905510001221854,
+    "range_percent_of_mean": 1.114423470942131
+  },
+  "ci_single_reference": 767.3497,
+  "local_mean_above_ci_percent": 7.10954861909765,
+  "target_802_passes": 3,
+  "original_user_gate_777_94_passes": 3,
+  "inference_limit": "Three local runs characterize local variability only. CI variability and the source of the cross-host gap remain unmeasured."
+}

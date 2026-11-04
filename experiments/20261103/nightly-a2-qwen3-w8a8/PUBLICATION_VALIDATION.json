@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "experiment_date": "2026-11-03",
+  "publication_date": "2026-11-04",
+  "evidence_files_checked": 139,
+  "json_documents_checked": 60,
+  "jsonl_records_checked": 1027,
+  "files_scanned_for_credentials_and_identifiers": 144,
+  "known_credential_value_check_enabled": true,
+  "credential_and_identifier_findings": 0,
+  "recomputed_analysis": [
+    {
+      "script": "summarize_repeats.py",
+      "returncode": 0
+    },
+    {
+      "script": "validate_repeats.py",
+      "returncode": 0
+    },
+    {
+      "script": "compare_actual_requests.py",
+      "returncode": 0
+    },
+    {
+      "script": "build_ci_local_differences.py",
+      "returncode": 0
+    }
+  ],
+  "recomputed_reports_equal": true,
+  "relative_links_checked": 75,
+  "source_records_unchanged": true,
+  "binary_artifact_note": "SQLite and the original public CI ZIP are preserved as bytes; model/driver/image binaries and compile caches are excluded.",
+  "errors": []
+}

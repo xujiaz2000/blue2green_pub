@@ -1,0 +1,197 @@
+{
+  "paths": {
+    "/usr/local/Ascend": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/usr/local/Ascend/driver/tools/npu-smi": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/usr/bin/docker": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/usr/local/bin/docker": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/snap/bin/docker": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/var/run/docker.sock": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/mnt/share": {
+      "exists": true,
+      "is_dir": true,
+      "children": [
+        "public",
+        "x30055540",
+        "list_keys.py",
+        "j00648035",
+        "ljb-migration",
+        "l30055792",
+        "f00644560",
+        "c30083170",
+        "wjc_gbsa_tmp",
+        "ascend-ci",
+        "Minimax-M3.1-Flash-w8a8",
+        "glm53_port_serve2.log",
+        ".cache",
+        "pre_glm53f_src",
+        "zouchangsong_npu_recovery_20261023",
+        "h00943455",
+        "b00886564",
+        "y00939322",
+        "glm53_port_serve5.log",
+        "VisionSDK.tar.gz",
+        "start_slim.sh",
+        "glm53_dev_src",
+        "glm53_slim_serve9.log",
+        "z00949194-reinstall",
+        "t00987544",
+        "YAPF",
+        "s00574452",
+        "glm53_slim_serve7.log",
+        "c00850989",
+        "w30062860",
+        "z00919488",
+        "x00937962",
+        "w00937462",
+        "codex-pd-mixed-20261021",
+        "z0964904",
+        ".codex-downloads",
+        "z00943141",
+        "l30070400",
+        "mxIndex",
+        "VisionSDK",
+        "glm53_slim_serve18.log",
+        "host-image-backups",
+        "y30061513",
+        "z00909740",
+        "dsv4-pro-mrv2-1m-20261022",
+        "glm53_slim_serve16.log",
+        "c00514243",
+        "codex-kimi16-stash-refresh-c2e6ad214",
+        "codex-kimi16-main3pr-20260930",
+        "glm53_keys.json.gz",
+        "MiniMax-M3.1-Flash-w8a8-quarot.quant.log",
+        "glm53_slim_serve11.log",
+        "glm53_slim_tp1_20261020",
+        "cann",
+        "c30087003",
+        "zyj",
+        "datasets",
+        "dsv4-pro-mrv2-1m-dp-relaunch-20261023",
+        "glm53_slim_serve23.log",
+        "lockprobe.2703270",
+        "MiniMax-M3.1-Flash",
+        "codex-kimi16-main3pr-image-pull.exit",
+        "x00883235",
+        "z30076177.tar.gz",
+        ".wtest_ 2",
+        "vllm-ci",
+        "wangchao_gpkv_verify",
+        "r00984988",
+        "g00977764",
+        "t00970481",
+        "Alyce",
+        "images",
+        "dsv4f",
+        "l00649558_new",
+        "l00649558",
+        "glm53_slim_serve1.log",
+        "glm53_slim_serve6.log",
+        "tmp",
+        "codex-kimi16-bounded-ut-20260930",
+        "dump_keys.py",
+        "test_reg.py",
+        "glm53_slim_serve8.log",
+        "lp",
+        "z00951393",
+        "MiniMax-M3.1-Flash-w8a8-quarot",
+        "ljb",
+        "p00893103",
+        "quant_keys.py",
+        "w60037606",
+        "glm53_port_serve4.log",
+        "zx_env_sync_20261029.tar.gz",
+        "modelscope",
+        "l00977753",
+        "w00976683",
+        "glm53_kvdev_src.tgz",
+        "glm53_port_serve3.log",
+        "Qwen3.8-27B-DSpark",
+        "l00723457",
+        "cann_autotest_log",
+        "dsv41f_instr"
+      ]
+    },
+    "/opt": {
+      "exists": true,
+      "is_dir": true,
+      "children": [
+        "clabagent"
+      ]
+    },
+    "/dev/davinci0": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/dev/davinci_manager": {
+      "exists": false,
+      "is_dir": false
+    },
+    "/home/ubuntu": {
+      "exists": true,
+      "is_dir": true,
+      "children": [
+        ".Xauthority",
+        ".sudo_as_admin_successful",
+        ".bash_logout",
+        ".bashrc",
+        ".ssh",
+        ".wget-hsts",
+        ".cache",
+        ".profile",
+        ".bash_history"
+      ]
+    }
+  },
+  "commands": {
+    "id": {
+      "returncode": 0,
+      "stdout": "uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),110(lxd)\n",
+      "stderr": ""
+    },
+    "sudo": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sudo: a password is required\n"
+    },
+    "pci": {
+      "returncode": 0,
+      "stdout": "00:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n00:08.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n00:10.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n00:11.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n00:12.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n01:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n02:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n03:00.0 VGA compatible controller [0300]: Huawei Technologies Co., Ltd. Hi171x Series [iBMC Intelligent Management system chip w/VGA support] [19e5:1711] (rev 01)\n04:00.0 Signal processing controller [1180]: Huawei Technologies Co., Ltd. iBMA Virtual Network Adapter [19e5:1710] (rev 01)\n05:00.0 RAID bus controller [0104]: Huawei Technologies Co., Ltd. Device [19e5:3758] (rev 21)\n34:01.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\n34:02.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\n34:03.0 SATA controller [0106]: Huawei Technologies Co., Ltd. HiSilicon AHCI HBA [19e5:a235] (rev 21)\n34:04.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\n3a:00.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 1.1 Host Controller [19e5:a23b] (rev 21)\n3a:01.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 2.0 2-port Host Controller [19e5:a239] (rev 21)\n3a:02.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 3.0 Host Controller [19e5:a238] (rev 21)\n3c:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\n3d:00.0 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE RDMA Network Controller [19e5:a222] (rev 21)\n3d:00.1 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE Network Controller [19e5:a221] (rev 21)\n3d:00.2 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE RDMA Network Controller [19e5:a222] (rev 21)\n3d:00.3 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE Network Controller [19e5:a221] (rev 21)\n40:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n40:08.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n40:10.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n41:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n42:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n43:00.0 Ethernet controller [0200]: Huawei Technologies Co., Ltd. Device [19e5:0222] (rev 21)\n43:00.1 Ethernet controller [0200]: Huawei Technologies Co., Ltd. Device [19e5:0222] (rev 21)\n74:01.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\n74:02.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\n74:03.0 SATA controller [0106]: Huawei Technologies Co., Ltd. HiSilicon AHCI HBA [19e5:a235] (rev 21)\n74:04.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\n7a:00.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 1.1 Host Controller [19e5:a23b] (rev 21)\n7a:01.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 2.0 2-port Host Controller [19e5:a239] (rev 21)\n7a:02.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 3.0 Host Controller [19e5:a238] (rev 21)\n7c:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\n80:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n80:08.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n80:10.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n80:12.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\n81:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n82:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\n83:00.0 Non-Volatile memory controller [0108]: Huawei Technologies Co., Ltd. ES3000 V6 NVMe PCIe SSD [19e5:3754]\n84:00.0 Non-Volatile memory controller [0108]: Huawei Technologies Co., Ltd. ES3000 V6 NVMe PCIe SSD [19e5:3754]\nb4:01.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\nb4:02.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\nb4:03.0 SATA controller [0106]: Huawei Technologies Co., Ltd. HiSilicon AHCI HBA [19e5:a235] (rev 21)\nb4:04.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\nba:00.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 1.1 Host Controller [19e5:a23b] (rev 21)\nba:01.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 2.0 2-port Host Controller [19e5:a239] (rev 21)\nba:02.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 3.0 Host Controller [19e5:a238] (rev 21)\nbc:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\nbd:00.0 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE RDMA Network Controller [19e5:a222] (rev 21)\nbd:00.1 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE Network Controller [19e5:a221] (rev 21)\nbd:00.2 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE RDMA Network Controller [19e5:a222] (rev 21)\nbd:00.3 Ethernet controller [0200]: Huawei Technologies Co., Ltd. HNS GE/10GE/25GE Network Controller [19e5:a221] (rev 21)\nc0:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\nc0:08.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\nc0:10.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCIe Root Port with Gen4 [19e5:a120] (rev 21)\nc1:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\nc2:00.0 Processing accelerators [1200]: Huawei Technologies Co., Ltd. Device [19e5:d802] (rev 20)\nf4:01.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\nf4:02.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\nf4:03.0 SATA controller [0106]: Huawei Technologies Co., Ltd. HiSilicon AHCI HBA [19e5:a235] (rev 21)\nf4:04.0 Serial Attached SCSI controller [0107]: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA [19e5:a230] (rev 21)\nfa:00.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 1.1 Host Controller [19e5:a23b] (rev 21)\nfa:01.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 2.0 2-port Host Controller [19e5:a239] (rev 21)\nfa:02.0 USB controller [0c03]: Huawei Technologies Co., Ltd. HiSilicon USB 3.0 Host Controller [19e5:a238] (rev 21)\nfc:00.0 PCI bridge [0604]: Huawei Technologies Co., Ltd. HiSilicon PCI-PCI Bridge [19e5:a121] (rev 20)\n",
+      "stderr": ""
+    },
+    "docker_service": {
+      "returncode": 4,
+      "stdout": "",
+      "stderr": "Unit docker.service could not be found.\n"
+    },
+    "os": {
+      "returncode": 0,
+      "stdout": "PRETTY_NAME=\"Ubuntu 22.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.4 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+      "stderr": ""
+    },
+    "mounts": {
+      "returncode": 0,
+      "stdout": "TARGET     SOURCE                FSTYPE OPTIONS\n/mnt/share suzblue.server:/share nfs    rw,relatime,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,nolock,proto=tcp,nconnect=8,timeo=600,retrans=2,sec=sys,mountaddr=178.27.1.16,mountvers=3,mountport=2050,mountproto=udp,local_lock=all,addr=178.27.1.16\n",
+      "stderr": ""
+    }
+  },
+  "devices": []
+}

@@ -8,3 +8,5 @@
 - [10-14 最新 main：16 组纯性能实验](20261014/latest-main-factorial/README.md)（180 请求，统一预热，不采 profiling）
 
 - [2026-10-16：GLM-5.3-Flash MRV2 异步 MTP+PP 问题复盘与最小修复](20261016/glm53-flash-mrv2-mtp-pp/README.md)（两处修复、完整补丁、八组 GSM8K 结果）
+
+- [2026-11-03：Qwen3 W8A8 A2 Nightly 固定镜像复现与三轮重复](20261103/nightly-a2-qwen3-w8a8/README.md)

@@ -1,0 +1,12 @@
+{
+  "pid": 161026,
+  "command": [
+    "docker",
+    "exec",
+    "z00943141_qwen3_nightly_ci_pinned",
+    "bash",
+    "-elc",
+    "python3 -u /setup/inside_runner.py --output /results/ci_pinned02"
+  ],
+  "start_time": 1793698185.3916676
+}

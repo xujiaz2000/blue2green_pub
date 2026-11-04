@@ -15,12 +15,15 @@ experiments/                     本机对比实验
     mrv2/                        BF16 / W8A8 × CANN 9.1 / 9.2
   20261016/
     glm53-flash-mrv2-mtp-pp/      BF16 异步 MTP+PP 最小修复与 GSM8K 验证
+  20261103/
+    nightly-a2-qwen3-w8a8/        Nightly 固定镜像复现与三轮重复
 archive/                         历史管理记录
   repo-merge/
 ```
 
 | 内容 | 入口 |
 | --- | --- |
+| Qwen3 W8A8 A2 Nightly 复现与三轮重复 | [环境、结果、完整证据与复现步骤](experiments/20261103/nightly-a2-qwen3-w8a8/README.md) |
 | BF16 月度吞吐 | [统计与折线图](ci/20260908-20261008/bf16/README.md) |
 | W8A8 月度吞吐 | [统计与折线图](ci/20260908-20261008/w8a8/README.md) |
 | 排除 PR 触发的月度吞吐 | [BF16 / W8A8 统计](ci/20260909-20261009/non-pr/README.md) |

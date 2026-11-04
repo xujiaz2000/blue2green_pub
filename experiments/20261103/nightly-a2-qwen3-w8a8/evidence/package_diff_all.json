@@ -1,0 +1,62 @@
+[
+  {
+    "package": "anyio",
+    "latest": "4.16.0",
+    "pinned_ci": "4.15.1"
+  },
+  {
+    "package": "cbor2",
+    "latest": "6.2.0.post2",
+    "pinned_ci": "6.1.5"
+  },
+  {
+    "package": "mistral_common",
+    "latest": "1.13.1",
+    "pinned_ci": "1.13.0"
+  },
+  {
+    "package": "openai",
+    "latest": "3.42.1",
+    "pinned_ci": "3.42.0"
+  },
+  {
+    "package": "platformdirs",
+    "latest": "4.14.3",
+    "pinned_ci": "4.14.2"
+  },
+  {
+    "package": "pyelftools",
+    "latest": "0.33",
+    "pinned_ci": null
+  },
+  {
+    "package": "pytest-asyncio",
+    "latest": "1.4.1.post1",
+    "pinned_ci": "1.4.1"
+  },
+  {
+    "package": "python-discovery",
+    "latest": "1.9.1",
+    "pinned_ci": "1.9.0"
+  },
+  {
+    "package": "torch_npu",
+    "latest": "2.10.0.post7",
+    "pinned_ci": "2.10.0.post4"
+  },
+  {
+    "package": "triton",
+    "latest": "3.6.0",
+    "pinned_ci": "3.5.0"
+  },
+  {
+    "package": "triton_ascend",
+    "latest": "3.6.0.post2",
+    "pinned_ci": "3.2.2"
+  },
+  {
+    "package": "vllm_ascend",
+    "latest": "0.19.1rc2.dev3276+g23e0e3764",
+    "pinned_ci": "0.19.1rc2.dev3242+gb3b82c137"
+  }
+]

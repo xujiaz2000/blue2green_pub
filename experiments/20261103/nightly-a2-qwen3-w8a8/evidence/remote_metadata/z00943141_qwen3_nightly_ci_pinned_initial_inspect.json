@@ -1,0 +1,338 @@
+[
+  {
+    "Id": "a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2",
+    "Created": "2026-11-03T09:25:08.45813309Z",
+    "Path": "/bin/bash",
+    "Args": [
+      "-elc",
+      "sleep infinity"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 159121,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-03T09:25:08.5201987Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    },
+    "Image": "sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df",
+    "ResolvConfPath": "/var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/hostname",
+    "HostsPath": "/var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/hosts",
+    "LogPath": "/var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2-json.log",
+    "Name": "/z00943141_qwen3_nightly_ci_pinned",
+    "RestartCount": 0,
+    "Driver": "overlayfs",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "docker-default",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": [
+        "/etc/ascend_install.info:/etc/ascend_install.info:ro",
+        "/home/ubuntu/qwen_nightly_setup:/setup:ro",
+        "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/outputs:/results",
+        "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/Eco-Tech/Qwen3-30B-A3B-w8a8:/inputs/model:ro",
+        "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/vllm-ascend/GSM8K-in3500-bs400:/inputs/dataset:ro",
+        "/usr/local/Ascend/driver:/usr/local/Ascend/driver:ro",
+        "/usr/local/dcmi:/usr/local/dcmi:ro",
+        "/usr/local/bin/npu-smi:/usr/local/bin/npu-smi:ro"
+      ],
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "host",
+      "PortBindings": {},
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": null,
+      "DnsOptions": [],
+      "DnsSearch": [],
+      "ExtraHosts": null,
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 34359738368,
+      "Runtime": "runc",
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": [],
+      "BlkioDeviceReadBps": [],
+      "BlkioDeviceWriteBps": [],
+      "BlkioDeviceReadIOps": [],
+      "BlkioDeviceWriteIOps": [],
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": [
+        {
+          "PathOnHost": "/dev/davinci0",
+          "PathInContainer": "/dev/davinci0",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/davinci1",
+          "PathInContainer": "/dev/davinci1",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/davinci2",
+          "PathInContainer": "/dev/davinci2",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/davinci3",
+          "PathInContainer": "/dev/davinci3",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/davinci_manager",
+          "PathInContainer": "/dev/davinci_manager",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/devmm_svm",
+          "PathInContainer": "/dev/devmm_svm",
+          "CgroupPermissions": "rwm"
+        },
+        {
+          "PathOnHost": "/dev/hisi_hdc",
+          "PathInContainer": "/dev/hisi_hdc",
+          "CgroupPermissions": "rwm"
+        }
+      ],
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": [],
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "MaskedPaths": [
+        "/proc/acpi",
+        "/proc/asound",
+        "/proc/interrupts",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/sys/devices/virtual/powercap",
+        "/sys/firmware"
+      ],
+      "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+      ]
+    },
+    "Storage": {
+      "RootFS": {
+        "Snapshot": {
+          "Name": "overlayfs"
+        }
+      }
+    },
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/Eco-Tech/Qwen3-30B-A3B-w8a8",
+        "Destination": "/inputs/model",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/vllm-ascend/GSM8K-in3500-bs400",
+        "Destination": "/inputs/dataset",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/usr/local/Ascend/driver",
+        "Destination": "/usr/local/Ascend/driver",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/usr/local/dcmi",
+        "Destination": "/usr/local/dcmi",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/usr/local/bin/npu-smi",
+        "Destination": "/usr/local/bin/npu-smi",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/etc/ascend_install.info",
+        "Destination": "/etc/ascend_install.info",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/home/ubuntu/qwen_nightly_setup",
+        "Destination": "/setup",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/outputs",
+        "Destination": "/results",
+        "Mode": "",
+        "RW": true,
+        "Propagation": "rprivate"
+      }
+    ],
+    "Config": {
+      "Hostname": "a2-local.example",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": false,
+      "AttachStderr": false,
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "ASCEND_RT_VISIBLE_DEVICES=0,1,2,3",
+        "ASCEND_VISIBLE_DEVICES=0,1,2,3",
+        "LANG=C.UTF-8",
+        "PATH=/root/.cargo/bin:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/bin:/usr/local/Ascend/ascend-toolkit/latest/bin:/usr/local/Ascend/ascend-toolkit/latest/compiler/ccec_compiler/bin:/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.2.1/tools/show_kernel_debug_data:/usr/local/Ascend/cann-9.2.1/tools/msobjdump:/usr/local/Ascend/cann-9.2.1/bin:/usr/local/Ascend/cann-9.2.1/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.2.1/tools/profiler/bin:/usr/local/Ascend/cann-9.2.1/tools/ascend_system_advisor/asys:/usr/local/python3.12.16/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LD_LIBRARY_PATH=/usr/local/Ascend/cann-9.2.1/lib64:/usr/local/Ascend/cann-9.2.1/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.2.1/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.2.1/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.16/lib:",
+        "ASCEND_TOOLKIT_HOME=/usr/local/Ascend/cann-9.2.1",
+        "ASCEND_TOOLKIT_LATEST_HOME=/usr/local/Ascend/ascend-toolkit/latest",
+        "PYTHONPATH=/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.2.1/python/site-packages:/usr/local/Ascend/cann-9.2.1/opp/built-in/op_impl/ai_core/tbe:",
+        "ASCEND_AICPU_PATH=/usr/local/Ascend/cann-9.2.1",
+        "ASCEND_OPP_PATH=/usr/local/Ascend/cann-9.2.1/opp",
+        "TOOLCHAIN_HOME=/usr/local/Ascend/cann-9.2.1/toolkit",
+        "ASCEND_HOME_PATH=/usr/local/Ascend/cann-9.2.1",
+        "CMAKE_PREFIX_PATH=/usr/local/Ascend/cann-9.2.1/toolkit/tools/tikicpulib/lib/cmake:/usr/local/Ascend/cann-9.2.1/lib64/cmake",
+        "ATB_HOME_PATH=/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1",
+        "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE=0",
+        "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE=0",
+        "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE=0",
+        "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT=1",
+        "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT=5",
+        "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE=1",
+        "ATB_COMPARE_TILING_EVERY_KERNEL=0",
+        "ATB_SHARE_MEMORY_NAME_SUFFIX=",
+        "ATB_MATMUL_SHUFFLE_K_ENABLE=1",
+        "LCCL_DETERMINISTIC=0",
+        "LCCL_PARALLEL=0",
+        "ATB_CXX_ABI=1",
+        "DEBIAN_FRONTEND=noninteractive",
+        "SOC_VERSION=ascend910b1",
+        "TASK_QUEUE_ENABLE=1",
+        "OMP_NUM_THREADS=1"
+      ],
+      "Cmd": [
+        "-elc",
+        "sleep infinity"
+      ],
+      "Image": "swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend@sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df",
+      "Volumes": null,
+      "WorkingDir": "/workspace",
+      "Entrypoint": [
+        "/bin/bash"
+      ],
+      "Labels": {
+        "codex.qwen3.run": "124914290773",
+        "org.opencontainers.image.version": "22.04"
+      }
+    },
+    "NetworkSettings": {
+      "SandboxID": "49ba7d972efa3f6603072fc7b56d8f439a12338c3e3c353a33210657a2a4fed7",
+      "SandboxKey": "/var/run/docker/netns/default",
+      "Ports": {},
+      "Networks": {
+        "host": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": null,
+          "DriverOpts": null,
+          "GwPriority": 0,
+          "NetworkID": "3dd170a3f040b12faca464b022c75c16430bd7c0dc1c237e97eab34ce2c69927",
+          "EndpointID": "178dc0c269b7e219598b27b0219889c2a44ce0f485263c5e53acb90423de9dce",
+          "Gateway": "",
+          "IPAddress": "",
+          "MacAddress": "",
+          "IPPrefixLen": 0,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "DNSNames": null
+        }
+      }
+    },
+    "ImageManifestDescriptor": {
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "digest": "sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df",
+      "size": 4279,
+      "platform": {
+        "architecture": "arm64",
+        "os": "linux"
+      }
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{"phase": "download", "time_utc": "2026-11-03T08:52:49Z", "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Ascend%20HDK/Ascend%20HDK%2025.5.2/Ascend-hdk-910b-npu-driver_25.5.2_linux-aarch64.run"}
+download_bytes 20971520
+download_bytes 41943040
+download_bytes 62914560
+download_bytes 83886080
+download_bytes 104857600
+{"phase": "verify", "time_utc": "2026-11-03T08:52:51Z", "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Ascend%20HDK/Ascend%20HDK%2025.5.2/Ascend-hdk-910b-npu-driver_25.5.2_linux-aarch64.run", "bytes": 120936131, "sha256": "96863152f7aa416246119690c5f9f290e573b3e4e864e5d0e78e47a060db0bfd"}
+Makeself logfile: /root/log/makeself/makeself.log
+Verifying archive integrity...     0%     3%     6%    10%    13%    17%    20%    24%    27%    31%    34%    38%    41%    45%    48%    52%    55%    58%    62%    65%    69%    72%    76%    79%    83%    86%    90%    93%    97%  100%   SHA256 checksums are OK. All good.
+Verifying archive integrity...     0%     3%     6%    10%    13%    17%    20%    24%    27%    31%    34%    38%    41%    45%    48%    52%    55%    58%    62%    65%    69%    72%    76%    79%    83%    86%    90%    93%    97%  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND DRIVER RUN PACKAGE     0%     3%     6%    10%    13%    17%    20%    24%    27%    31%    34%    38%    41%    45%    48%    52%    55%    58%    62%    65%    69%    72%    76%    79%    83%    86%    90%    93%    97%  100%  
+[Driver] [2026-11-03 08:52:55] [INFO]Start time: 2026-11-03 08:52:55
+[Driver] [2026-11-03 08:52:55] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Driver] [2026-11-03 08:52:55] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Driver] [2026-11-03 08:52:56] [INFO]End time: 2026-11-03 08:52:56
+{"phase": "install", "time_utc": "2026-11-03T08:52:56Z", "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Ascend%20HDK/Ascend%20HDK%2025.5.2/Ascend-hdk-910b-npu-driver_25.5.2_linux-aarch64.run", "bytes": 120936131, "sha256": "96863152f7aa416246119690c5f9f290e573b3e4e864e5d0e78e47a060db0bfd"}
+[Driver] [2026-11-03 08:52:58] [INFO]Start time: 2026-11-03 08:52:58
+[Driver] [2026-11-03 08:52:58] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Driver] [2026-11-03 08:52:58] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Driver] [2026-11-03 08:52:59] [WARNING][33mDo not power off or restart the system during the installation/upgrade[0m
+[Driver] [2026-11-03 08:52:59] [INFO]set username and usergroup, HwHiAiUser:HwHiAiUser
+[Driver] [2026-11-03 08:53:00] [INFO]driver install type: DKMS
+[Driver] [2026-11-03 08:53:00] [INFO]upgradePercentage:10%
+[Driver] [2026-11-03 08:53:07] [INFO]upgradePercentage:30%
+[Driver] [2026-11-03 08:53:07] [INFO]upgradePercentage:40%
+[Driver] [2026-11-03 08:53:21] [INFO]upgradePercentage:90%
+[Driver] [2026-11-03 08:53:23] [INFO]Waiting for device startup...
+[Driver] [2026-11-03 08:53:25] [INFO]Device startup success
+[Driver] [2026-11-03 08:54:06] [INFO]upgradePercentage:100%
+[Driver] [2026-11-03 08:54:07] [INFO][32mDriver package installed successfully! The new version takes effect immediately. [0m
+[Driver] [2026-11-03 08:54:08] [INFO]End time: 2026-11-03 08:54:08
+{"phase": "finished", "time_utc": "2026-11-03T08:54:08Z", "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Ascend%20HDK/Ascend%20HDK%2025.5.2/Ascend-hdk-910b-npu-driver_25.5.2_linux-aarch64.run", "bytes": 120936131, "sha256": "96863152f7aa416246119690c5f9f290e573b3e4e864e5d0e78e47a060db0bfd", "returncode": 0}

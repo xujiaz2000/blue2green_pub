@@ -1,0 +1,8 @@
+{
+  "source_experiment": "/vllm-workspace/vllm-ascend/outputs/default/20261103_111916",
+  "files": {
+    "aisbench_configs": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/outputs/ci_pinned04/aisbench_configs",
+    "aisbench_details.jsonl": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/outputs/ci_pinned04/aisbench_details.jsonl",
+    "aisbench_db_data": "/mnt/share/z00943141/qwen3_nightly_20261103_124914290773/outputs/ci_pinned04/aisbench_db_data"
+  }
+}

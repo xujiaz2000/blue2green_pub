@@ -1,0 +1,79 @@
+{
+  "source_job": "https://github.com/vllm-project/vllm-ascend/actions/runs/41327490550/job/124914290773",
+  "started_ns": 1793704215900293840,
+  "success": true,
+  "measurement_kind": "historical_ci_image_pinned_by_arm64_digest",
+  "command": [
+    "/usr/local/python3.12.16/bin/python3",
+    "-u",
+    "-m",
+    "pytest",
+    "-sv",
+    "tests/e2e/common/single_node/test_single_node.py"
+  ],
+  "detailed_telemetry": false,
+  "path_substitution": {
+    "model": "/inputs/model",
+    "dataset": "/inputs/dataset"
+  },
+  "pytest_returncode": 0,
+  "formal_metrics": {
+    "E2EL": 71249.4,
+    "TTFT": 44496.4,
+    "TPOT": 17.8,
+    "ITL": 17.8,
+    "InputTokens": 3648.85,
+    "OutputTokens": 1500.0,
+    "OutputTokenThroughput": 23.6779,
+    "Benchmark Duration": 326318.3858,
+    "Total Requests": 180.0,
+    "Failed Requests": 0.0,
+    "Success Requests": 180.0,
+    "Concurrency": 39.3018,
+    "Max Concurrency": 45.0,
+    "Request Throughput": 0.5516,
+    "Total Input Tokens": 656793.0,
+    "Prefill Token Throughput": 82.0033,
+    "Total Generated Tokens": 270000.0,
+    "Input Token Throughput": 2012.7367,
+    "Output Token Throughput": 827.4128,
+    "Total Token Throughput": 2840.1495
+  },
+  "model_runner_validation": {
+    "expected": "MRV2",
+    "ranks_with_v2_load": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "v2_worker_warnings": 4,
+    "v1_load_detected": false
+  },
+  "binding": {
+    "allocation_logs": 4,
+    "failed_logs": 0,
+    "irq_skipped": true,
+    "numa_note": "migrate logs do not establish successful physical page migration"
+  },
+  "thresholds": {
+    "temporary_ci": {
+      "baseline": 765,
+      "floor": 742.05,
+      "pass": true
+    },
+    "original_w8a8": {
+      "baseline": 805.872,
+      "floor": 781.69584,
+      "pass": true
+    },
+    "user_802": {
+      "baseline": 802,
+      "floor": 777.94,
+      "pass": true
+    }
+  },
+  "relative_to_ci_767_3497_pct": 7.8273439085204455,
+  "measurement_valid": true,
+  "finished_ns": 1793705166284425420
+}

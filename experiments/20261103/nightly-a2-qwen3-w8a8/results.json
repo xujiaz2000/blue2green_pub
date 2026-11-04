@@ -1,0 +1,348 @@
+{
+  "experiment_date": "2026-11-03",
+  "timezone": "Asia/Shanghai",
+  "publication_date": "2026-11-04",
+  "target_ci": {
+    "url": "https://github.com/vllm-project/vllm-ascend/actions/runs/41327490550/job/124914290773",
+    "metrics": {
+      "E2EL": 77018.9,
+      "TTFT": 48035.8,
+      "TPOT": 19.3,
+      "ITL": 19.3,
+      "InputTokens": 3648.85,
+      "OutputTokens": 1500.0,
+      "OutputTokenThroughput": 21.8295,
+      "Benchmark Duration": 351860.4314,
+      "Total Requests": 180.0,
+      "Failed Requests": 0.0,
+      "Success Requests": 180.0,
+      "Concurrency": 39.4003,
+      "Max Concurrency": 45.0,
+      "Request Throughput": 0.5116,
+      "Total Input Tokens": 656793.0,
+      "Prefill Token Throughput": 75.961,
+      "Total Generated Tokens": 270000.0,
+      "Input Token Throughput": 1866.6293,
+      "Output Token Throughput": 767.3497,
+      "Total Token Throughput": 2633.979
+    }
+  },
+  "runs": [
+    {
+      "run": "latest_baseline01",
+      "kind": "latest_rolling_image_not_exact_ci",
+      "ascend_sha": "23e0e3764293f0c85ebf96c1383fbbf431b8fbb3",
+      "vllm_sha": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+      "packages": {
+        "vllm": "0.32.0+empty",
+        "torch": "2.10.0+cpu",
+        "torch-npu": "2.10.0.post7",
+        "triton-ascend": "3.6.0.post2",
+        "transformers": "5.19.0",
+        "ais_bench_benchmark": "3.1.20260609"
+      },
+      "metrics": {
+        "E2EL": 72318.1,
+        "TTFT": 45154.2,
+        "TPOT": 18.1,
+        "ITL": 18.1,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.3342,
+        "Benchmark Duration": 330546.8913,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.381,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5446,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 80.8086,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 1986.9889,
+        "Output Token Throughput": 816.8281,
+        "Total Token Throughput": 2803.817
+      },
+      "mrv2_validation": {
+        "expected": "MRV2",
+        "ranks_with_v2_load": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "v2_worker_warnings": 4,
+        "v1_load_detected": false
+      },
+      "binding": {
+        "allocation_logs": 4,
+        "failed_logs": 0,
+        "irq_skipped": true,
+        "numa_note": "migrate logs do not establish successful physical page migration"
+      },
+      "started_ns": 1793696963010833280,
+      "finished_ns": 1793697895888295660,
+      "source_result": "evidence/latest_baseline01/result.json",
+      "source_environment": "evidence/latest_baseline01/environment.json",
+      "source_log": "evidence/latest_baseline01/pytest.log"
+    },
+    {
+      "run": "ci_pinned02",
+      "kind": "historical_ci_image_pinned_by_arm64_digest",
+      "ascend_sha": "b3b82c137ee242a774c29b56325133771f5f069d",
+      "vllm_sha": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+      "packages": {
+        "vllm": "0.32.0+empty",
+        "torch": "2.10.0+cpu",
+        "torch-npu": "2.10.0.post4",
+        "triton-ascend": "3.2.2",
+        "transformers": "5.19.0",
+        "ais_bench_benchmark": "3.1.20260609"
+      },
+      "metrics": {
+        "E2EL": 72004.3,
+        "TTFT": 44953.3,
+        "TPOT": 18.0,
+        "ITL": 18.0,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.4376,
+        "Benchmark Duration": 329971.1644,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.2785,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5455,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 81.1697,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 1990.4557,
+        "Output Token Throughput": 818.2533,
+        "Total Token Throughput": 2808.7091
+      },
+      "mrv2_validation": {
+        "expected": "MRV2",
+        "ranks_with_v2_load": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "v2_worker_warnings": 4,
+        "v1_load_detected": false
+      },
+      "binding": {
+        "allocation_logs": 4,
+        "failed_logs": 0,
+        "irq_skipped": true,
+        "numa_note": "migrate logs do not establish successful physical page migration"
+      },
+      "started_ns": 1793698185745562220,
+      "finished_ns": 1793699146278056820,
+      "source_result": "evidence/ci_pinned02/result.json",
+      "source_environment": "evidence/ci_pinned02/environment.json",
+      "source_log": "evidence/ci_pinned02/pytest.log"
+    },
+    {
+      "run": "ci_pinned03",
+      "kind": "historical_ci_image_pinned_by_arm64_digest",
+      "ascend_sha": "b3b82c137ee242a774c29b56325133771f5f069d",
+      "vllm_sha": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+      "packages": {
+        "vllm": "0.32.0+empty",
+        "torch": "2.10.0+cpu",
+        "torch-npu": "2.10.0.post4",
+        "triton-ascend": "3.2.2",
+        "transformers": "5.19.0",
+        "ais_bench_benchmark": "3.1.20260609"
+      },
+      "metrics": {
+        "E2EL": 71981.7,
+        "TTFT": 44949.2,
+        "TPOT": 18.0,
+        "ITL": 18.0,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.4497,
+        "Benchmark Duration": 329248.8936,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.3523,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5467,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 81.1772,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 1994.8222,
+        "Output Token Throughput": 820.0483,
+        "Total Token Throughput": 2814.8705
+      },
+      "mrv2_validation": {
+        "expected": "MRV2",
+        "ranks_with_v2_load": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "v2_worker_warnings": 4,
+        "v1_load_detected": false
+      },
+      "binding": {
+        "allocation_logs": 4,
+        "failed_logs": 0,
+        "irq_skipped": true,
+        "numa_note": "migrate logs do not establish successful physical page migration"
+      },
+      "started_ns": 1793703263338744340,
+      "finished_ns": 1793704209899936020,
+      "source_result": "evidence/ci_pinned03/result.json",
+      "source_environment": "evidence/ci_pinned03/environment.json",
+      "source_log": "evidence/ci_pinned03/pytest.log"
+    },
+    {
+      "run": "ci_pinned04",
+      "kind": "historical_ci_image_pinned_by_arm64_digest",
+      "ascend_sha": "b3b82c137ee242a774c29b56325133771f5f069d",
+      "vllm_sha": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+      "packages": {
+        "vllm": "0.32.0+empty",
+        "torch": "2.10.0+cpu",
+        "torch-npu": "2.10.0.post4",
+        "triton-ascend": "3.2.2",
+        "transformers": "5.19.0",
+        "ais_bench_benchmark": "3.1.20260609"
+      },
+      "metrics": {
+        "E2EL": 71249.4,
+        "TTFT": 44496.4,
+        "TPOT": 17.8,
+        "ITL": 17.8,
+        "InputTokens": 3648.85,
+        "OutputTokens": 1500.0,
+        "OutputTokenThroughput": 23.6779,
+        "Benchmark Duration": 326318.3858,
+        "Total Requests": 180.0,
+        "Failed Requests": 0.0,
+        "Success Requests": 180.0,
+        "Concurrency": 39.3018,
+        "Max Concurrency": 45.0,
+        "Request Throughput": 0.5516,
+        "Total Input Tokens": 656793.0,
+        "Prefill Token Throughput": 82.0033,
+        "Total Generated Tokens": 270000.0,
+        "Input Token Throughput": 2012.7367,
+        "Output Token Throughput": 827.4128,
+        "Total Token Throughput": 2840.1495
+      },
+      "mrv2_validation": {
+        "expected": "MRV2",
+        "ranks_with_v2_load": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "v2_worker_warnings": 4,
+        "v1_load_detected": false
+      },
+      "binding": {
+        "allocation_logs": 4,
+        "failed_logs": 0,
+        "irq_skipped": true,
+        "numa_note": "migrate logs do not establish successful physical page migration"
+      },
+      "started_ns": 1793704215900293840,
+      "finished_ns": 1793705166284425420,
+      "source_result": "evidence/ci_pinned04/result.json",
+      "source_environment": "evidence/ci_pinned04/environment.json",
+      "source_log": "evidence/ci_pinned04/pytest.log"
+    }
+  ],
+  "repeat_statistics": {
+    "image": "sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df",
+    "scope": "Local A2 only; the actual GitHub CI runner was not rerun",
+    "cpu_policy": "Same 256-CPU host, 28 main CPUs per rank, unchanged ondemand governor; no manual clock lock",
+    "n": 3,
+    "expected_n": 3,
+    "rows": [
+      {
+        "folder": "ci_pinned02",
+        "output_token_throughput": 818.2533,
+        "duration_ms": 329971.1644,
+        "mean_tpot_ms": 18.0,
+        "mean_ttft_ms": 44953.3,
+        "mean_e2el_ms": 72004.3,
+        "success_requests": 180.0,
+        "failed_requests": 0.0,
+        "input_tokens": 656793.0,
+        "output_tokens": 270000.0,
+        "verified_mrv2_ranks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "binding_failures": 0
+      },
+      {
+        "folder": "ci_pinned03",
+        "output_token_throughput": 820.0483,
+        "duration_ms": 329248.8936,
+        "mean_tpot_ms": 18.0,
+        "mean_ttft_ms": 44949.2,
+        "mean_e2el_ms": 71981.7,
+        "success_requests": 180.0,
+        "failed_requests": 0.0,
+        "input_tokens": 656793.0,
+        "output_tokens": 270000.0,
+        "verified_mrv2_ranks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "binding_failures": 0
+      },
+      {
+        "folder": "ci_pinned04",
+        "output_token_throughput": 827.4128,
+        "duration_ms": 326318.3858,
+        "mean_tpot_ms": 17.8,
+        "mean_ttft_ms": 44496.4,
+        "mean_e2el_ms": 71249.4,
+        "success_requests": 180.0,
+        "failed_requests": 0.0,
+        "input_tokens": 656793.0,
+        "output_tokens": 270000.0,
+        "verified_mrv2_ranks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "binding_failures": 0
+      }
+    ],
+    "statistics": {
+      "mean": 821.9048,
+      "median": 820.0483,
+      "min": 818.2533,
+      "max": 827.4128,
+      "sample_sd": 4.853767016452248,
+      "cv_percent": 0.5905510001221854,
+      "range_percent_of_mean": 1.114423470942131
+    },
+    "ci_single_reference": 767.3497,
+    "local_mean_above_ci_percent": 7.10954861909765,
+    "target_802_passes": 3,
+    "original_user_gate_777_94_passes": 3,
+    "inference_limit": "Three local runs characterize local variability only. CI variability and the source of the cross-host gap remain unmeasured."
+  },
+  "interpretation": "Local low throughput was not reproduced. Observed local variation does not span the CI/local gap; CI variability and the specific environmental cause are not measured.",
+  "rollback_performed": false,
+  "rollback_reason": "All four local formal results exceeded 802",
+  "shutdown_note": "ci_pinned04 logged EngineDeadError during mode=abort teardown after AISBench had saved all 180 successful requests; details are in repeat_validation.json and pytest.log."
+}

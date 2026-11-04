@@ -1,0 +1,77 @@
+{
+  "environment_checks": [
+    {
+      "folder": "ci_pinned02",
+      "package_versions_equal": true,
+      "native_extension_hashes_equal": true,
+      "model_config_metadata_hashes_equal": true,
+      "dataset_file_hashes_equal": true,
+      "vllm_sha_equal": true,
+      "ascend_sha_equal": true,
+      "tracked_sources_clean": true,
+      "measurement_valid": true,
+      "all_requests_succeeded": true,
+      "four_mrv2_workers": true,
+      "cpu_allocation_equal": true,
+      "binding_failure_count": 0
+    },
+    {
+      "folder": "ci_pinned03",
+      "package_versions_equal": true,
+      "native_extension_hashes_equal": true,
+      "model_config_metadata_hashes_equal": true,
+      "dataset_file_hashes_equal": true,
+      "vllm_sha_equal": true,
+      "ascend_sha_equal": true,
+      "tracked_sources_clean": true,
+      "measurement_valid": true,
+      "all_requests_succeeded": true,
+      "four_mrv2_workers": true,
+      "cpu_allocation_equal": true,
+      "binding_failure_count": 0
+    },
+    {
+      "folder": "ci_pinned04",
+      "package_versions_equal": true,
+      "native_extension_hashes_equal": true,
+      "model_config_metadata_hashes_equal": true,
+      "dataset_file_hashes_equal": true,
+      "vllm_sha_equal": true,
+      "ascend_sha_equal": true,
+      "tracked_sources_clean": true,
+      "measurement_valid": true,
+      "all_requests_succeeded": true,
+      "four_mrv2_workers": true,
+      "cpu_allocation_equal": true,
+      "binding_failure_count": 0
+    }
+  ],
+  "cpu_policy_checks": [
+    {
+      "snapshot": "ci_pinned03_after_host_snapshot.json",
+      "governor_and_frequency_limits_unchanged": true
+    },
+    {
+      "snapshot": "ci_pinned04_after_host_snapshot.json",
+      "governor_and_frequency_limits_unchanged": true
+    }
+  ],
+  "local_generation_comparison": [
+    {
+      "against": "ci_pinned03",
+      "n": 180,
+      "input_mismatch_ids": [],
+      "identical_full_predictions": 0,
+      "median_common_prediction_prefix_chars": 174.0
+    },
+    {
+      "against": "ci_pinned04",
+      "n": 180,
+      "input_mismatch_ids": [],
+      "identical_full_predictions": 0,
+      "median_common_prediction_prefix_chars": 180.0
+    }
+  ],
+  "last_run_shutdown_note": "ci_pinned04 formal results saved at 11:25:43.641 UTC and benchmark finished before 11:25:46 UTC. The test then triggered mode=abort shutdown and killed EngineCore; the output-handler EngineDeadError was logged during that teardown. All 180 requests had completed successfully.",
+  "note": "Package/native extension hashes, model configuration metadata and dataset contents were checked. Historical CI weight bytes remain unverified; local rounds use the same read-only model files."
+}

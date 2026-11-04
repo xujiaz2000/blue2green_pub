@@ -1,0 +1,4 @@
+[Driver] [2026-11-03 08:50:48] [INFO]Start time: 2026-11-03 08:50:48
+[Driver] [2026-11-03 08:50:48] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Driver] [2026-11-03 08:50:48] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Driver] [2026-11-03 08:50:48] [ERROR]The current installation package and environment is not match, please check.

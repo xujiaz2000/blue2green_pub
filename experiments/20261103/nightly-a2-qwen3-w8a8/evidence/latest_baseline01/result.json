@@ -1,0 +1,85 @@
+{
+  "source_job": "https://github.com/vllm-project/vllm-ascend/actions/runs/41327490550/job/124914290773",
+  "started_ns": 1793696963010833280,
+  "success": true,
+  "measurement_kind": "latest_rolling_image_not_exact_ci",
+  "ci_ascend_sha": "b3b82c137ee242a774c29b56325133771f5f069d",
+  "ci_torch_npu_version": "2.10.0.post4",
+  "command": [
+    "/usr/local/python3.12.16/bin/python3",
+    "-u",
+    "-m",
+    "pytest",
+    "-sv",
+    "tests/e2e/common/single_node/test_single_node.py"
+  ],
+  "detailed_telemetry": false,
+  "path_substitution": {
+    "model": "/inputs/model",
+    "dataset": "/inputs/dataset"
+  },
+  "pytest_returncode": 0,
+  "formal_metrics": {
+    "E2EL": 72318.1,
+    "TTFT": 45154.2,
+    "TPOT": 18.1,
+    "ITL": 18.1,
+    "InputTokens": 3648.85,
+    "OutputTokens": 1500.0,
+    "OutputTokenThroughput": 23.3342,
+    "Benchmark Duration": 330546.8913,
+    "Total Requests": 180.0,
+    "Failed Requests": 0.0,
+    "Success Requests": 180.0,
+    "Concurrency": 39.381,
+    "Max Concurrency": 45.0,
+    "Request Throughput": 0.5446,
+    "Total Input Tokens": 656793.0,
+    "Prefill Token Throughput": 80.8086,
+    "Total Generated Tokens": 270000.0,
+    "Input Token Throughput": 1986.9889,
+    "Output Token Throughput": 816.8281,
+    "Total Token Throughput": 2803.817
+  },
+  "model_runner_validation": {
+    "expected": "MRV2",
+    "ranks_with_v2_load": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "v2_worker_warnings": 4,
+    "v1_load_detected": false
+  },
+  "binding": {
+    "allocation_logs": 4,
+    "failed_logs": 0,
+    "irq_skipped": true,
+    "numa_note": "migrate logs do not establish successful physical page migration"
+  },
+  "thresholds": {
+    "temporary_ci": {
+      "baseline": 765,
+      "floor": 742.05,
+      "pass": true
+    },
+    "original_w8a8": {
+      "baseline": 805.872,
+      "floor": 781.69584,
+      "pass": true
+    },
+    "user_802": {
+      "baseline": 802,
+      "floor": 777.94,
+      "pass": true
+    }
+  },
+  "target_802": {
+    "target": 802,
+    "pass": true
+  },
+  "relative_to_ci_767_3497_pct": 6.447959776357504,
+  "measurement_valid": true,
+  "finished_ns": 1793697895888295660
+}

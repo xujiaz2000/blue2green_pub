@@ -1,0 +1,1552 @@
+2026-11-01T16:03:43.1618067Z Current runner version: '2.338.0'
+2026-11-01T16:03:43.1625714Z Runner name: 'linux-aarch64-cpu-4-cn12-001-dqfc6-runner-q6mbr'
+2026-11-01T16:03:43.1626945Z Runner group name: 'Default'
+2026-11-01T16:03:43.1628284Z Machine name: 'linux-aarch64-cpu-4-cn12-001-dqfc6-runner-q6mbr'
+2026-11-01T16:03:43.1632408Z ##[group]GITHUB_TOKEN Permissions
+2026-11-01T16:03:43.1635037Z Contents: read
+2026-11-01T16:03:43.1635780Z Metadata: read
+2026-11-01T16:03:43.1636528Z Packages: write
+2026-11-01T16:03:43.1637197Z ##[endgroup]
+2026-11-01T16:03:43.1639806Z Secret source: Actions
+2026-11-01T16:03:43.1640925Z Cache mode: write
+2026-11-01T16:03:43.1642377Z Runner is running behind proxy server 'http://squid-cache.squid.svc.cluster.local:3128' for all HTTP requests.
+2026-11-01T16:03:43.1644199Z Runner is running behind proxy server 'http://squid-cache.squid.svc.cluster.local:3128' for all HTTPS requests.
+2026-11-01T16:03:43.1645459Z Prepare workflow directory
+2026-11-01T16:03:43.2423190Z Prepare all required actions
+2026-11-01T16:03:43.2476531Z Getting action download info
+2026-11-01T16:03:47.2490500Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-01T16:03:50.5466939Z Download action repository 'docker/login-action@v4' (SHA:81c6f93d4bc991e510b342a00b419b3bb4efc5c6)
+2026-11-01T16:03:52.6949695Z Uses: vllm-project/vllm-ascend/.github/workflows/_nightly_image_build.yaml@refs/heads/main (b3b82c137ee242a774c29b56325133771f5f069d)
+2026-11-01T16:03:52.6953764Z ##[group] Inputs
+2026-11-01T16:03:52.6954074Z   target: a2
+2026-11-01T16:03:52.6954326Z   vllm_ascend_branch: main
+2026-11-01T16:03:52.6954612Z   base_image_branch: main
+2026-11-01T16:03:52.6954884Z   build_type: full
+2026-11-01T16:03:52.6955183Z   swr_registry: swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:03:52.6955869Z   should_push: true
+2026-11-01T16:03:52.6956265Z   cann_swr_url: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/cann
+2026-11-01T16:03:52.6956759Z   cann_image_version: 9.1.0
+2026-11-01T16:03:52.6957041Z   soc: 910b
+2026-11-01T16:03:52.6957279Z   os_filter: ubuntu
+2026-11-01T16:03:52.6957540Z   chips: ["a2","a3","310p","a5"]
+2026-11-01T16:03:52.6957840Z   skip_base: false
+2026-11-01T16:03:52.6958089Z ##[endgroup]
+2026-11-01T16:03:52.6958587Z Complete job name: Build nightly-a2 (ubuntu) / Build nightly-a2 (ubuntu) / Build nightly-a2-ubuntu-arm64
+2026-11-01T16:03:52.7658357Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:03:52.7661719Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:03:52.7662461Z ##[endgroup]
+2026-11-01T16:03:53.0168434Z (node:133) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:03:53.0169338Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:03:53.0366586Z (node:133) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:04:00.3104471Z (node:133) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:04:02.5372102Z ##[group]Run actions/checkout@v7
+2026-11-01T16:04:02.5372580Z with:
+2026-11-01T16:04:02.5373029Z   fetch-depth: 0
+2026-11-01T16:04:02.5373303Z   ref: main
+2026-11-01T16:04:02.5373644Z   repository: vllm-project/vllm-ascend
+2026-11-01T16:04:02.5377105Z   token: ***
+2026-11-01T16:04:02.5377388Z   ssh-strict: true
+2026-11-01T16:04:02.5377830Z   ssh-user: git
+2026-11-01T16:04:02.5378156Z   persist-credentials: true
+2026-11-01T16:04:02.5378517Z   clean: true
+2026-11-01T16:04:02.5378813Z   sparse-checkout-cone-mode: true
+2026-11-01T16:04:02.5379169Z   fetch-tags: false
+2026-11-01T16:04:02.5379577Z   show-progress: true
+2026-11-01T16:04:02.5379909Z   lfs: false
+2026-11-01T16:04:02.5380219Z   submodules: false
+2026-11-01T16:04:02.5380530Z   set-safe-directory: true
+2026-11-01T16:04:02.5381286Z   allow-unsafe-pr-checkout: false
+2026-11-01T16:04:02.5381664Z ##[endgroup]
+2026-11-01T16:04:02.5488843Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:04:02.5490238Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:04:02.5490665Z ##[endgroup]
+2026-11-01T16:04:02.7876862Z (node:301) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:04:02.7877816Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:04:02.8096465Z (node:301) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:04:02.8545183Z (node:301) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:04:03.1518028Z Syncing repository: vllm-project/vllm-ascend
+2026-11-01T16:04:03.1609734Z ##[group]Getting Git version info
+2026-11-01T16:04:03.1610282Z Working directory is '/__w/vllm-ascend/vllm-ascend'
+2026-11-01T16:04:03.1610976Z [command]/usr/bin/git version
+2026-11-01T16:04:03.1611277Z git version 2.34.1
+2026-11-01T16:04:03.1612310Z ##[endgroup]
+2026-11-01T16:04:03.1616496Z Temporarily overriding HOME='/__w/_temp/5f892881-7757-4ea6-8fc5-d9f007611693' before making global git config changes
+2026-11-01T16:04:03.1617392Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T16:04:03.1618252Z [command]/usr/bin/git config --global --add safe.directory /__w/vllm-ascend/vllm-ascend
+2026-11-01T16:04:03.1619223Z Deleting the contents of '/__w/vllm-ascend/vllm-ascend'
+2026-11-01T16:04:03.1619902Z ##[group]Determining repository object format
+2026-11-01T16:04:03.9353223Z ##[endgroup]
+2026-11-01T16:04:03.9353729Z ##[group]Initializing the repository
+2026-11-01T16:04:03.9358968Z [command]/usr/bin/git init /__w/vllm-ascend/vllm-ascend
+2026-11-01T16:04:03.9401679Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-01T16:04:03.9402426Z hint: is subject to change. To configure the initial branch name to use in all
+2026-11-01T16:04:03.9403034Z hint: of your new repositories, which will suppress this warning, call:
+2026-11-01T16:04:03.9403468Z hint: 
+2026-11-01T16:04:03.9403779Z hint: 	git config --global init.defaultBranch <name>
+2026-11-01T16:04:03.9404139Z hint: 
+2026-11-01T16:04:03.9404490Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-01T16:04:03.9405089Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-01T16:04:03.9405578Z hint: 
+2026-11-01T16:04:03.9405816Z hint: 	git branch -m <name>
+2026-11-01T16:04:03.9406256Z Initialized empty Git repository in /__w/vllm-ascend/vllm-ascend/.git/
+2026-11-01T16:04:03.9416001Z [command]/usr/bin/git remote add origin https://github.com/vllm-project/vllm-ascend
+2026-11-01T16:04:03.9454157Z ##[endgroup]
+2026-11-01T16:04:03.9454621Z ##[group]Disabling automatic garbage collection
+2026-11-01T16:04:03.9458671Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-01T16:04:03.9497560Z ##[endgroup]
+2026-11-01T16:04:03.9498267Z ##[group]Setting up auth
+2026-11-01T16:04:03.9498646Z Removing SSH command configuration
+2026-11-01T16:04:03.9502323Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T16:04:03.9539608Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T16:04:03.9850202Z Removing HTTP extra header
+2026-11-01T16:04:03.9853093Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T16:04:03.9892019Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T16:04:04.0185359Z Removing includeIf entries pointing to credentials config files
+2026-11-01T16:04:04.0188538Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T16:04:04.0225461Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T16:04:04.0513694Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-01T16:04:04.0553689Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/vllm-ascend/vllm-ascend/.git.path /__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:04:04.0587698Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/vllm-ascend/vllm-ascend/.git/worktrees/*.path /__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:04:04.0627136Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:04:04.0663273Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:04:04.0696353Z ##[endgroup]
+2026-11-01T16:04:04.0696773Z ##[group]Fetching the repository
+2026-11-01T16:04:04.0703052Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-01T16:04:04.4683251Z warning: redirecting to http://git-cdn-service.git-cdn.svc.cluster.local:8000/vllm-project/vllm-ascend.git/
+2026-11-01T16:04:20.9596799Z From http://git-cdn-service.git-cdn.svc.cluster.local:8000/vllm-project/vllm-ascend
+2026-11-01T16:04:20.9597563Z  * [new branch]          arc-fedsched-e2e-lab  -> origin/arc-fedsched-e2e-lab
+2026-11-01T16:04:20.9598343Z  * [new branch]          dependabot/github_actions/actions/labeler-7 -> origin/dependabot/github_actions/actions/labeler-7
+2026-11-01T16:04:20.9599362Z  * [new branch]          dependabot/github_actions/actions/setup-python-7.0.0 -> origin/dependabot/github_actions/actions/setup-python-7.0.0
+2026-11-01T16:04:20.9600127Z  * [new branch]          main                  -> origin/main
+2026-11-01T16:04:20.9600583Z  * [new branch]          releases/v0.13.0      -> origin/releases/v0.13.0
+2026-11-01T16:04:20.9601086Z  * [new branch]          releases/v0.18.0      -> origin/releases/v0.18.0
+2026-11-01T16:04:20.9601592Z  * [new branch]          releases/v0.20.2rc    -> origin/releases/v0.20.2rc
+2026-11-01T16:04:20.9602108Z  * [new branch]          releases/v0.21.0rc    -> origin/releases/v0.21.0rc
+2026-11-01T16:04:20.9602616Z  * [new branch]          releases/v0.22.1rc    -> origin/releases/v0.22.1rc
+2026-11-01T16:04:20.9603132Z  * [new branch]          releases/v0.23.0      -> origin/releases/v0.23.0
+2026-11-01T16:04:20.9605047Z  * [new branch]          releases/v0.24.0rc    -> origin/releases/v0.24.0rc
+2026-11-01T16:04:20.9605996Z  * [new branch]          releases/v0.25.1rc    -> origin/releases/v0.25.1rc
+2026-11-01T16:04:20.9606525Z  * [new branch]          releases/v0.26.0rc    -> origin/releases/v0.26.0rc
+2026-11-01T16:04:20.9607044Z  * [new branch]          releases/v0.27.1rc    -> origin/releases/v0.27.1rc
+2026-11-01T16:04:20.9607566Z  * [new branch]          releases/v0.28.0rc    -> origin/releases/v0.28.0rc
+2026-11-01T16:04:20.9608116Z  * [new branch]          releases/v0.29.0rc    -> origin/releases/v0.29.0rc
+2026-11-01T16:04:20.9608743Z  * [new branch]          releases/v0.30.0      -> origin/releases/v0.30.0
+2026-11-01T16:04:20.9609805Z  * [new branch]          releases/v0.30.0rc2   -> origin/releases/v0.30.0rc2
+2026-11-01T16:04:20.9610993Z  * [new branch]          releases/v0.31.0rc    -> origin/releases/v0.31.0rc
+2026-11-01T16:04:20.9612111Z  * [new branch]          releases/v0.32.0rc    -> origin/releases/v0.32.0rc
+2026-11-01T16:04:20.9612998Z  * [new branch]          revert-13905-releases/v0.23.0_bugbix_w8a8_mxfp8_for_rl -> origin/revert-13905-releases/v0.23.0_bugbix_w8a8_mxfp8_for_rl
+2026-11-01T16:04:20.9613920Z  * [new branch]          revert-15210-glm52_v2_dspark -> origin/revert-15210-glm52_v2_dspark
+2026-11-01T16:04:20.9614573Z  * [new branch]          revert-15908-new-refactor -> origin/revert-15908-new-refactor
+2026-11-01T16:04:20.9615560Z  * [new branch]          rfc/0.26.0rc1-bugfix  -> origin/rfc/0.26.0rc1-bugfix
+2026-11-01T16:04:20.9616398Z  * [new branch]          rfc/community-contrib -> origin/rfc/community-contrib
+2026-11-01T16:04:20.9617320Z  * [new branch]          rfc/megakernel        -> origin/rfc/megakernel
+2026-11-01T16:04:20.9618312Z  * [new branch]          rfc/vllm_cann         -> origin/rfc/vllm_cann
+2026-11-01T16:04:20.9619389Z  * [new branch]          v0.11.0-dev           -> origin/v0.11.0-dev
+2026-11-01T16:04:20.9620238Z  * [new branch]          v0.7.1-dev            -> origin/v0.7.1-dev
+2026-11-01T16:04:20.9621089Z  * [new branch]          v0.7.3-dev            -> origin/v0.7.3-dev
+2026-11-01T16:04:20.9622206Z  * [new branch]          v0.9.1-dev            -> origin/v0.9.1-dev
+2026-11-01T16:04:20.9622938Z  * [new branch]          zxy_fix_boradash      -> origin/zxy_fix_boradash
+2026-11-01T16:04:20.9623764Z  * [new tag]             v0.10.0rc1            -> v0.10.0rc1
+2026-11-01T16:04:20.9624501Z  * [new tag]             v0.10.1rc1            -> v0.10.1rc1
+2026-11-01T16:04:20.9625302Z  * [new tag]             v0.10.2rc1            -> v0.10.2rc1
+2026-11-01T16:04:20.9625834Z  * [new tag]             v0.11.0               -> v0.11.0
+2026-11-01T16:04:20.9626244Z  * [new tag]             v0.11.0rc0            -> v0.11.0rc0
+2026-11-01T16:04:20.9626847Z  * [new tag]             v0.11.0rc1            -> v0.11.0rc1
+2026-11-01T16:04:20.9627384Z  * [new tag]             v0.11.0rc2            -> v0.11.0rc2
+2026-11-01T16:04:20.9628025Z  * [new tag]             v0.11.0rc3            -> v0.11.0rc3
+2026-11-01T16:04:20.9628632Z  * [new tag]             v0.12.0rc1            -> v0.12.0rc1
+2026-11-01T16:04:20.9629379Z  * [new tag]             v0.13.0               -> v0.13.0
+2026-11-01T16:04:20.9630161Z  * [new tag]             v0.13.0rc1            -> v0.13.0rc1
+2026-11-01T16:04:20.9632227Z  * [new tag]             v0.13.0rc2            -> v0.13.0rc2
+2026-11-01T16:04:20.9632980Z  * [new tag]             v0.13.0rc3            -> v0.13.0rc3
+2026-11-01T16:04:20.9633404Z  * [new tag]             v0.14.0rc1            -> v0.14.0rc1
+2026-11-01T16:04:20.9633998Z  * [new tag]             v0.15.0rc1            -> v0.15.0rc1
+2026-11-01T16:04:20.9634475Z  * [new tag]             v0.16.0rc1            -> v0.16.0rc1
+2026-11-01T16:04:20.9634939Z  * [new tag]             v0.17.0rc1            -> v0.17.0rc1
+2026-11-01T16:04:20.9635503Z  * [new tag]             v0.18.0               -> v0.18.0
+2026-11-01T16:04:20.9636326Z  * [new tag]             v0.18.0rc1            -> v0.18.0rc1
+2026-11-01T16:04:20.9636723Z  * [new tag]             v0.19.1rc1            -> v0.19.1rc1
+2026-11-01T16:04:20.9637499Z  * [new tag]             v0.20.2rc1            -> v0.20.2rc1
+2026-11-01T16:04:20.9637910Z  * [new tag]             v0.21.0rc1            -> v0.21.0rc1
+2026-11-01T16:04:20.9638322Z  * [new tag]             v0.22.1rc1            -> v0.22.1rc1
+2026-11-01T16:04:20.9639450Z  * [new tag]             v0.23.0               -> v0.23.0
+2026-11-01T16:04:20.9640218Z  * [new tag]             v0.23.0.post1         -> v0.23.0.post1
+2026-11-01T16:04:20.9640771Z  * [new tag]             v0.23.0rc1            -> v0.23.0rc1
+2026-11-01T16:04:20.9642290Z  * [new tag]             v0.24.0rc1            -> v0.24.0rc1
+2026-11-01T16:04:20.9643252Z  * [new tag]             v0.25.1rc1            -> v0.25.1rc1
+2026-11-01T16:04:20.9643863Z  * [new tag]             v0.26.0rc1            -> v0.26.0rc1
+2026-11-01T16:04:20.9644390Z  * [new tag]             v0.26.0rc2            -> v0.26.0rc2
+2026-11-01T16:04:20.9644963Z  * [new tag]             v0.27.1rc1            -> v0.27.1rc1
+2026-11-01T16:04:20.9645364Z  * [new tag]             v0.28.0.rc1           -> v0.28.0.rc1
+2026-11-01T16:04:20.9645771Z  * [new tag]             v0.29.0.rc1           -> v0.29.0.rc1
+2026-11-01T16:04:20.9646317Z  * [new tag]             v0.30.0               -> v0.30.0
+2026-11-01T16:04:20.9647110Z  * [new tag]             v0.30.0rc1            -> v0.30.0rc1
+2026-11-01T16:04:20.9647926Z  * [new tag]             v0.30.0rc2            -> v0.30.0rc2
+2026-11-01T16:04:20.9648461Z  * [new tag]             v0.7.1rc1             -> v0.7.1rc1
+2026-11-01T16:04:20.9649107Z  * [new tag]             v0.7.3                -> v0.7.3
+2026-11-01T16:04:20.9649711Z  * [new tag]             v0.7.3.post1          -> v0.7.3.post1
+2026-11-01T16:04:20.9650494Z  * [new tag]             v0.7.3rc1             -> v0.7.3rc1
+2026-11-01T16:04:20.9651267Z  * [new tag]             v0.7.3rc2             -> v0.7.3rc2
+2026-11-01T16:04:20.9651808Z  * [new tag]             v0.8.4rc1             -> v0.8.4rc1
+2026-11-01T16:04:20.9652374Z  * [new tag]             v0.8.4rc2             -> v0.8.4rc2
+2026-11-01T16:04:20.9652986Z  * [new tag]             v0.8.5rc1             -> v0.8.5rc1
+2026-11-01T16:04:20.9653630Z  * [new tag]             v0.9.0rc1             -> v0.9.0rc1
+2026-11-01T16:04:20.9654300Z  * [new tag]             v0.9.0rc2             -> v0.9.0rc2
+2026-11-01T16:04:20.9655215Z  * [new tag]             v0.9.1                -> v0.9.1
+2026-11-01T16:04:20.9655845Z  * [new tag]             v0.9.1rc1             -> v0.9.1rc1
+2026-11-01T16:04:20.9656466Z  * [new tag]             v0.9.1rc2             -> v0.9.1rc2
+2026-11-01T16:04:20.9656992Z  * [new tag]             v0.9.1rc3             -> v0.9.1rc3
+2026-11-01T16:04:20.9657570Z  * [new tag]             v0.9.2rc1             -> v0.9.2rc1
+2026-11-01T16:04:20.9689075Z ##[endgroup]
+2026-11-01T16:04:20.9689518Z ##[group]Determining the checkout info
+2026-11-01T16:04:20.9694596Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-01T16:04:20.9732552Z   origin/main
+2026-11-01T16:04:20.9736564Z ##[endgroup]
+2026-11-01T16:04:20.9741439Z [command]/usr/bin/git sparse-checkout disable
+2026-11-01T16:04:20.9781416Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-01T16:04:20.9818096Z ##[group]Checking out the ref
+2026-11-01T16:04:20.9822069Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-01T16:04:21.3758901Z Switched to a new branch 'main'
+2026-11-01T16:04:21.3759313Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2026-11-01T16:04:21.3832681Z ##[endgroup]
+2026-11-01T16:04:21.3876295Z [command]/usr/bin/git log -1 --format=%H
+2026-11-01T16:04:21.3906070Z b3b82c137ee242a774c29b56325133771f5f069d
+2026-11-01T16:04:21.7234155Z ##[group]Run docker/login-action@v4
+2026-11-01T16:04:21.7234473Z with:
+2026-11-01T16:04:21.7234724Z   registry: swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:04:21.7235424Z   username: ***
+2026-11-01T16:04:21.7235842Z   password: ***
+2026-11-01T16:04:21.7236070Z   logout: true
+2026-11-01T16:04:21.7236283Z ##[endgroup]
+2026-11-01T16:04:21.7258471Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:04:21.7259576Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:04:21.7259918Z ##[endgroup]
+2026-11-01T16:04:21.9635582Z (node:338) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:04:21.9636389Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:04:21.9853468Z (node:338) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:04:22.0302832Z (node:338) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:04:22.7102405Z Logging into swr.cn-north-12.myhuaweicloud.com...
+2026-11-01T16:04:22.9508570Z Login Succeeded!
+2026-11-01T16:04:23.3480360Z ##[group]Run BRANCH_TAG="main"
+2026-11-01T16:04:23.3480769Z [36;1mBRANCH_TAG="main"[0m
+2026-11-01T16:04:23.3481098Z [36;1mBRANCH_TAG=$(echo "$BRANCH_TAG" | tr '/' '-')[0m
+2026-11-01T16:04:23.3481465Z [36;1mBASE_BRANCH_TAG="main"[0m
+2026-11-01T16:04:23.3481807Z [36;1mif [ -z "$BASE_BRANCH_TAG" ]; then[0m
+2026-11-01T16:04:23.3482142Z [36;1m  BASE_BRANCH_TAG="main"[0m
+2026-11-01T16:04:23.3482423Z [36;1mfi[0m
+2026-11-01T16:04:23.3482725Z [36;1mBASE_BRANCH_TAG=$(echo "$BASE_BRANCH_TAG" | tr '/' '-')[0m
+2026-11-01T16:04:23.3483106Z [36;1m[0m
+2026-11-01T16:04:23.3483451Z [36;1m# Runtime images are published by the runtime build workflow as[0m
+2026-11-01T16:04:23.3484021Z [36;1m# nightly-<branch>[-<target>][-openeuler] from the root Dockerfiles.[0m
+2026-11-01T16:04:23.3484611Z [36;1mBASE_IMAGE="swr.cn-north-12.myhuaweicloud.com/ascend/vllm-ascend"[0m
+2026-11-01T16:04:23.3485076Z [36;1mOS_MARK=""[0m
+2026-11-01T16:04:23.3485373Z [36;1mif [ "ubuntu" = "openeuler" ]; then[0m
+2026-11-01T16:04:23.3485713Z [36;1m  OS_MARK="-openeuler"[0m
+2026-11-01T16:04:23.3485981Z [36;1mfi[0m
+2026-11-01T16:04:23.3486349Z [36;1m# Runtime image tags are stable now that dependency versions are pinned[0m
+2026-11-01T16:04:23.3486906Z [36;1m# in the Dockerfiles, so no CANN/date suffix is appended.[0m
+2026-11-01T16:04:23.3487303Z [36;1mTAG_SUFFIX=""[0m
+2026-11-01T16:04:23.3487626Z [36;1mFULL_TAG="nightly-ci-${BRANCH_TAG}-a2${OS_MARK}"[0m
+2026-11-01T16:04:23.3488132Z [36;1m# Same dual-tag rule as the mainline nightly builds: the stable tag is[0m
+2026-11-01T16:04:23.3488719Z [36;1m# overwritten by each nightly, while a unique tag (CANN version +[0m
+2026-11-01T16:04:23.3489262Z [36;1m# build date + run number) keeps the history of nightly images.[0m
+2026-11-01T16:04:23.3489716Z [36;1mif [ "ubuntu" = "openeuler" ]; then[0m
+2026-11-01T16:04:23.3490089Z [36;1m  UNIQUE_SUFFIX="-cann9.2.1-20261101-r63"[0m
+2026-11-01T16:04:23.3490424Z [36;1melse[0m
+2026-11-01T16:04:23.3490693Z [36;1m  UNIQUE_SUFFIX="-cann9.2.1-20261101-r63"[0m
+2026-11-01T16:04:23.3491016Z [36;1mfi[0m
+2026-11-01T16:04:23.3491275Z [36;1mUNIQUE_TAG="${FULL_TAG}${UNIQUE_SUFFIX}"[0m
+2026-11-01T16:04:23.3491609Z [36;1m[0m
+2026-11-01T16:04:23.3491828Z [36;1mif [ "full" = "full" ]; then[0m
+2026-11-01T16:04:23.3492284Z [36;1m  # Arch-specific images are pushed to the temp repo under the unique[0m
+2026-11-01T16:04:23.3492866Z [36;1m  # tag; the merge job creates the final multi-arch manifests. Ubuntu[0m
+2026-11-01T16:04:23.3493437Z [36;1m  # full builds are published to the CI repo and to atlas_inference[0m
+2026-11-01T16:04:23.3494001Z [36;1m  # (mirrored to swr.cn-north-4); openEuler only to atlas_inference.[0m
+2026-11-01T16:04:23.3494449Z [36;1m  if [ -n "$OS_MARK" ]; then[0m
+2026-11-01T16:04:23.3494992Z [36;1m    FINAL_IMAGE="swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:${FULL_TAG}"[0m
+2026-11-01T16:04:23.3495542Z [36;1m  else[0m
+2026-11-01T16:04:23.3496345Z [36;1m    FINAL_IMAGE="swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:${FULL_TAG}, swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:${FULL_TAG}"[0m
+2026-11-01T16:04:23.3497228Z [36;1m  fi[0m
+2026-11-01T16:04:23.3497704Z [36;1m  PUSH_IMAGE="swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:${UNIQUE_TAG}-arm64"[0m
+2026-11-01T16:04:23.3498257Z [36;1melse[0m
+2026-11-01T16:04:23.3498733Z [36;1m  FINAL_IMAGE="swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:${FULL_TAG}"[0m
+2026-11-01T16:04:23.3499426Z [36;1m  PUSH_IMAGE="${FINAL_IMAGE}"[0m
+2026-11-01T16:04:23.3499751Z [36;1mfi[0m
+2026-11-01T16:04:23.3499955Z [36;1m[0m
+2026-11-01T16:04:23.3500167Z [36;1mBUILD_ARGS=([0m
+2026-11-01T16:04:23.3500424Z [36;1m  --platform linux/arm64[0m
+2026-11-01T16:04:23.3500820Z [36;1m  -f .github/workflows/dockerfiles/Dockerfile.nightly.a2[0m
+2026-11-01T16:04:23.3501593Z [36;1m  --build-arg VLLM_ASCEND_BRANCH="${BASE_BRANCH_TAG}"[0m
+2026-11-01T16:04:23.3502271Z [36;1m  --build-arg BASE_IMAGE="${BASE_IMAGE}"[0m
+2026-11-01T16:04:23.3502643Z [36;1m  --build-arg OS_MARK="${OS_MARK}"[0m
+2026-11-01T16:04:23.3503001Z [36;1m  --build-arg TAG_SUFFIX="${TAG_SUFFIX}"[0m
+2026-11-01T16:04:23.3503326Z [36;1m)[0m
+2026-11-01T16:04:23.3503532Z [36;1m[0m
+2026-11-01T16:04:23.3503745Z [36;1mif [ "true" = "true" ]; then[0m
+2026-11-01T16:04:23.3504486Z [36;1m  docker buildx build "${BUILD_ARGS[@]}" --provenance=false --sbom=false --output "type=image,name=${PUSH_IMAGE},oci-mediatypes=false,push=true" .[0m
+2026-11-01T16:04:23.3505227Z [36;1melse[0m
+2026-11-01T16:04:23.3505848Z [36;1m  docker buildx build "${BUILD_ARGS[@]}" --provenance=false --sbom=false --output "type=image,name=${PUSH_IMAGE},oci-mediatypes=false" .[0m
+2026-11-01T16:04:23.3506545Z [36;1mfi[0m
+2026-11-01T16:04:23.3506745Z [36;1m[0m
+2026-11-01T16:04:23.3506944Z [36;1m{[0m
+2026-11-01T16:04:23.3507175Z [36;1m  echo "image=${FINAL_IMAGE}"[0m
+2026-11-01T16:04:23.3507493Z [36;1m  echo "full_tag=${FULL_TAG}"[0m
+2026-11-01T16:04:23.3507937Z [36;1m  echo "unique_tag=${UNIQUE_TAG}"[0m
+2026-11-01T16:04:23.3508301Z [36;1m} >> "$GITHUB_OUTPUT"[0m
+2026-11-01T16:04:23.3511845Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-11-01T16:04:23.3512201Z ##[endgroup]
+2026-11-01T16:04:23.3588019Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:04:23.3589148Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:04:23.3589490Z ##[endgroup]
+2026-11-01T16:04:23.5973510Z (node:387) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:04:23.5974314Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:04:23.6194082Z (node:387) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:04:23.6631505Z (node:387) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:04:24.0174187Z #0 building with "buildkitd" instance using remote driver
+2026-11-01T16:04:24.0174524Z 
+2026-11-01T16:04:24.0174723Z #1 [internal] load build definition from Dockerfile.nightly.a2
+2026-11-01T16:04:24.2164136Z #1 transferring dockerfile: 1.82kB done
+2026-11-01T16:04:24.2165181Z #1 DONE 0.0s
+2026-11-01T16:04:24.2165317Z 
+2026-11-01T16:04:24.2168044Z #2 [auth] ascend/vllm-ascend:,pull token for swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:04:24.2168576Z #2 DONE 0.0s
+2026-11-01T16:04:24.2168705Z 
+2026-11-01T16:04:24.2169047Z #3 [internal] load metadata for swr.cn-north-12.myhuaweicloud.com/ascend/vllm-ascend:nightly-main
+2026-11-01T16:04:24.2436392Z #3 DONE 0.2s
+2026-11-01T16:04:24.3749655Z 
+2026-11-01T16:04:24.3750409Z #4 [internal] load .dockerignore
+2026-11-01T16:04:24.3750799Z #4 transferring context: 2B done
+2026-11-01T16:04:24.3751113Z #4 DONE 0.0s
+2026-11-01T16:04:24.3751244Z 
+2026-11-01T16:04:24.3751833Z #5 [1/4] FROM swr.cn-north-12.myhuaweicloud.com/ascend/vllm-ascend:nightly-main@sha256:2b851114b6c3c3b453147a282af07d2f85399ee6e40f3a98666b2872f0d36ff1
+2026-11-01T16:04:24.3753093Z #5 resolve swr.cn-north-12.myhuaweicloud.com/ascend/vllm-ascend:nightly-main@sha256:2b851114b6c3c3b453147a282af07d2f85399ee6e40f3a98666b2872f0d36ff1 done
+2026-11-01T16:04:24.3753885Z #5 DONE 0.1s
+2026-11-01T16:04:24.5483245Z 
+2026-11-01T16:04:24.5483517Z #6 [2/4] WORKDIR /workspace
+2026-11-01T16:04:24.5483809Z #6 DONE 0.0s
+2026-11-01T16:04:24.5483940Z 
+2026-11-01T16:04:24.5484779Z #7 [3/4] RUN export PIP_EXTRA_INDEX_URL="https://repo.huaweicloud.com/ascend/repos/pypi" &&     cd /vllm-workspace/vllm-ascend &&     python3 -m pip install -r requirements-nightly.txt &&     python3 -m pip cache purge
+2026-11-01T16:04:24.8376453Z #7 0.440 Looking in indexes: https://pypi.org/simple, https://repo.huaweicloud.com/ascend/repos/pypi
+2026-11-01T16:04:25.3413390Z #7 0.943 Collecting pre-commit==4.0.1 (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:25.4949351Z #7 0.947   Downloading pre_commit-4.0.1-py2.py3-none-any.whl (218 kB)
+2026-11-01T16:04:25.6428957Z #7 1.245 Collecting mypy==1.11.1 (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 5))
+2026-11-01T16:04:25.8200182Z #7 1.251   Downloading mypy-1.11.1-py3-none-any.whl (2.6 MB)
+2026-11-01T16:04:25.8200954Z #7 1.271      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 130.0 MB/s  0:00:00
+2026-11-01T16:04:25.8600624Z #7 1.462 Collecting types-PyYAML (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 6))
+2026-11-01T16:04:26.0277634Z #7 1.479   Downloading types_pyyaml-6.0.12.20261030-py3-none-any.whl (21 kB)
+2026-11-01T16:04:26.1592490Z #7 1.761 Collecting types-regex (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 7))
+2026-11-01T16:04:26.3032565Z #7 1.764   Downloading types_regex-2026.9.29.20261030-py3-none-any.whl (11 kB)
+2026-11-01T16:04:26.3033335Z #7 1.906 Collecting types-requests (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 8))
+2026-11-01T16:04:26.4711817Z #7 1.923   Downloading types_requests-2.33.0.20261030-py3-none-any.whl (21 kB)
+2026-11-01T16:04:26.4742211Z #7 2.077 Collecting types-setuptools (from -r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 9))
+2026-11-01T16:04:26.6124714Z #7 2.080   Downloading types_setuptools-84.0.0.20261006-py3-none-any.whl (70 kB)
+2026-11-01T16:04:26.6125720Z #7 2.085 Requirement already satisfied: modelscope<1.38 in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 2)) (1.37.1)
+2026-11-01T16:04:26.6127001Z #7 2.086 Requirement already satisfied: openai in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 3)) (3.42.0)
+2026-11-01T16:04:26.6128305Z #7 2.087 Requirement already satisfied: pytest<9.0.0,>=6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 4)) (8.3.2)
+2026-11-01T16:04:26.6129262Z #7 2.215 Collecting pytest-asyncio (from -r requirements-nightly.txt (line 5))
+2026-11-01T16:04:26.7656661Z #7 2.218   Downloading pytest_asyncio-1.4.1-py3-none-any.whl (17 kB)
+2026-11-01T16:04:26.7677617Z #7 2.370 Collecting pytest-mock (from -r requirements-nightly.txt (line 6))
+2026-11-01T16:04:26.9146111Z #7 2.387   Downloading pytest_mock-3.17.0-py3-none-any.whl (11 kB)
+2026-11-01T16:04:26.9146708Z #7 2.517 Collecting lm-eval==0.4.12 (from -r requirements-nightly.txt (line 7))
+2026-11-01T16:04:27.1269685Z #7 2.521   Downloading lm_eval-0.4.12-py3-none-any.whl (8.9 MB)
+2026-11-01T16:04:27.1270473Z #7 2.579      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 157.0 MB/s  0:00:00
+2026-11-01T16:04:27.2417675Z #7 2.844 Collecting types-jsonschema (from -r requirements-nightly.txt (line 8))
+2026-11-01T16:04:27.3591788Z #7 2.847   Downloading types_jsonschema-4.26.0.20261006-py3-none-any.whl (16 kB)
+2026-11-01T16:04:27.3592780Z #7 2.852 Requirement already satisfied: xgrammar in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 9)) (0.2.8)
+2026-11-01T16:04:27.3593689Z #7 2.944 Collecting zmq (from -r requirements-nightly.txt (line 10))
+2026-11-01T16:04:27.3594182Z #7 2.961   Downloading zmq-0.0.0.zip (2.2 kB)
+2026-11-01T16:04:27.5153706Z #7 2.967   Installing build dependencies: started
+2026-11-01T16:04:28.6385647Z #7 4.238   Installing build dependencies: finished with status 'done'
+2026-11-01T16:04:28.7873413Z #7 4.239   Getting requirements to build wheel: started
+2026-11-01T16:04:29.0061571Z #7 4.608   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:04:29.1576067Z #7 4.609   Preparing metadata (pyproject.toml): started
+2026-11-01T16:04:29.2035655Z #7 4.806   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:29.7077891Z #7 5.310 Collecting types-psutil (from -r requirements-nightly.txt (line 11))
+2026-11-01T16:04:29.8496917Z #7 5.313   Downloading types_psutil-7.2.2.20260906-py3-none-any.whl (33 kB)
+2026-11-01T16:04:29.8497591Z #7 5.452 Collecting pytest-cov (from -r requirements-nightly.txt (line 12))
+2026-11-01T16:04:29.9911703Z #7 5.455   Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+2026-11-01T16:04:29.9912624Z #7 5.461 Requirement already satisfied: regex in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 13)) (2026.9.29)
+2026-11-01T16:04:29.9913610Z #7 5.593 Collecting sentence_transformers (from -r requirements-nightly.txt (line 14))
+2026-11-01T16:04:30.1709888Z #7 5.613   Downloading sentence_transformers-6.2.0-py3-none-any.whl (760 kB)
+2026-11-01T16:04:30.1710765Z #7 5.622      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 760.7/760.7 kB 79.3 MB/s  0:00:00
+2026-11-01T16:04:30.2616004Z #7 5.864 Collecting pyarrow<26 (from -r requirements-nightly.txt (line 15))
+2026-11-01T16:04:30.4165756Z #7 5.868   Downloading pyarrow-25.0.1-cp312-cp312-manylinux_2_28_aarch64.whl (46.8 MB)
+2026-11-01T16:04:30.7587745Z #7 6.166      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.8/46.8 MB 157.7 MB/s  0:00:00
+2026-11-01T16:04:30.7588767Z #7 6.210 Requirement already satisfied: ray<=2.48.0,>=2.47.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 16)) (2.48.0)
+2026-11-01T16:04:30.7590091Z #7 6.210 Requirement already satisfied: protobuf>3.20.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 17)) (7.36.2)
+2026-11-01T16:04:30.8256811Z #7 6.428 Collecting jiwer (from -r requirements-nightly.txt (line 18))
+2026-11-01T16:04:30.9791024Z #7 6.431   Downloading jiwer-4.0.0-py3-none-any.whl (23 kB)
+2026-11-01T16:04:31.1025347Z #7 6.705 Collecting librosa (from -r requirements-nightly.txt (line 19))
+2026-11-01T16:04:31.2240518Z #7 6.708   Downloading librosa-1.0.0-py3-none-any.whl (294 kB)
+2026-11-01T16:04:31.2241425Z #7 6.717 Requirement already satisfied: scipy in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 20)) (1.13.1)
+2026-11-01T16:04:31.2242693Z #7 6.717 Requirement already satisfied: soundfile in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 21)) (0.14.0)
+2026-11-01T16:04:31.2243679Z #7 6.804 Collecting mindstudio-probe>=8.3.0 (from -r requirements-nightly.txt (line 23))
+2026-11-01T16:04:31.2244394Z #7 6.826   Downloading mindstudio_probe-26.2.0-cp312-cp312-manylinux_2_17_aarch64.whl (5.2 MB)
+2026-11-01T16:04:31.3927445Z #7 6.863      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 147.4 MB/s  0:00:00
+2026-11-01T16:04:31.3928006Z #7 6.995 Collecting xlite==0.2.0rc3 (from -r requirements-nightly.txt (line 24))
+2026-11-01T16:04:31.5104271Z #7 7.000   Downloading xlite-0.2.0rc3-cp312-cp312-manylinux2014_aarch64.whl (1.2 MB)
+2026-11-01T16:04:31.5105004Z #7 7.011      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 113.9 MB/s  0:00:00
+2026-11-01T16:04:31.5105579Z #7 7.113 Collecting uc-manager (from -r requirements-nightly.txt (line 25))
+2026-11-01T16:04:31.6870469Z #7 7.133   Downloading uc_manager-0.8.1-py3-none-any.whl (1.1 kB)
+2026-11-01T16:04:31.6871356Z #7 7.139 Requirement already satisfied: ninja in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements-nightly.txt (line 26)) (1.13.2)
+2026-11-01T16:04:32.3605381Z #7 7.963 Collecting coverage (from -r requirements-nightly.txt (line 27))
+2026-11-01T16:04:32.4767897Z #7 7.966   Downloading coverage-7.17.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (262 kB)
+2026-11-01T16:04:32.4768947Z #7 8.079 Collecting cfgv>=2.0.0 (from pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:32.6300283Z #7 8.082   Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-01T16:04:32.6441570Z #7 8.247 Collecting identify>=1.0.0 (from pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:32.7607487Z #7 8.250   Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-01T16:04:32.7608267Z #7 8.363 Collecting nodeenv>=0.11.1 (from pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:32.9212739Z #7 8.366   Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-01T16:04:32.9213793Z #7 8.373 Requirement already satisfied: pyyaml>=5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2)) (6.0.3)
+2026-11-01T16:04:32.9454321Z #7 8.548 Collecting virtualenv>=20.10.0 (from pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:33.1304738Z #7 8.567   Downloading virtualenv-21.15.2-py3-none-any.whl (5.6 MB)
+2026-11-01T16:04:33.1305552Z #7 8.605      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 151.5 MB/s  0:00:00
+2026-11-01T16:04:33.1306688Z #7 8.617 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from mypy==1.11.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 5)) (4.16.0)
+2026-11-01T16:04:33.1308062Z #7 8.733 Collecting mypy-extensions>=1.0.0 (from mypy==1.11.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 5))
+2026-11-01T16:04:33.2821880Z #7 8.736   Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-11-01T16:04:33.2822556Z #7 8.884 Collecting datasets>=2.16.0 (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:33.4404842Z #7 8.888   Downloading datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-11-01T16:04:33.4405589Z #7 8.896      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 62.8 MB/s  0:00:00
+2026-11-01T16:04:33.4406528Z #7 8.922 Requirement already satisfied: numpy in /usr/local/python3.12.16/lib/python3.12/site-packages (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (1.26.4)
+2026-11-01T16:04:33.4407600Z #7 9.043 Collecting evaluate>=0.4.0 (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:33.5967328Z #7 9.046   Downloading evaluate-0.4.6-py3-none-any.whl (84 kB)
+2026-11-01T16:04:33.5968266Z #7 9.058 Requirement already satisfied: jinja2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (3.1.6)
+2026-11-01T16:04:33.5969302Z #7 9.199 Collecting pytablewriter (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:33.7389555Z #7 9.202   Downloading pytablewriter-1.2.1-py3-none-any.whl (91 kB)
+2026-11-01T16:04:33.7390192Z #7 9.341 Collecting rouge-score>=0.0.4 (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:33.9198981Z #7 9.360   Downloading rouge_score-0.1.2.tar.gz (17 kB)
+2026-11-01T16:04:33.9199414Z #7 9.372   Installing build dependencies: started
+2026-11-01T16:04:35.1031640Z #7 10.71   Installing build dependencies: finished with status 'done'
+2026-11-01T16:04:35.2545206Z #7 10.71   Getting requirements to build wheel: started
+2026-11-01T16:04:35.4801345Z #7 11.08   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:04:35.6313336Z #7 11.08   Preparing metadata (pyproject.toml): started
+2026-11-01T16:04:35.6828360Z #7 11.29   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:35.9533601Z #7 11.56 Collecting sacrebleu>=1.5.0 (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:36.1070906Z #7 11.56   Downloading sacrebleu-2.6.0-py3-none-any.whl (100 kB)
+2026-11-01T16:04:36.2074502Z #7 11.81 Collecting scikit-learn>=0.24.1 (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:36.3634482Z #7 11.82   Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (8.9 MB)
+2026-11-01T16:04:36.5870363Z #7 12.08      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 32.8 MB/s  0:00:00
+2026-11-01T16:04:36.5871373Z #7 12.19 Collecting sqlitedict (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:36.7651072Z #7 12.21   Downloading sqlitedict-2.1.0.tar.gz (21 kB)
+2026-11-01T16:04:36.7651527Z #7 12.22   Installing build dependencies: started
+2026-11-01T16:04:37.9733766Z #7 13.58   Installing build dependencies: finished with status 'done'
+2026-11-01T16:04:38.1247886Z #7 13.58   Getting requirements to build wheel: started
+2026-11-01T16:04:38.3510172Z #7 13.95   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:04:38.5024266Z #7 13.95   Preparing metadata (pyproject.toml): started
+2026-11-01T16:04:38.5512297Z #7 14.15   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:38.6670406Z #7 14.16 Requirement already satisfied: dill in /usr/local/python3.12.16/lib/python3.12/site-packages (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (0.4.1)
+2026-11-01T16:04:38.6671443Z #7 14.27 Collecting word2number (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:38.8427264Z #7 14.29   Downloading word2number-1.1.zip (9.7 kB)
+2026-11-01T16:04:38.8427691Z #7 14.29   Installing build dependencies: started
+2026-11-01T16:04:39.9590225Z #7 15.56   Installing build dependencies: finished with status 'done'
+2026-11-01T16:04:40.1079873Z #7 15.56   Getting requirements to build wheel: started
+2026-11-01T16:04:40.3320899Z #7 15.93   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:04:40.4833066Z #7 15.94   Preparing metadata (pyproject.toml): started
+2026-11-01T16:04:40.5328399Z #7 16.14   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:40.7418114Z #7 16.34 Collecting more_itertools (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:40.8446749Z #7 16.35   Downloading more_itertools-11.2.1-py3-none-any.whl (74 kB)
+2026-11-01T16:04:40.8447736Z #7 16.35 Requirement already satisfied: tqdm>=4.59.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (4.70.1)
+2026-11-01T16:04:40.8449175Z #7 16.36 Requirement already satisfied: torch>=2.5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from xlite==0.2.0rc3->-r requirements-nightly.txt (line 24)) (2.10.0+cpu)
+2026-11-01T16:04:40.8450577Z #7 16.36 Requirement already satisfied: filelock in /usr/local/python3.12.16/lib/python3.12/site-packages (from modelscope<1.38->-r requirements-nightly.txt (line 2)) (4.2.4)
+2026-11-01T16:04:40.8451967Z #7 16.36 Requirement already satisfied: packaging in /usr/local/python3.12.16/lib/python3.12/site-packages (from modelscope<1.38->-r requirements-nightly.txt (line 2)) (26.3)
+2026-11-01T16:04:40.8453367Z #7 16.36 Requirement already satisfied: requests>=2.25 in /usr/local/python3.12.16/lib/python3.12/site-packages (from modelscope<1.38->-r requirements-nightly.txt (line 2)) (2.34.2)
+2026-11-01T16:04:40.8454784Z #7 16.36 Requirement already satisfied: setuptools in /usr/local/python3.12.16/lib/python3.12/site-packages (from modelscope<1.38->-r requirements-nightly.txt (line 2)) (80.10.2)
+2026-11-01T16:04:40.8456204Z #7 16.36 Requirement already satisfied: urllib3>=1.26 in /usr/local/python3.12.16/lib/python3.12/site-packages (from modelscope<1.38->-r requirements-nightly.txt (line 2)) (2.8.0)
+2026-11-01T16:04:40.8457598Z #7 16.39 Requirement already satisfied: iniconfig in /usr/local/python3.12.16/lib/python3.12/site-packages (from pytest<9.0.0,>=6.0->-r requirements-nightly.txt (line 4)) (2.3.1)
+2026-11-01T16:04:40.8458999Z #7 16.39 Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pytest<9.0.0,>=6.0->-r requirements-nightly.txt (line 4)) (1.7.0)
+2026-11-01T16:04:40.8460404Z #7 16.39 Requirement already satisfied: click>=7.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ray<=2.48.0,>=2.47.1->-r requirements-nightly.txt (line 16)) (8.5.0)
+2026-11-01T16:04:40.8461942Z #7 16.39 Requirement already satisfied: jsonschema in /usr/local/python3.12.16/lib/python3.12/site-packages (from ray<=2.48.0,>=2.47.1->-r requirements-nightly.txt (line 16)) (4.26.0)
+2026-11-01T16:04:40.8463879Z #7 16.39 Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ray<=2.48.0,>=2.47.1->-r requirements-nightly.txt (line 16)) (1.2.4)
+2026-11-01T16:04:40.8465292Z #7 16.45 Requirement already satisfied: anyio<5,>=4.10.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements-nightly.txt (line 3)) (4.15.1)
+2026-11-01T16:04:41.0105237Z #7 16.45 Requirement already satisfied: httpx2<3,>=2.12.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements-nightly.txt (line 3)) (2.16.0)
+2026-11-01T16:04:41.0106607Z #7 16.45 Requirement already satisfied: jiter<1,>=0.16.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements-nightly.txt (line 3)) (0.18.0)
+2026-11-01T16:04:41.0108145Z #7 16.45 Requirement already satisfied: pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements-nightly.txt (line 3)) (2.14.2)
+2026-11-01T16:04:41.0109563Z #7 16.45 Requirement already satisfied: sniffio in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements-nightly.txt (line 3)) (1.3.1)
+2026-11-01T16:04:41.0110917Z #7 16.45 Requirement already satisfied: idna>=2.8 in /usr/local/python3.12.16/lib/python3.12/site-packages (from anyio<5,>=4.10.0->openai->-r requirements-nightly.txt (line 3)) (3.20)
+2026-11-01T16:04:41.0112369Z #7 16.45 Requirement already satisfied: httpcore2==2.16.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpx2<3,>=2.12.0->openai->-r requirements-nightly.txt (line 3)) (2.16.0)
+2026-11-01T16:04:41.0113853Z #7 16.45 Requirement already satisfied: truststore>=0.10 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpx2<3,>=2.12.0->openai->-r requirements-nightly.txt (line 3)) (0.10.5)
+2026-11-01T16:04:41.0115380Z #7 16.46 Requirement already satisfied: h11>=0.16 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpcore2==2.16.0->httpx2<3,>=2.12.0->openai->-r requirements-nightly.txt (line 3)) (0.16.0)
+2026-11-01T16:04:41.0117011Z #7 16.46 Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements-nightly.txt (line 3)) (0.8.0)
+2026-11-01T16:04:41.0119039Z #7 16.46 Requirement already satisfied: pydantic-core==2.50.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements-nightly.txt (line 3)) (2.50.2)
+2026-11-01T16:04:41.0120769Z #7 16.46 Requirement already satisfied: typing-inspection>=0.4.4 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements-nightly.txt (line 3)) (0.4.4)
+2026-11-01T16:04:41.0266697Z #7 16.63 Collecting pytest<9.0.0,>=6.0 (from -r requirements-nightly.txt (line 4))
+2026-11-01T16:04:41.2258690Z #7 16.63   Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2026-11-01T16:04:41.2259660Z #7 16.64 Requirement already satisfied: pygments>=2.7.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pytest<9.0.0,>=6.0->-r requirements-nightly.txt (line 4)) (2.21.0)
+2026-11-01T16:04:41.2261164Z #7 16.65 Requirement already satisfied: referencing in /usr/local/python3.12.16/lib/python3.12/site-packages (from types-jsonschema->-r requirements-nightly.txt (line 8)) (0.37.0)
+2026-11-01T16:04:41.2262632Z #7 16.65 Requirement already satisfied: apache-tvm-ffi>=0.1.11 in /usr/local/python3.12.16/lib/python3.12/site-packages (from xgrammar->-r requirements-nightly.txt (line 9)) (0.1.15.post2)
+2026-11-01T16:04:41.2264105Z #7 16.65 Requirement already satisfied: transformers>=4.38.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from xgrammar->-r requirements-nightly.txt (line 9)) (5.19.0)
+2026-11-01T16:04:41.2265828Z #7 16.65 Requirement already satisfied: pyzmq in /usr/local/python3.12.16/lib/python3.12/site-packages (from zmq->-r requirements-nightly.txt (line 10)) (27.2.0)
+2026-11-01T16:04:41.2267225Z #7 16.66 Requirement already satisfied: tokenizers>=0.19 in /usr/local/python3.12.16/lib/python3.12/site-packages (from sentence_transformers->-r requirements-nightly.txt (line 14)) (0.23.3)
+2026-11-01T16:04:41.2268859Z #7 16.66 Requirement already satisfied: huggingface-hub<3.0.0,>=1.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from sentence_transformers->-r requirements-nightly.txt (line 14)) (2.4.0)
+2026-11-01T16:04:41.2270532Z #7 16.67 Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from huggingface-hub<3.0.0,>=1.3.0->sentence_transformers->-r requirements-nightly.txt (line 14)) (2026.9.0)
+2026-11-01T16:04:41.2272274Z #7 16.67 Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from huggingface-hub<3.0.0,>=1.3.0->sentence_transformers->-r requirements-nightly.txt (line 14)) (1.8.0)
+2026-11-01T16:04:41.2273880Z #7 16.68 Requirement already satisfied: typer in /usr/local/python3.12.16/lib/python3.12/site-packages (from transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (0.27.3)
+2026-11-01T16:04:41.2275397Z #7 16.68 Requirement already satisfied: safetensors>=0.8.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (0.8.0)
+2026-11-01T16:04:41.9548898Z #7 17.56 Collecting rapidfuzz>=3.9.7 (from jiwer->-r requirements-nightly.txt (line 18))
+2026-11-01T16:04:42.1262191Z #7 17.56   Downloading rapidfuzz-3.14.6-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (1.4 MB)
+2026-11-01T16:04:42.1263169Z #7 17.57      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 118.1 MB/s  0:00:00
+2026-11-01T16:04:42.1264142Z #7 17.58 Requirement already satisfied: numba>=0.61.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from librosa->-r requirements-nightly.txt (line 19)) (0.68.1)
+2026-11-01T16:04:42.4516455Z #7 18.05 Collecting numpy (from lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:42.6914581Z #7 18.06   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (15.7 MB)
+2026-11-01T16:04:42.6915443Z #7 18.14      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 189.3 MB/s  0:00:00
+2026-11-01T16:04:42.9456476Z #7 18.55 Collecting scipy (from -r requirements-nightly.txt (line 20))
+2026-11-01T16:04:43.1004027Z #7 18.55   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (34.0 MB)
+2026-11-01T16:04:43.3144555Z #7 18.77      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.0/34.0 MB 163.4 MB/s  0:00:00
+2026-11-01T16:04:43.3155081Z #7 18.92 Collecting joblib>=1.2 (from librosa->-r requirements-nightly.txt (line 19))
+2026-11-01T16:04:43.4349118Z #7 18.92   Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+2026-11-01T16:04:43.4349744Z #7 19.04 Collecting decorator>=5.2.1 (from librosa->-r requirements-nightly.txt (line 19))
+2026-11-01T16:04:43.5882383Z #7 19.04   Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+2026-11-01T16:04:43.6460476Z #7 19.25 Collecting pooch>=1.7 (from librosa->-r requirements-nightly.txt (line 19))
+2026-11-01T16:04:43.8057653Z #7 19.25   Downloading pooch-1.9.0-py3-none-any.whl (67 kB)
+2026-11-01T16:04:43.8058545Z #7 19.26 Requirement already satisfied: soxr>=1.0.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from librosa->-r requirements-nightly.txt (line 19)) (1.1.0)
+2026-11-01T16:04:43.8806513Z #7 19.47 Collecting lazy_loader>=0.3 (from librosa->-r requirements-nightly.txt (line 19))
+2026-11-01T16:04:44.0819236Z #7 19.47   Downloading lazy_loader-0.6-py3-none-any.whl (8.8 kB)
+2026-11-01T16:04:44.0820163Z #7 19.48 Requirement already satisfied: cffi>=1.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from soundfile->-r requirements-nightly.txt (line 21)) (2.1.1)
+2026-11-01T16:04:44.0822187Z #7 19.48 Requirement already satisfied: einops in /usr/local/python3.12.16/lib/python3.12/site-packages (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (0.8.2)
+2026-11-01T16:04:44.2098052Z #7 19.81 Collecting matplotlib (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:44.4324258Z #7 19.82   Downloading matplotlib-3.11.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (10.7 MB)
+2026-11-01T16:04:44.4325156Z #7 19.89      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 153.4 MB/s  0:00:00
+2026-11-01T16:04:44.4325807Z #7 20.03 Collecting openpyxl>=3.0.6 (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:44.5934660Z #7 20.04   Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-11-01T16:04:44.5935678Z #7 20.05 Requirement already satisfied: pandas>=1.3.5 in /usr/local/python3.12.16/lib/python3.12/site-packages (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (3.0.6)
+2026-11-01T16:04:44.5937166Z #7 20.05 Requirement already satisfied: psutil in /usr/local/python3.12.16/lib/python3.12/site-packages (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (6.0.0)
+2026-11-01T16:04:44.6310257Z #7 20.23 Collecting pytz (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:44.7554450Z #7 20.25   Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+2026-11-01T16:04:44.7555107Z #7 20.36 Collecting skl2onnx>=1.14.1 (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:44.9086886Z #7 20.36   Downloading skl2onnx-1.20.0-py3-none-any.whl (317 kB)
+2026-11-01T16:04:44.9300868Z #7 20.53 Collecting tensorboard>=2.11.2 (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:45.1358973Z #7 20.54   Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+2026-11-01T16:04:45.1359710Z #7 20.57      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 174.8 MB/s  0:00:00
+2026-11-01T16:04:45.1360691Z #7 20.58 Requirement already satisfied: wheel in /usr/local/python3.12.16/lib/python3.12/site-packages (from mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (0.48.0)
+2026-11-01T16:04:45.1362122Z #7 20.59 Requirement already satisfied: pycparser in /usr/local/python3.12.16/lib/python3.12/site-packages (from cffi>=1.0->soundfile->-r requirements-nightly.txt (line 21)) (3.12)
+2026-11-01T16:04:45.5270827Z #7 21.13 Collecting xxhash (from datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:45.6953522Z #7 21.15   Downloading xxhash-4.0.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (276 kB)
+2026-11-01T16:04:45.7515910Z #7 21.35 Collecting multiprocess<0.70.20 (from datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:45.8824047Z #7 21.36   Downloading multiprocess-0.70.19-py312-none-any.whl (150 kB)
+2026-11-01T16:04:45.8825260Z #7 21.48 Collecting fsspec>=2023.5.0 (from huggingface-hub<3.0.0,>=1.3.0->sentence_transformers->-r requirements-nightly.txt (line 14))
+2026-11-01T16:04:46.1185996Z #7 21.49   Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+2026-11-01T16:04:46.1187179Z #7 21.52 Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (3.14.5)
+2026-11-01T16:04:46.1189206Z #7 21.52 Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (2.7.1)
+2026-11-01T16:04:46.1191227Z #7 21.52 Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (1.4.0)
+2026-11-01T16:04:46.1193199Z #7 21.52 Requirement already satisfied: attrs>=17.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (24.2.0)
+2026-11-01T16:04:46.1195170Z #7 21.52 Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (1.8.0)
+2026-11-01T16:04:46.1197145Z #7 21.53 Requirement already satisfied: multidict<8.0,>=4.5 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (7.2.1)
+2026-11-01T16:04:46.1199123Z #7 21.53 Requirement already satisfied: propcache>=0.2.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (0.5.4)
+2026-11-01T16:04:46.1201080Z #7 21.53 Requirement already satisfied: yarl<2.0,>=1.25.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.7.0,>=2023.1.0->datasets>=2.16.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (1.25.1)
+2026-11-01T16:04:46.1202790Z #7 21.56 Requirement already satisfied: cloudpickle>=3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from joblib>=1.2->librosa->-r requirements-nightly.txt (line 19)) (3.1.2)
+2026-11-01T16:04:46.1204314Z #7 21.57 Requirement already satisfied: llvmlite<0.51,>=0.50.0dev0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from numba>=0.61.0->librosa->-r requirements-nightly.txt (line 19)) (0.50.0)
+2026-11-01T16:04:46.2012022Z #7 21.80 Collecting et-xmlfile (from openpyxl>=3.0.6->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:46.3287356Z #7 21.81   Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-11-01T16:04:46.3288487Z #7 21.82 Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pandas>=1.3.5->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (4.0.0)
+2026-11-01T16:04:46.3289738Z #7 21.93 Collecting platformdirs>=2.5.0 (from pooch>=1.7->librosa->-r requirements-nightly.txt (line 19))
+2026-11-01T16:04:46.4821412Z #7 21.95   Downloading platformdirs-4.14.2-py3-none-any.whl (35 kB)
+2026-11-01T16:04:46.4822550Z #7 21.96 Requirement already satisfied: tzdata in /usr/local/python3.12.16/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas>=1.3.5->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (2026.6)
+2026-11-01T16:04:46.4824752Z #7 21.97 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from requests>=2.25->modelscope<1.38->-r requirements-nightly.txt (line 2)) (3.5.2)
+2026-11-01T16:04:46.4826360Z #7 21.97 Requirement already satisfied: certifi>=2023.5.7 in /usr/local/python3.12.16/lib/python3.12/site-packages (from requests>=2.25->modelscope<1.38->-r requirements-nightly.txt (line 2)) (2026.10.23)
+2026-11-01T16:04:46.4827991Z #7 21.98 Requirement already satisfied: absl-py in /usr/local/python3.12.16/lib/python3.12/site-packages (from rouge-score>=0.0.4->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (2.5.1)
+2026-11-01T16:04:46.4829138Z #7 22.08 Collecting nltk (from rouge-score>=0.0.4->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:46.6037024Z #7 22.10   Downloading nltk-3.10.4-py3-none-any.whl (1.7 MB)
+2026-11-01T16:04:46.6037764Z #7 22.12      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 132.1 MB/s  0:00:00
+2026-11-01T16:04:46.6038791Z #7 22.12 Requirement already satisfied: six>=1.14.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from rouge-score>=0.0.4->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (1.17.0)
+2026-11-01T16:04:46.6040309Z #7 22.13 Requirement already satisfied: portalocker in /usr/local/python3.12.16/lib/python3.12/site-packages (from sacrebleu>=1.5.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7)) (4.4.2)
+2026-11-01T16:04:46.6041496Z #7 22.21 Collecting tabulate>=0.8.9 (from sacrebleu>=1.5.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:46.7063910Z #7 22.21   Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+2026-11-01T16:04:46.7064568Z #7 22.31 Collecting colorama (from sacrebleu>=1.5.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:46.8600686Z #7 22.31   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+2026-11-01T16:04:47.2363117Z #7 22.84 Collecting lxml (from sacrebleu>=1.5.0->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:47.4214363Z #7 22.84   Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (5.0 MB)
+2026-11-01T16:04:47.4215341Z #7 22.88      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 160.2 MB/s  0:00:00
+2026-11-01T16:04:47.4216036Z #7 23.02 Collecting narwhals>=2.0.1 (from scikit-learn>=0.24.1->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:47.5241592Z #7 23.03   Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+2026-11-01T16:04:47.5242323Z #7 23.12 Collecting threadpoolctl>=3.5.0 (from scikit-learn>=0.24.1->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:47.5243056Z #7 23.13   Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+2026-11-01T16:04:47.7020179Z #7 23.30 Collecting onnx>=1.2.1 (from skl2onnx>=1.14.1->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:47.9064287Z #7 23.31   Downloading onnx-1.23.2-cp312-abi3-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (8.6 MB)
+2026-11-01T16:04:47.9065175Z #7 23.36      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 158.6 MB/s  0:00:00
+2026-11-01T16:04:48.0188359Z #7 23.51 Collecting ml_dtypes>=0.5.4 (from onnx>=1.2.1->skl2onnx>=1.14.1->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:48.0189331Z #7 23.51   Downloading ml_dtypes-0.6.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (360 kB)
+2026-11-01T16:04:48.0190619Z #7 23.53 Requirement already satisfied: grpcio<2.0,>=1.74.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (1.85.1)
+2026-11-01T16:04:48.0191944Z #7 23.62 Collecting markdown>=2.6.8 (from tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:48.1617932Z #7 23.64   Downloading markdown-3.11.2-py3-none-any.whl (114 kB)
+2026-11-01T16:04:48.1619001Z #7 23.65 Requirement already satisfied: pillow in /usr/local/python3.12.16/lib/python3.12/site-packages (from tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (13.0.0)
+2026-11-01T16:04:48.1621178Z #7 23.76 Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:48.3036376Z #7 23.77   Downloading tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+2026-11-01T16:04:48.3037558Z #7 23.77 Requirement already satisfied: werkzeug>=1.0.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (3.1.9)
+2026-11-01T16:04:48.3039147Z #7 23.79 Requirement already satisfied: sympy>=1.13.3 in /usr/local/python3.12.16/lib/python3.12/site-packages (from torch>=2.5.1->xlite==0.2.0rc3->-r requirements-nightly.txt (line 24)) (1.14.0)
+2026-11-01T16:04:48.3040641Z #7 23.79 Requirement already satisfied: networkx>=2.5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from torch>=2.5.1->xlite==0.2.0rc3->-r requirements-nightly.txt (line 24)) (3.7)
+2026-11-01T16:04:48.3042239Z #7 23.80 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.5.1->xlite==0.2.0rc3->-r requirements-nightly.txt (line 24)) (1.3.0)
+2026-11-01T16:04:48.3043601Z #7 23.91 Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:48.4165886Z #7 23.91   Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-01T16:04:48.4166745Z #7 24.00 Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit==4.0.1->-r /vllm-workspace/vllm-ascend/requirements-lint.txt (line 2))
+2026-11-01T16:04:48.4167597Z #7 24.02   Downloading python_discovery-1.9.0-py3-none-any.whl (39 kB)
+2026-11-01T16:04:48.5928696Z #7 24.03 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from werkzeug>=1.0.1->tensorboard>=2.11.2->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23)) (3.0.4)
+2026-11-01T16:04:48.5930563Z #7 24.04 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/python3.12.16/lib/python3.12/site-packages (from jsonschema->ray<=2.48.0,>=2.47.1->-r requirements-nightly.txt (line 16)) (2025.9.1)
+2026-11-01T16:04:48.5932205Z #7 24.04 Requirement already satisfied: rpds-py>=0.25.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from jsonschema->ray<=2.48.0,>=2.47.1->-r requirements-nightly.txt (line 16)) (2026.9.1)
+2026-11-01T16:04:48.6883402Z #7 24.29 Collecting contourpy>=1.0.1 (from matplotlib->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:48.7902208Z #7 24.29   Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (356 kB)
+2026-11-01T16:04:48.7903119Z #7 24.39 Collecting cycler>=0.10 (from matplotlib->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:48.9433195Z #7 24.40   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-11-01T16:04:49.2476167Z #7 24.85 Collecting fonttools>=4.28.2 (from matplotlib->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:49.4543871Z #7 24.87   Downloading fonttools-4.68.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.5 MB)
+2026-11-01T16:04:49.4544947Z #7 24.91      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 155.9 MB/s  0:00:00
+2026-11-01T16:04:49.6685481Z #7 25.27 Collecting kiwisolver>=1.3.1 (from matplotlib->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:49.8348366Z #7 25.27   Downloading kiwisolver-1.5.1-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.3 MB)
+2026-11-01T16:04:49.8349242Z #7 25.29      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 110.1 MB/s  0:00:00
+2026-11-01T16:04:50.0249413Z #7 25.63 Collecting pyparsing>=3 (from matplotlib->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:50.1784909Z #7 25.63   Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-11-01T16:04:50.2321808Z #7 25.83 Collecting defusedxml (from nltk->rouge-score>=0.0.4->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:50.3855850Z #7 25.84   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-11-01T16:04:50.4989866Z #7 26.10 Collecting DataProperty<2,>=1.1.0 (from pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:50.6164204Z #7 26.10   Downloading dataproperty-1.1.1-py3-none-any.whl (27 kB)
+2026-11-01T16:04:50.6164925Z #7 26.22 Collecting mbstrdecoder<2,>=1.0.0 (from pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:50.7697173Z #7 26.22   Downloading mbstrdecoder-1.1.5-py3-none-any.whl (8.0 kB)
+2026-11-01T16:04:50.8227610Z #7 26.43 Collecting pathvalidate<4,>=2.3.0 (from pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:50.9251474Z #7 26.43   Downloading pathvalidate-3.3.1-py3-none-any.whl (24 kB)
+2026-11-01T16:04:50.9252195Z #7 26.53 Collecting tabledata<2,>=1.3.1 (from pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:51.0393133Z #7 26.53   Downloading tabledata-1.3.5-py3-none-any.whl (11 kB)
+2026-11-01T16:04:51.0393833Z #7 26.64 Collecting tcolorpy<1,>=0.0.5 (from pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:51.1560488Z #7 26.64   Downloading tcolorpy-0.1.7-py3-none-any.whl (8.1 kB)
+2026-11-01T16:04:51.1561334Z #7 26.76 Collecting typepy<2,>=1.3.2 (from typepy[datetime]<2,>=1.3.2->pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:51.2984282Z #7 26.76   Downloading typepy-1.3.5-py3-none-any.whl (31 kB)
+2026-11-01T16:04:51.2985034Z #7 26.90 Collecting chardet<7,>=3.0.4 (from mbstrdecoder<2,>=1.0.0->pytablewriter->lm-eval==0.4.12->-r requirements-nightly.txt (line 7))
+2026-11-01T16:04:51.4188409Z #7 26.90   Downloading chardet-6.0.0.post1-py3-none-any.whl (627 kB)
+2026-11-01T16:04:51.4189235Z #7 26.91      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 627.2/627.2 kB 67.9 MB/s  0:00:00
+2026-11-01T16:04:51.4189994Z #7 27.02 Collecting python-dateutil>=2.8.2 (from pandas>=1.3.5->mindstudio-probe>=8.3.0->-r requirements-nightly.txt (line 23))
+2026-11-01T16:04:51.6286161Z #7 27.02   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-11-01T16:04:51.6287314Z #7 27.05 Requirement already satisfied: shellingham>=1.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from typer->transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (1.5.4)
+2026-11-01T16:04:51.6288916Z #7 27.05 Requirement already satisfied: rich>=13.8.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from typer->transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (15.0.0)
+2026-11-01T16:04:51.6290509Z #7 27.05 Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from typer->transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (0.0.5)
+2026-11-01T16:04:51.6292214Z #7 27.05 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (4.2.0)
+2026-11-01T16:04:51.6293991Z #7 27.06 Requirement already satisfied: mdurl~=0.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers>=4.38.0->xgrammar->-r requirements-nightly.txt (line 9)) (0.1.2)
+2026-11-01T16:04:51.6295264Z #7 27.08 Building wheels for collected packages: zmq, rouge-score, sqlitedict, word2number
+2026-11-01T16:04:51.6295832Z #7 27.08   Building wheel for zmq (pyproject.toml): started
+2026-11-01T16:04:51.7136029Z #7 27.32   Building wheel for zmq (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:51.8667707Z #7 27.32   Created wheel for zmq: filename=zmq-0.0.0-py3-none-any.whl size=1089 sha256=5c059476237a6b04519db46e0cfd6dea2ababfdf712ede83fec39295bc183059
+2026-11-01T16:04:51.8669064Z #7 27.32   Stored in directory: /root/.cache/pip/wheels/ef/5f/a5/9935d530b0fd903784c25487bf84d039c2d181e43372f79e07
+2026-11-01T16:04:51.8669765Z #7 27.32   Building wheel for rouge-score (pyproject.toml): started
+2026-11-01T16:04:51.9654299Z #7 27.57   Building wheel for rouge-score (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:52.1190115Z #7 27.57   Created wheel for rouge-score: filename=rouge_score-0.1.2-py3-none-any.whl size=24985 sha256=02d0806dfb226fd760e79246696e42e0a5c46a5303b6a4f114549667c0fd7f6f
+2026-11-01T16:04:52.1191214Z #7 27.57   Stored in directory: /root/.cache/pip/wheels/eb/d9/cb/829f2cdc935c967262bad0ef66370717118ae730197862fdf7
+2026-11-01T16:04:52.1191889Z #7 27.57   Building wheel for sqlitedict (pyproject.toml): started
+2026-11-01T16:04:52.2111582Z #7 27.81   Building wheel for sqlitedict (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:52.3652489Z #7 27.81   Created wheel for sqlitedict: filename=sqlitedict-2.1.0-py3-none-any.whl size=16957 sha256=ad187dd5f5230f8f004d1299a357156cc30ab3772956d153684b59af2d366311
+2026-11-01T16:04:52.3653619Z #7 27.81   Stored in directory: /root/.cache/pip/wheels/33/ca/7e/8694e20c5fc9167bf811686a4923f2e7aa6513b0dd57542db4
+2026-11-01T16:04:52.3654311Z #7 27.82   Building wheel for word2number (pyproject.toml): started
+2026-11-01T16:04:52.4549979Z #7 28.06   Building wheel for word2number (pyproject.toml): finished with status 'done'
+2026-11-01T16:04:52.6084716Z #7 28.06   Created wheel for word2number: filename=word2number-1.1-py3-none-any.whl size=5659 sha256=17351ac2976bbe17c88baef68644361cb24e896f183e8393ca0ff0868f736de3
+2026-11-01T16:04:52.6085835Z #7 28.06   Stored in directory: /root/.cache/pip/wheels/d7/91/d1/224a7e9469070a0348a23882dcc6ee9c68e2eaa8655111a34e
+2026-11-01T16:04:52.6086525Z #7 28.06 Successfully built zmq rouge-score sqlitedict word2number
+2026-11-01T16:04:52.9507876Z #7 28.55 Installing collected packages: word2number, sqlitedict, pytz, distlib, zmq, xxhash, uc-manager, types-setuptools, types-requests, types-regex, types-PyYAML, types-psutil, threadpoolctl, tensorboard-data-server, tcolorpy, tabulate, rapidfuzz, python-discovery, python-dateutil, pytest, pyparsing, pyarrow, platformdirs, pathvalidate, numpy, nodeenv, narwhals, mypy-extensions, multiprocess, more_itertools, markdown, lxml, lazy_loader, kiwisolver, joblib, identify, fsspec, fonttools, et-xmlfile, defusedxml, decorator, cycler, coverage, colorama, chardet, cfgv, virtualenv, types-jsonschema, tensorboard, scipy, sacrebleu, pytest-mock, pytest-asyncio, pooch, openpyxl, nltk, mypy, ml_dtypes, mbstrdecoder, jiwer, contourpy, xlite, typepy, scikit-learn, rouge-score, pytest-cov, pre-commit, onnx, matplotlib, skl2onnx, librosa, datasets, mindstudio-probe, evaluate, DataProperty, tabledata, sentence_transformers, pytablewriter, lm-eval
+2026-11-01T16:04:53.3735548Z #7 28.98   Attempting uninstall: python-dateutil
+2026-11-01T16:04:53.5228466Z #7 29.05     Found existing installation: python-dateutil 4.0.0
+2026-11-01T16:04:53.5228956Z #7 29.06     Uninstalling python-dateutil-4.0.0:
+2026-11-01T16:04:53.5229379Z #7 29.07       Successfully uninstalled python-dateutil-4.0.0
+2026-11-01T16:04:53.5229780Z #7 29.13   Attempting uninstall: pytest
+2026-11-01T16:04:53.6890006Z #7 29.13     Found existing installation: pytest 8.3.2
+2026-11-01T16:04:53.6890418Z #7 29.14     Uninstalling pytest-8.3.2:
+2026-11-01T16:04:54.1049754Z #7 29.71       Successfully uninstalled pytest-8.3.2
+2026-11-01T16:04:55.9129607Z #7 31.52   Attempting uninstall: numpy
+2026-11-01T16:04:56.1241800Z #7 31.53     Found existing installation: numpy 1.26.4
+2026-11-01T16:04:56.1242219Z #7 31.58     Uninstalling numpy-1.26.4:
+2026-11-01T16:04:56.1852245Z #7 31.79       Successfully uninstalled numpy-1.26.4
+2026-11-01T16:04:59.5551402Z #7 35.16   Attempting uninstall: fsspec
+2026-11-01T16:04:59.7410830Z #7 35.17     Found existing installation: fsspec 2026.9.0
+2026-11-01T16:04:59.7411712Z #7 35.17     Uninstalling fsspec-2026.9.0:
+2026-11-01T16:04:59.7412292Z #7 35.19       Successfully uninstalled fsspec-2026.9.0
+2026-11-01T16:05:00.8944727Z #7 36.50   Attempting uninstall: decorator
+2026-11-01T16:05:01.0552276Z #7 36.51     Found existing installation: decorator 5.1.1
+2026-11-01T16:05:01.0552699Z #7 36.51     Uninstalling decorator-5.1.1:
+2026-11-01T16:05:01.3166239Z #7 36.92       Successfully uninstalled decorator-5.1.1
+2026-11-01T16:05:03.3703249Z #7 38.97   Attempting uninstall: scipy
+2026-11-01T16:05:03.4743416Z #7 38.99     Found existing installation: scipy 1.13.1
+2026-11-01T16:05:03.4743836Z #7 39.08     Uninstalling scipy-1.13.1:
+2026-11-01T16:05:03.8616388Z #7 39.46       Successfully uninstalled scipy-1.13.1
+2026-11-01T16:05:22.1676277Z #7 57.77 
+2026-11-01T16:05:22.3423934Z #7 57.77 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-11-01T16:05:22.3424939Z #7 57.77 cannsim 0.1.0 requires plotly, which is not installed.
+2026-11-01T16:05:22.3425494Z #7 57.77 ms-service-profiler 26.0.0 requires msguard, which is not installed.
+2026-11-01T16:05:22.3426151Z #7 57.77 flash-linear-attention-npu-a2 26.9.1 requires expecttest, which is not installed.
+2026-11-01T16:05:22.3426897Z #7 57.77 mindstudio-kl 26.2.0 requires numpy<=1.26.4, but you have numpy 2.5.4 which is incompatible.
+2026-11-01T16:05:22.3427667Z #7 57.77 triton-ascend 3.2.2 requires decorator==5.1.1, but you have decorator 5.3.1 which is incompatible.
+2026-11-01T16:05:22.3428507Z #7 57.77 triton-ascend 3.2.2 requires numpy==1.26.4, but you have numpy 2.5.4 which is incompatible.
+2026-11-01T16:05:22.3429254Z #7 57.77 triton-ascend 3.2.2 requires pytest==8.3.2, but you have pytest 8.4.2 which is incompatible.
+2026-11-01T16:05:22.3430087Z #7 57.77 triton-ascend 3.2.2 requires scipy==1.13.1; python_version < "3.13", but you have scipy 1.18.1 which is incompatible.
+2026-11-01T16:05:22.3431030Z #7 57.77 mistral-common 1.13.0 requires numpy<2.4,>=1.25; python_version <= "3.12", but you have numpy 2.5.4 which is incompatible.
+2026-11-01T16:05:22.3437365Z #7 57.79 Successfully installed DataProperty-1.1.1 cfgv-3.5.0 chardet-6.0.0.post1 colorama-0.4.6 contourpy-1.4.0 coverage-7.17.0 cycler-0.12.1 datasets-5.1.0 decorator-5.3.1 defusedxml-0.7.1 distlib-0.4.4 et-xmlfile-2.0.0 evaluate-0.4.6 fonttools-4.68.0 fsspec-2026.7.0 identify-2.6.20 jiwer-4.0.0 joblib-1.6.0 kiwisolver-1.5.1 lazy_loader-0.6 librosa-1.0.0 lm-eval-0.4.12 lxml-6.1.3 markdown-3.11.2 matplotlib-3.11.2 mbstrdecoder-1.1.5 mindstudio-probe-26.2.0 ml_dtypes-0.6.0 more_itertools-11.2.1 multiprocess-0.70.19 mypy-1.11.1 mypy-extensions-1.1.0 narwhals-2.28.0 nltk-3.10.4 nodeenv-1.12.0 numpy-2.5.4 onnx-1.23.2 openpyxl-3.1.5 pathvalidate-3.3.1 platformdirs-4.14.2 pooch-1.9.0 pre-commit-4.0.1 pyarrow-25.0.1 pyparsing-3.3.3 pytablewriter-1.2.1 pytest-8.4.2 pytest-asyncio-1.4.1 pytest-cov-7.1.0 pytest-mock-3.17.0 python-dateutil-2.9.0.post0 python-discovery-1.9.0 pytz-2026.6 rapidfuzz-3.14.6 rouge-score-0.1.2 sacrebleu-2.6.0 scikit-learn-1.9.1 scipy-1.18.1 sentence_transformers-6.2.0 skl2onnx-1.20.0 sqlitedict-2.1.0 tabledata-1.3.5 tabulate-0.10.0 tcolorpy-0.1.7 tensorboard-2.21.0 tensorboard-data-server-0.7.2 threadpoolctl-3.7.0 typepy-1.3.5 types-PyYAML-6.0.12.20261030 types-jsonschema-4.26.0.20261006 types-psutil-7.2.2.20260906 types-regex-2026.9.29.20261030 types-requests-2.33.0.20261030 types-setuptools-84.0.0.20261006 uc-manager-0.8.1 virtualenv-21.15.2 word2number-1.1 xlite-0.2.0rc3 xxhash-4.0.2 zmq-0.0.0
+2026-11-01T16:05:22.3444912Z #7 57.79 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-01T16:05:22.8474439Z #7 58.45 Files removed: 168 (178.2 MB)
+2026-11-01T16:05:22.9979451Z #7 58.45 Directories removed: 345
+2026-11-01T16:05:25.6591158Z #7 61.26 proxy network requests:
+2026-11-01T16:05:25.6591708Z #7 61.26 - GET https://pypi.org/simple/pre-commit/ -> 200
+2026-11-01T16:05:25.6592267Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pre-commit/ -> 404
+2026-11-01T16:05:25.6593256Z #7 61.26 - GET https://pypi.org/packages/16/8f/496e10d51edd6671ebe0432e33ff800aa86775d2d147ce7d43389324a525/pre_commit-4.0.1-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.6594109Z #7 61.26 - GET https://pypi.org/simple/mypy/ -> 200
+2026-11-01T16:05:25.6594598Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/mypy/ -> 404
+2026-11-01T16:05:25.6595473Z #7 61.26 - GET https://pypi.org/packages/f8/d4/4960d0df55f30a7625d9c3c9414dfd42f779caabae137ef73ffaed0c97b9/mypy-1.11.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6596298Z #7 61.26 - GET https://pypi.org/simple/types-pyyaml/ -> 200
+2026-11-01T16:05:25.6596860Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-pyyaml/ -> 404
+2026-11-01T16:05:25.6597844Z #7 61.26 - GET https://pypi.org/packages/34/99/7e2c7c7202108220fb664ce4c5ac313a564ab5babb153516a3ac0ad8a681/types_pyyaml-6.0.12.20261030-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6598733Z #7 61.26 - GET https://pypi.org/simple/types-regex/ -> 200
+2026-11-01T16:05:25.6599273Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-regex/ -> 404
+2026-11-01T16:05:25.6600247Z #7 61.26 - GET https://pypi.org/packages/a9/27/517899e827975f3256b16b301ef6de6aa70830a83f8f4ae6a5cf9eb574f2/types_regex-2026.9.29.20261030-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6601144Z #7 61.26 - GET https://pypi.org/simple/types-requests/ -> 200
+2026-11-01T16:05:25.6601697Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-requests/ -> 404
+2026-11-01T16:05:25.6602703Z #7 61.26 - GET https://pypi.org/packages/95/35/77ed86be430bd179d34905d62cdb5ba6747c635737092088fcf03c753c61/types_requests-2.33.0.20261030-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6603610Z #7 61.26 - GET https://pypi.org/simple/types-setuptools/ -> 200
+2026-11-01T16:05:25.6604187Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-setuptools/ -> 404
+2026-11-01T16:05:25.6605212Z #7 61.26 - GET https://pypi.org/packages/de/24/add82014f533f2ebf62088b39db86d6a341bb0fd94af50b3a3c1e8886683/types_setuptools-84.0.0.20261006-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6606128Z #7 61.26 - GET https://pypi.org/simple/pytest-asyncio/ -> 200
+2026-11-01T16:05:25.6606684Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytest-asyncio/ -> 404
+2026-11-01T16:05:25.6607660Z #7 61.26 - GET https://pypi.org/packages/46/d7/cd9e2708afdbf059658adaf08bdb0792ca52489871051d6ce7d498b51277/pytest_asyncio-1.4.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6608520Z #7 61.26 - GET https://pypi.org/simple/pytest-mock/ -> 200
+2026-11-01T16:05:25.6609056Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytest-mock/ -> 404
+2026-11-01T16:05:25.6609987Z #7 61.26 - GET https://pypi.org/packages/e8/ea/47fbdc8f37410956fd445720e927589b1e2a47772c5f28109f0ce2fa26d9/pytest_mock-3.17.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6610821Z #7 61.26 - GET https://pypi.org/simple/lm-eval/ -> 200
+2026-11-01T16:05:25.6611323Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/lm-eval/ -> 404
+2026-11-01T16:05:25.6612219Z #7 61.26 - GET https://pypi.org/packages/bd/43/944724465ed73ec2889f58007c114ce8dd2023324bc86d3e6f41ce00e2e8/lm_eval-0.4.12-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6613051Z #7 61.26 - GET https://pypi.org/simple/types-jsonschema/ -> 200
+2026-11-01T16:05:25.6613627Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-jsonschema/ -> 404
+2026-11-01T16:05:25.6614652Z #7 61.26 - GET https://pypi.org/packages/8b/a0/4f2e3c0dc3d5cad958006f2e0307065cc8fe4fbf0393ff0b69d55ee9bbe5/types_jsonschema-4.26.0.20261006-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6615538Z #7 61.26 - GET https://pypi.org/simple/zmq/ -> 200
+2026-11-01T16:05:25.6616241Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/zmq/ -> 404
+2026-11-01T16:05:25.6617155Z #7 61.26 - GET https://pypi.org/packages/a4/a1/0dcfcea4c3f547f23781877ee90b4fccc8cf32bbbc1bc529a17bd142abc1/zmq-0.0.0.zip -> 200
+2026-11-01T16:05:25.6617917Z #7 61.26 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:05:25.6618449Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:05:25.6619388Z #7 61.26 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.6620239Z #7 61.26 - GET https://pypi.org/simple/types-psutil/ -> 200
+2026-11-01T16:05:25.8184058Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/types-psutil/ -> 404
+2026-11-01T16:05:25.8185143Z #7 61.26 - GET https://pypi.org/packages/eb/8d/81a86107486e1c23f5ca21bea1e9e5b18a50754242e7a0b82f41f9ae8384/types_psutil-7.2.2.20260906-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8186028Z #7 61.26 - GET https://pypi.org/simple/pytest-cov/ -> 200
+2026-11-01T16:05:25.8186564Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytest-cov/ -> 404
+2026-11-01T16:05:25.8187497Z #7 61.26 - GET https://pypi.org/packages/9d/7a/d968e294073affff457b041c2be9868a40c1c71f4a35fcc1e45e5493067b/pytest_cov-7.1.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8188435Z #7 61.26 - GET https://pypi.org/simple/sentence-transformers/ -> 200
+2026-11-01T16:05:25.8189065Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/sentence-transformers/ -> 404
+2026-11-01T16:05:25.8190115Z #7 61.26 - GET https://pypi.org/packages/66/ae/aac4fcaf7aa27daee96aa15d74770b38bb5ff50b1d31ccf12becd68c6e8b/sentence_transformers-6.2.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8191039Z #7 61.26 - GET https://pypi.org/simple/pyarrow/ -> 200
+2026-11-01T16:05:25.8191544Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pyarrow/ -> 404
+2026-11-01T16:05:25.8192556Z #7 61.26 - GET https://pypi.org/packages/13/49/d93a57d375f4bf0cf82913dd6bb54acafde83dd993be2282c81ac5616cad/pyarrow-25.0.1-cp312-cp312-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8193469Z #7 61.26 - GET https://pypi.org/simple/jiwer/ -> 200
+2026-11-01T16:05:25.8193956Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/jiwer/ -> 404
+2026-11-01T16:05:25.8194817Z #7 61.26 - GET https://pypi.org/packages/69/c9/172c525330c739a068c01050759a6f855ce16212db10a0359e690a03ac48/jiwer-4.0.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8195598Z #7 61.26 - GET https://pypi.org/simple/librosa/ -> 200
+2026-11-01T16:05:25.8196107Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/librosa/ -> 404
+2026-11-01T16:05:25.8196996Z #7 61.26 - GET https://pypi.org/packages/96/14/0b2e4cc8017796dc8f69de740708601832c1e8d5377166eedb4db0a92264/librosa-1.0.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8197822Z #7 61.26 - GET https://pypi.org/simple/mindstudio-probe/ -> 200
+2026-11-01T16:05:25.8198401Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/mindstudio-probe/ -> 404
+2026-11-01T16:05:25.8199477Z #7 61.26 - GET https://pypi.org/packages/25/b6/18731cd91fe4bd51de6f3849866ff49b689d3eda646d7bba24afe83674e7/mindstudio_probe-26.2.0-cp312-cp312-manylinux_2_17_aarch64.whl -> 200
+2026-11-01T16:05:25.8200422Z #7 61.26 - GET https://pypi.org/simple/xlite/ -> 200
+2026-11-01T16:05:25.8200912Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/xlite/ -> 404
+2026-11-01T16:05:25.8201891Z #7 61.26 - GET https://pypi.org/packages/b1/56/b015fd7a6cac4148488e6d137557c4b3d2cf6d7d4d6b3ba7947c7559efe0/xlite-0.2.0rc3-cp312-cp312-manylinux2014_aarch64.whl -> 200
+2026-11-01T16:05:25.8202803Z #7 61.26 - GET https://pypi.org/simple/uc-manager/ -> 200
+2026-11-01T16:05:25.8203324Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/uc-manager/ -> 404
+2026-11-01T16:05:25.8204236Z #7 61.26 - GET https://pypi.org/packages/85/47/ccc3a465c4ddba723299972162a620c5f9c3f30e8742ffacd4c1ec2135c6/uc_manager-0.8.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8205361Z #7 61.26 - GET https://pypi.org/simple/coverage/ -> 200
+2026-11-01T16:05:25.8205993Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/coverage/ -> 404
+2026-11-01T16:05:25.8207312Z #7 61.26 - GET https://pypi.org/packages/e8/3e/d9cd006d1a3cc5deab07beb29b86cb4a10dd84d66b330820363fb8d310d6/coverage-7.17.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8208416Z #7 61.26 - GET https://pypi.org/simple/cfgv/ -> 200
+2026-11-01T16:05:25.8208895Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/cfgv/ -> 404
+2026-11-01T16:05:25.8209785Z #7 61.26 - GET https://pypi.org/packages/db/3c/33bac158f8ab7f89b2e59426d5fe2e4f63f7ed25df84c036890172b412b5/cfgv-3.5.0-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8210602Z #7 61.26 - GET https://pypi.org/simple/identify/ -> 200
+2026-11-01T16:05:25.8211109Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/identify/ -> 404
+2026-11-01T16:05:25.8212043Z #7 61.26 - GET https://pypi.org/packages/fa/70/fffc9613501877c0a10a1ef73a165e6ded3e53f6e7502227fef56d973933/identify-2.6.20-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8212886Z #7 61.26 - GET https://pypi.org/simple/nodeenv/ -> 200
+2026-11-01T16:05:25.8213388Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/nodeenv/ -> 404
+2026-11-01T16:05:25.8214292Z #7 61.26 - GET https://pypi.org/packages/2d/6a/8a9ac7d5e2f7cf53c459bfef90ebc17a2f8cd54b665af96799d4c534840e/nodeenv-1.12.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8215128Z #7 61.26 - GET https://pypi.org/simple/virtualenv/ -> 200
+2026-11-01T16:05:25.8215652Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/virtualenv/ -> 404
+2026-11-01T16:05:25.8216576Z #7 61.26 - GET https://pypi.org/packages/f7/d8/09c9d6df253b2016312dd5ccbb962dfa86a5202f2452604b52e0a9844661/virtualenv-21.15.2-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8217428Z #7 61.26 - GET https://pypi.org/simple/mypy-extensions/ -> 200
+2026-11-01T16:05:25.8217994Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/mypy-extensions/ -> 404
+2026-11-01T16:05:25.8218964Z #7 61.26 - GET https://pypi.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8219810Z #7 61.26 - GET https://pypi.org/simple/datasets/ -> 200
+2026-11-01T16:05:25.8220321Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/datasets/ -> 404
+2026-11-01T16:05:25.8221217Z #7 61.26 - GET https://pypi.org/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8222034Z #7 61.26 - GET https://pypi.org/simple/evaluate/ -> 200
+2026-11-01T16:05:25.8222541Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/evaluate/ -> 404
+2026-11-01T16:05:25.8223446Z #7 61.26 - GET https://pypi.org/packages/3e/af/3e990d8d4002bbc9342adb4facd59506e653da93b2417de0fa6027cb86b1/evaluate-0.4.6-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8224414Z #7 61.26 - GET https://pypi.org/simple/pytablewriter/ -> 200
+2026-11-01T16:05:25.8224966Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytablewriter/ -> 404
+2026-11-01T16:05:25.8225923Z #7 61.26 - GET https://pypi.org/packages/21/4c/c199512f01c845dfe5a7840ab3aae6c60463b5dc2a775be72502dfd9170a/pytablewriter-1.2.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8226774Z #7 61.26 - GET https://pypi.org/simple/rouge-score/ -> 200
+2026-11-01T16:05:25.8227313Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/rouge-score/ -> 404
+2026-11-01T16:05:25.8228280Z #7 61.26 - GET https://pypi.org/packages/e2/c5/9136736c37022a6ad27fea38f3111eb8f02fe75d067f9a985cc358653102/rouge_score-0.1.2.tar.gz -> 200
+2026-11-01T16:05:25.8229068Z #7 61.26 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:05:25.8229593Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:05:25.8230520Z #7 61.26 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:05:25.8231721Z #7 61.26 - GET https://pypi.org/simple/sacrebleu/ -> 200
+2026-11-01T16:05:25.8232246Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/sacrebleu/ -> 404
+2026-11-01T16:05:25.8233163Z #7 61.26 - GET https://pypi.org/packages/06/f2/6c90ccf3ad1d09a7d662a405b274f3c93b92df59c8d6a025d26aaf34d302/sacrebleu-2.6.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8233997Z #7 61.26 - GET https://pypi.org/simple/scikit-learn/ -> 200
+2026-11-01T16:05:25.8234533Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/scikit-learn/ -> 404
+2026-11-01T16:05:25.8235651Z #7 61.26 - GET https://pypi.org/packages/78/2b/5721a174406bfba49bce20ae997b3b64cf355c3f623a2638284ab6a82156/scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8236668Z #7 61.26 - GET https://pypi.org/simple/sqlitedict/ -> 200
+2026-11-01T16:05:25.8237205Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/sqlitedict/ -> 404
+2026-11-01T16:05:25.8238078Z #7 61.26 - GET https://pypi.org/packages/12/9a/7620d1e9dcb02839ed6d4b14064e609cdd7a8ae1e47289aa0456796dd9ca/sqlitedict-2.1.0.tar.gz -> 200
+2026-11-01T16:05:25.8238858Z #7 61.26 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:05:25.8239380Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:05:25.8240321Z #7 61.26 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:05:25.8241168Z #7 61.26 - GET https://pypi.org/simple/word2number/ -> 200
+2026-11-01T16:05:25.8241693Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/word2number/ -> 404
+2026-11-01T16:05:25.8242547Z #7 61.26 - GET https://pypi.org/packages/4a/29/a31940c848521f0725f0df6b25dca8917f13a2025b0e8fcbe5d0457e45e6/word2number-1.1.zip -> 200
+2026-11-01T16:05:25.8243318Z #7 61.26 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:05:25.8243844Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:05:25.8244777Z #7 61.26 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:05:25.8245632Z #7 61.26 - GET https://pypi.org/simple/more-itertools/ -> 200
+2026-11-01T16:05:25.8246185Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/more-itertools/ -> 404
+2026-11-01T16:05:25.8247139Z #7 61.26 - GET https://pypi.org/packages/5d/57/3c4b1c6f2e0cc29ba023802458ea3d2a996f87085559e4a5f2192d549532/more_itertools-11.2.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8248002Z #7 61.26 - GET https://pypi.org/simple/pytest/ -> 200
+2026-11-01T16:05:25.8248516Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytest/ -> 404
+2026-11-01T16:05:25.8249399Z #7 61.26 - GET https://pypi.org/packages/a8/a4/20da314d277121d6534b3a980b29035dcd51e6744bd79075a6ce8fa4eb8d/pytest-8.4.2-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8250211Z #7 61.26 - GET https://pypi.org/simple/rapidfuzz/ -> 200
+2026-11-01T16:05:25.8250745Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/rapidfuzz/ -> 404
+2026-11-01T16:05:25.8251938Z #7 61.26 - GET https://pypi.org/packages/39/e9/0794043c1a0af09cacdbb6a9e8b9b2079cdf73337e7c29b4a9f117415bb9/rapidfuzz-3.14.6-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8252951Z #7 61.26 - GET https://pypi.org/simple/numpy/ -> 200
+2026-11-01T16:05:25.8253440Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/numpy/ -> 404
+2026-11-01T16:05:25.8254495Z #7 61.26 - GET https://pypi.org/packages/dc/96/8319e2457ae4333c62c815c7006b869a4f60985c1e01024c2f8c6c040fe5/numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8255465Z #7 61.26 - GET https://pypi.org/simple/scipy/ -> 200
+2026-11-01T16:05:25.8255951Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/scipy/ -> 404
+2026-11-01T16:05:25.8257322Z #7 61.26 - GET https://pypi.org/packages/75/9a/2e71719f31eaefe0e3a1706c4a1ded94e664bfd95ffca2b219a671faee01/scipy-1.18.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8258324Z #7 61.26 - GET https://pypi.org/simple/joblib/ -> 200
+2026-11-01T16:05:25.8258821Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/joblib/ -> 404
+2026-11-01T16:05:25.8259701Z #7 61.26 - GET https://pypi.org/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8260518Z #7 61.26 - GET https://pypi.org/simple/decorator/ -> 200
+2026-11-01T16:05:25.8261030Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/decorator/ -> 404
+2026-11-01T16:05:25.8261933Z #7 61.26 - GET https://pypi.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8262749Z #7 61.26 - GET https://pypi.org/simple/pooch/ -> 200
+2026-11-01T16:05:25.8263238Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pooch/ -> 404
+2026-11-01T16:05:25.8264192Z #7 61.26 - GET https://pypi.org/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8265010Z #7 61.26 - GET https://pypi.org/simple/lazy-loader/ -> 200
+2026-11-01T16:05:25.8265544Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/lazy-loader/ -> 404
+2026-11-01T16:05:25.8266454Z #7 61.26 - GET https://pypi.org/packages/23/93/4e45e37f26c820216704b36b8e67cc55c490a7abd287a78a26a2c0e21386/lazy_loader-0.6-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8267280Z #7 61.26 - GET https://pypi.org/simple/matplotlib/ -> 200
+2026-11-01T16:05:25.8267897Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/matplotlib/ -> 404
+2026-11-01T16:05:25.8269016Z #7 61.26 - GET https://pypi.org/packages/f4/84/32549e7a462dc311aed2ab62e5d2538028840b5c53a8be0195c789937c3d/matplotlib-3.11.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8270039Z #7 61.26 - GET https://pypi.org/simple/openpyxl/ -> 200
+2026-11-01T16:05:25.8270550Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/openpyxl/ -> 404
+2026-11-01T16:05:25.8271474Z #7 61.26 - GET https://pypi.org/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8272296Z #7 61.26 - GET https://pypi.org/simple/pytz/ -> 200
+2026-11-01T16:05:25.8272778Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pytz/ -> 404
+2026-11-01T16:05:25.8273661Z #7 61.26 - GET https://pypi.org/packages/b6/25/564f3fc5b70c1398d706c51f2b1470d0ea0b1b2f96fee67877b6f5bdf3b6/pytz-2026.6-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8274483Z #7 61.26 - GET https://pypi.org/simple/skl2onnx/ -> 200
+2026-11-01T16:05:25.8274988Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/skl2onnx/ -> 404
+2026-11-01T16:05:25.8275896Z #7 61.26 - GET https://pypi.org/packages/24/d3/b0db77025a4683ec1b9aafc301b78c7e2e2059a1e2543e918435f3d03582/skl2onnx-1.20.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8276726Z #7 61.26 - GET https://pypi.org/simple/tensorboard/ -> 200
+2026-11-01T16:05:25.8277255Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tensorboard/ -> 404
+2026-11-01T16:05:25.8278187Z #7 61.26 - GET https://pypi.org/packages/37/4b/cd2eec9642781a8f5b2fb9994e3933a7b259ab18e9d49aeede9b5acf6311/tensorboard-2.21.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8279021Z #7 61.26 - GET https://pypi.org/simple/xxhash/ -> 200
+2026-11-01T16:05:25.8279526Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/xxhash/ -> 404
+2026-11-01T16:05:25.8280697Z #7 61.26 - GET https://pypi.org/packages/19/9c/39619aa3a1d569ff5fd8b5ea34600451310a63bf23d158f74a4fbc9fdcd3/xxhash-4.0.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8282017Z #7 61.26 - GET https://pypi.org/simple/multiprocess/ -> 200
+2026-11-01T16:05:25.8282764Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/multiprocess/ -> 404
+2026-11-01T16:05:25.8283724Z #7 61.26 - GET https://pypi.org/packages/71/70/38998b950a97ea279e6bd657575d22d1a2047256caf707d9a10fbce4f065/multiprocess-0.70.19-py312-none-any.whl -> 200
+2026-11-01T16:05:25.8284564Z #7 61.26 - GET https://pypi.org/simple/fsspec/ -> 200
+2026-11-01T16:05:25.8285060Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/fsspec/ -> 404
+2026-11-01T16:05:25.8285955Z #7 61.26 - GET https://pypi.org/packages/fd/3c/6a2bf344106328fd04963664a60b9bb6496fc25df8e962fcdc1367285fb9/fsspec-2026.7.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8286770Z #7 61.26 - GET https://pypi.org/simple/et-xmlfile/ -> 200
+2026-11-01T16:05:25.8287308Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/et-xmlfile/ -> 404
+2026-11-01T16:05:25.8288232Z #7 61.26 - GET https://pypi.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8289075Z #7 61.26 - GET https://pypi.org/simple/platformdirs/ -> 200
+2026-11-01T16:05:25.8289616Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/platformdirs/ -> 404
+2026-11-01T16:05:25.8290569Z #7 61.26 - GET https://pypi.org/packages/0b/2d/98af31fdcd7c95c7114e2eb7c2eb0fa55d2a012c37ba4eb3722b7272abcb/platformdirs-4.14.2-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8291417Z #7 61.26 - GET https://pypi.org/simple/nltk/ -> 200
+2026-11-01T16:05:25.8291895Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/nltk/ -> 404
+2026-11-01T16:05:25.8292761Z #7 61.26 - GET https://pypi.org/packages/a2/04/e7816813e409ca874ba2fcc35455db0e4130b79eb277e1f9edd270ca3c69/nltk-3.10.4-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8293558Z #7 61.26 - GET https://pypi.org/simple/tabulate/ -> 200
+2026-11-01T16:05:25.8294069Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tabulate/ -> 404
+2026-11-01T16:05:25.8294987Z #7 61.26 - GET https://pypi.org/packages/99/55/db07de81b5c630da5cbf5c7df646580ca26dfaefa593667fc6f2fe016d2e/tabulate-0.10.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8295822Z #7 61.26 - GET https://pypi.org/simple/colorama/ -> 200
+2026-11-01T16:05:25.8296334Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/colorama/ -> 404
+2026-11-01T16:05:25.8297254Z #7 61.26 - GET https://pypi.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8298084Z #7 61.26 - GET https://pypi.org/simple/lxml/ -> 200
+2026-11-01T16:05:25.8298568Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/lxml/ -> 404
+2026-11-01T16:05:25.8299631Z #7 61.26 - GET https://pypi.org/packages/a3/a0/a1f7f1313795bfec67b77f01ef3b1128d49f2d7f66a8413fa55d47f4e25f/lxml-6.1.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8300618Z #7 61.26 - GET https://pypi.org/simple/narwhals/ -> 200
+2026-11-01T16:05:25.8301134Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/narwhals/ -> 404
+2026-11-01T16:05:25.8302051Z #7 61.26 - GET https://pypi.org/packages/cf/82/8ef9c7e0f50493307a49c09cfa7f00c5a778b6d1921f7b2dabe1d3a5809e/narwhals-2.28.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8302895Z #7 61.26 - GET https://pypi.org/simple/threadpoolctl/ -> 200
+2026-11-01T16:05:25.8303440Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/threadpoolctl/ -> 404
+2026-11-01T16:05:25.8304464Z #7 61.26 - GET https://pypi.org/packages/43/3f/f88a53f60a472b46f4023f56d204dd7de33d34c5d2acbfa0d70a674e639e/threadpoolctl-3.7.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8305301Z #7 61.26 - GET https://pypi.org/simple/onnx/ -> 200
+2026-11-01T16:05:25.8305784Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/onnx/ -> 404
+2026-11-01T16:05:25.8306842Z #7 61.26 - GET https://pypi.org/packages/f9/50/2e156ef2cae1c9f4ff01a41dffa43fc1eb7b969755055436bf6df1805d54/onnx-1.23.2-cp312-abi3-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8308144Z #7 61.26 - GET https://pypi.org/simple/ml-dtypes/ -> 200
+2026-11-01T16:05:25.8308785Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/ml-dtypes/ -> 404
+2026-11-01T16:05:25.8309887Z #7 61.26 - GET https://pypi.org/packages/ed/cf/87e8a6c57eed63a91782a0d229856ddf73e138ce004dd71e2799a9dcdb33/ml_dtypes-0.6.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8310906Z #7 61.26 - GET https://pypi.org/simple/markdown/ -> 200
+2026-11-01T16:05:25.8311553Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/markdown/ -> 404
+2026-11-01T16:05:25.8312533Z #7 61.26 - GET https://pypi.org/packages/fe/66/bcab3b677b71ad286b4e607e3427499537c76e13ad2e22584ba7a7d9882c/markdown-3.11.2-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8313554Z #7 61.26 - GET https://pypi.org/simple/tensorboard-data-server/ -> 200
+2026-11-01T16:05:25.8314267Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tensorboard-data-server/ -> 404
+2026-11-01T16:05:25.8315379Z #7 61.26 - GET https://pypi.org/packages/7a/13/e503968fefabd4c6b2650af21e110aa8466fe21432cd7c43a84577a89438/tensorboard_data_server-0.7.2-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8316359Z #7 61.26 - GET https://pypi.org/simple/distlib/ -> 200
+2026-11-01T16:05:25.8316922Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/distlib/ -> 404
+2026-11-01T16:05:25.8317932Z #7 61.26 - GET https://pypi.org/packages/c1/2b/238f02a4927fa2e27aa995371d240a468b52e42eae44a678434aff736b38/distlib-0.4.4-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8318828Z #7 61.26 - GET https://pypi.org/simple/python-discovery/ -> 200
+2026-11-01T16:05:25.8319498Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/python-discovery/ -> 404
+2026-11-01T16:05:25.8320556Z #7 61.26 - GET https://pypi.org/packages/cb/3c/da1cae963a076132dbc4d3c1f0292dd2f373b9d3e072d42f4620801159c1/python_discovery-1.9.0-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8386997Z #7 61.26 - GET https://pypi.org/simple/contourpy/ -> 200
+2026-11-01T16:05:25.8387755Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/contourpy/ -> 404
+2026-11-01T16:05:25.8389036Z #7 61.26 - GET https://pypi.org/packages/0f/cc/cb989599eec12fda312e127eb8e04a8b21a7a6c94bf7ff1bc68273334a42/contourpy-1.4.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8390068Z #7 61.26 - GET https://pypi.org/simple/cycler/ -> 200
+2026-11-01T16:05:25.8390575Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/cycler/ -> 404
+2026-11-01T16:05:25.8391466Z #7 61.26 - GET https://pypi.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8392279Z #7 61.26 - GET https://pypi.org/simple/fonttools/ -> 200
+2026-11-01T16:05:25.8392807Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/fonttools/ -> 404
+2026-11-01T16:05:25.8394020Z #7 61.26 - GET https://pypi.org/packages/21/94/b125c7a6d154d17f4f699150ef3abebd9d8ad0f7eddce9dad649a9e5c1d8/fonttools-4.68.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8395160Z #7 61.26 - GET https://pypi.org/simple/kiwisolver/ -> 200
+2026-11-01T16:05:25.8395684Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/kiwisolver/ -> 404
+2026-11-01T16:05:25.8396806Z #7 61.26 - GET https://pypi.org/packages/6f/35/09c58daac34e6f6ea5c6dee0094b422118e5a7c265586008a95fd135ac5f/kiwisolver-1.5.1-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:05:25.8397832Z #7 61.26 - GET https://pypi.org/simple/pyparsing/ -> 200
+2026-11-01T16:05:25.8398350Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pyparsing/ -> 404
+2026-11-01T16:05:25.8399261Z #7 61.26 - GET https://pypi.org/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8400088Z #7 61.26 - GET https://pypi.org/simple/defusedxml/ -> 200
+2026-11-01T16:05:25.8400969Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/defusedxml/ -> 404
+2026-11-01T16:05:25.8402059Z #7 61.26 - GET https://pypi.org/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8402937Z #7 61.26 - GET https://pypi.org/simple/dataproperty/ -> 200
+2026-11-01T16:05:25.8403482Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/dataproperty/ -> 404
+2026-11-01T16:05:25.8404428Z #7 61.26 - GET https://pypi.org/packages/03/41/eab7fe313820578b341a2a1d6aeeedd2c38ec1e3f3d51e57e2735b5beac0/dataproperty-1.1.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8405290Z #7 61.26 - GET https://pypi.org/simple/mbstrdecoder/ -> 200
+2026-11-01T16:05:25.8405824Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/mbstrdecoder/ -> 404
+2026-11-01T16:05:25.8406768Z #7 61.26 - GET https://pypi.org/packages/4c/eb/711270faab7b7df702339a2c68b31fd3ed4fffc68b0e99e5bdf49b1e87e4/mbstrdecoder-1.1.5-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8407649Z #7 61.26 - GET https://pypi.org/simple/pathvalidate/ -> 200
+2026-11-01T16:05:25.8408198Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pathvalidate/ -> 404
+2026-11-01T16:05:25.8409131Z #7 61.26 - GET https://pypi.org/packages/9a/70/875f4a23bfc4731703a5835487d0d2fb999031bd415e7d17c0ae615c18b7/pathvalidate-3.3.1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8409969Z #7 61.26 - GET https://pypi.org/simple/tabledata/ -> 200
+2026-11-01T16:05:25.8410491Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tabledata/ -> 404
+2026-11-01T16:05:25.8411387Z #7 61.26 - GET https://pypi.org/packages/c7/86/37fa0e1437089f08b8b1b8c8ad93f6b57e9427753f002914299323300a9e/tabledata-1.3.5-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8412198Z #7 61.26 - GET https://pypi.org/simple/tcolorpy/ -> 200
+2026-11-01T16:05:25.8412706Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tcolorpy/ -> 404
+2026-11-01T16:05:25.8413616Z #7 61.26 - GET https://pypi.org/packages/05/a2/ed023f2edd1e011b4d99b6727bce8253842d66c3fbf9ed0a26fc09a92571/tcolorpy-0.1.7-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8414432Z #7 61.26 - GET https://pypi.org/simple/typepy/ -> 200
+2026-11-01T16:05:25.8414927Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/typepy/ -> 404
+2026-11-01T16:05:25.8415812Z #7 61.26 - GET https://pypi.org/packages/64/71/75cf08c49b64a9419f1f2cef9be072ac34f6b784da2851489470b7c7ba15/typepy-1.3.5-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8416623Z #7 61.26 - GET https://pypi.org/simple/chardet/ -> 200
+2026-11-01T16:05:25.8417123Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/chardet/ -> 404
+2026-11-01T16:05:25.8418224Z #7 61.26 - GET https://pypi.org/packages/66/42/5de54f632c2de53cd3415b3703383d5fff43a94cbc0567ef362515261a21/chardet-6.0.0.post1-py3-none-any.whl -> 200
+2026-11-01T16:05:25.8419088Z #7 61.26 - GET https://pypi.org/simple/python-dateutil/ -> 200
+2026-11-01T16:05:25.8419647Z #7 61.26 - GET https://repo.huaweicloud.com/ascend/repos/pypi/python-dateutil/ -> 404
+2026-11-01T16:05:25.8420681Z #7 61.26 - GET https://pypi.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl -> 200
+2026-11-01T16:05:25.8421513Z #7 DONE 61.3s
+2026-11-01T16:05:25.8421652Z 
+2026-11-01T16:05:25.8422773Z #8 [4/4] RUN git clone -b v3.1-20260609-master --depth 1 "https://github.com/AISBench/benchmark.git" /vllm-workspace/vllm-ascend/benchmark &&     cd /vllm-workspace/vllm-ascend/benchmark &&     pip install -e . -r requirements/api.txt -r requirements/extra.txt &&     python3 -m pip cache purge
+2026-11-01T16:05:25.8905839Z #8 0.223 Cloning into '/vllm-workspace/vllm-ascend/benchmark'...
+2026-11-01T16:05:36.9405615Z #8 11.27 Note: switching to '0da56eadb2ac85c31c2540f4f5b69af3ec5717a5'.
+2026-11-01T16:05:36.9406084Z #8 11.27 
+2026-11-01T16:05:36.9406446Z #8 11.27 You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-01T16:05:36.9407533Z #8 11.27 changes and commit them, and you can discard any commits you make in this
+2026-11-01T16:05:36.9408329Z #8 11.27 state without impacting any branches by switching back to a branch.
+2026-11-01T16:05:36.9408767Z #8 11.27 
+2026-11-01T16:05:36.9409115Z #8 11.27 If you want to create a new branch to retain commits you create, you may
+2026-11-01T16:05:36.9409674Z #8 11.27 do so (now or later) by using -c with the switch command. Example:
+2026-11-01T16:05:36.9410081Z #8 11.27 
+2026-11-01T16:05:36.9410319Z #8 11.27   git switch -c <new-branch-name>
+2026-11-01T16:05:36.9410621Z #8 11.27 
+2026-11-01T16:05:36.9410856Z #8 11.27 Or undo this operation with:
+2026-11-01T16:05:36.9411143Z #8 11.27 
+2026-11-01T16:05:36.9411360Z #8 11.27   git switch -
+2026-11-01T16:05:36.9411591Z #8 11.27 
+2026-11-01T16:05:36.9411967Z #8 11.27 Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-01T16:05:36.9412436Z #8 11.27 
+2026-11-01T16:05:37.5912370Z #8 11.92 Looking in indexes: https://pypi.org/simple, https://repo.huaweicloud.com/ascend/repos/pypi
+2026-11-01T16:05:37.7433083Z #8 11.92 Obtaining file:///vllm-workspace/vllm-ascend/benchmark
+2026-11-01T16:05:37.7433545Z #8 11.93   Installing build dependencies: started
+2026-11-01T16:05:39.2136587Z #8 13.55   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:39.3645890Z #8 13.55   Checking if build backend supports build_editable: started
+2026-11-01T16:05:39.5242562Z #8 13.86   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-01T16:05:39.6755336Z #8 13.86   Getting requirements to build editable: started
+2026-11-01T16:05:39.7199931Z #8 14.05   Getting requirements to build editable: finished with status 'done'
+2026-11-01T16:05:39.8716194Z #8 14.05   Installing backend dependencies: started
+2026-11-01T16:05:42.5857144Z #8 16.92   Installing backend dependencies: finished with status 'done'
+2026-11-01T16:05:42.7366179Z #8 16.92   Preparing editable metadata (pyproject.toml): started
+2026-11-01T16:05:42.9282328Z #8 17.26   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:05:43.1074089Z #8 17.29 Requirement already satisfied: openai in /usr/local/python3.12.16/lib/python3.12/site-packages (from -r requirements/api.txt (line 2)) (3.42.0)
+2026-11-01T16:05:43.4605245Z #8 17.79 Collecting human-eval (from -r requirements/extra.txt (line 2))
+2026-11-01T16:05:43.5723186Z #8 17.80   Downloading human_eval-1.0.3-py3-none-any.whl (52 kB)
+2026-11-01T16:05:43.5723769Z #8 17.90 Collecting math-verify==0.5.2 (from -r requirements/extra.txt (line 5))
+2026-11-01T16:05:43.6716542Z #8 17.91   Downloading math_verify-0.5.2-py3-none-any.whl (27 kB)
+2026-11-01T16:05:43.6717087Z #8 18.00 Collecting langdetect (from -r requirements/extra.txt (line 8))
+2026-11-01T16:05:43.9022434Z #8 18.02   Downloading langdetect-1.0.9.tar.gz (981 kB)
+2026-11-01T16:05:43.9023196Z #8 18.04      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 981.5/981.5 kB 97.1 MB/s  0:00:00
+2026-11-01T16:05:43.9023674Z #8 18.08   Installing build dependencies: started
+2026-11-01T16:05:45.2210733Z #8 19.55   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:45.3757703Z #8 19.55   Getting requirements to build wheel: started
+2026-11-01T16:05:45.5998855Z #8 19.93   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:05:45.7512239Z #8 19.93   Preparing metadata (pyproject.toml): started
+2026-11-01T16:05:45.8045617Z #8 20.14   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:05:45.9062733Z #8 20.14 Requirement already satisfied: absl-py in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (2.5.1)
+2026-11-01T16:05:45.9063665Z #8 20.24 Collecting accelerate>=0.19.0 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:46.0394118Z #8 20.24   Downloading accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-11-01T16:05:46.0394675Z #8 20.37 Collecting cpm_kernels (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:46.1548162Z #8 20.37   Downloading cpm_kernels-1.0.11-py3-none-any.whl (416 kB)
+2026-11-01T16:05:46.1549049Z #8 20.49 Collecting datasets<=3.6.0,>=2.12.0 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:46.2927207Z #8 20.49   Downloading datasets-3.6.0-py3-none-any.whl (491 kB)
+2026-11-01T16:05:46.2928100Z #8 20.51 Requirement already satisfied: einops>=0.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.8.2)
+2026-11-01T16:05:46.2929337Z #8 20.51 Requirement already satisfied: evaluate>=0.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.4.6)
+2026-11-01T16:05:46.2930228Z #8 20.62 Collecting func_timeout (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:46.4809909Z #8 20.65   Downloading func_timeout-4.3.5.tar.gz (44 kB)
+2026-11-01T16:05:46.4810356Z #8 20.66   Installing build dependencies: started
+2026-11-01T16:05:47.9173406Z #8 22.25   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:48.0791112Z #8 22.25   Getting requirements to build wheel: started
+2026-11-01T16:05:48.2930228Z #8 22.63   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:05:48.4484360Z #8 22.63   Preparing metadata (pyproject.toml): started
+2026-11-01T16:05:48.4979799Z #8 22.83   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:05:48.5986507Z #8 22.93 Collecting fuzzywuzzy (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:48.5987058Z #8 22.93   Downloading fuzzywuzzy-0.18.0-py2.py3-none-any.whl (18 kB)
+2026-11-01T16:05:48.7558306Z #8 23.09 Collecting gradio-client (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:48.9094386Z #8 23.09   Downloading gradio_client-2.7.2-py3-none-any.whl (64 kB)
+2026-11-01T16:05:48.9565517Z #8 23.29 Collecting h5py (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:49.1118220Z #8 23.29   Downloading h5py-3.16.0-cp312-cp312-manylinux_2_28_aarch64.whl (5.2 MB)
+2026-11-01T16:05:49.3159133Z #8 23.53      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 20.8 MB/s  0:00:00
+2026-11-01T16:05:49.3159996Z #8 23.54 Requirement already satisfied: httpx in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.28.1)
+2026-11-01T16:05:49.3160882Z #8 23.65 Collecting immutabledict (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:49.4415411Z #8 23.65   Downloading immutabledict-4.3.1-py3-none-any.whl (5.0 kB)
+2026-11-01T16:05:49.4416005Z #8 23.77 Collecting importlib-metadata (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:49.5993497Z #8 23.79   Downloading importlib_metadata-10.1.0-py3-none-any.whl (32 kB)
+2026-11-01T16:05:49.5994029Z #8 23.93 Collecting jieba (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:49.7721626Z #8 23.95   Downloading jieba-0.42.1.tar.gz (19.2 MB)
+2026-11-01T16:05:50.6301036Z #8 24.81      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.2/19.2 MB 22.2 MB/s  0:00:00
+2026-11-01T16:05:50.9395528Z #8 25.27   Installing build dependencies: started
+2026-11-01T16:05:52.5497193Z #8 26.88   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:52.7005406Z #8 26.88   Getting requirements to build wheel: started
+2026-11-01T16:05:52.9239260Z #8 27.26   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:05:53.0752008Z #8 27.26   Preparing metadata (pyproject.toml): started
+2026-11-01T16:05:53.1278062Z #8 27.46   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:05:53.3206847Z #8 27.65 Collecting json5 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:53.4481250Z #8 27.66   Downloading json5-0.17.3-py3-none-any.whl (34 kB)
+2026-11-01T16:05:53.4481763Z #8 27.78 Collecting jsonlines (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:53.5737094Z #8 27.78   Downloading jsonlines-4.0.0-py3-none-any.whl (8.7 kB)
+2026-11-01T16:05:53.5737626Z #8 27.91 Collecting mmengine-lite (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:53.7384868Z #8 27.91   Downloading mmengine_lite-0.10.7-py3-none-any.whl (452 kB)
+2026-11-01T16:05:53.7386010Z #8 27.92 Requirement already satisfied: nltk>=3.7 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (3.10.4)
+2026-11-01T16:05:54.0232120Z #8 28.36 Collecting numpy<2.0.0,>=1.23.4 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:54.1345314Z #8 28.36   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
+2026-11-01T16:05:54.1346380Z #8 28.44      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.9/13.9 MB 178.1 MB/s  0:00:00
+2026-11-01T16:05:54.1347326Z #8 28.47 Requirement already satisfied: opencv-python-headless in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (5.0.0.93)
+2026-11-01T16:05:54.7302817Z #8 29.06 Collecting orjson (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:54.8918971Z #8 29.07   Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (129 kB)
+2026-11-01T16:05:54.8920038Z #8 29.07 Requirement already satisfied: pandas in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (3.0.6)
+2026-11-01T16:05:54.9244546Z #8 29.26 Collecting plotly (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:55.1354261Z #8 29.26   Downloading plotly-7.1.0-py3-none-any.whl (9.7 MB)
+2026-11-01T16:05:55.1355004Z #8 29.32      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 179.1 MB/s  0:00:00
+2026-11-01T16:05:55.1462933Z #8 29.48 Collecting prettytable (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:55.2651915Z #8 29.48   Downloading prettytable-3.18.0-py3-none-any.whl (37 kB)
+2026-11-01T16:05:55.2652780Z #8 29.49 Requirement already satisfied: protobuf in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (7.36.2)
+2026-11-01T16:05:55.2653644Z #8 29.60 Collecting pyext==0.5 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:55.4417297Z #8 29.62   Downloading pyext-0.5.tar.gz (6.7 kB)
+2026-11-01T16:05:55.4417699Z #8 29.62   Installing build dependencies: started
+2026-11-01T16:05:56.8296967Z #8 31.16   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:56.9805314Z #8 31.16   Getting requirements to build wheel: started
+2026-11-01T16:05:57.2038437Z #8 31.54   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:05:57.3551554Z #8 31.54   Preparing metadata (pyproject.toml): started
+2026-11-01T16:05:57.4036233Z #8 31.74   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:05:57.5203717Z #8 31.85 Collecting python-Levenshtein (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:57.6374789Z #8 31.86   Downloading python_levenshtein-0.27.5-py3-none-any.whl (9.5 kB)
+2026-11-01T16:05:57.6375359Z #8 31.97 Collecting rank_bm25==0.2.2 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:57.7396993Z #8 31.97   Downloading rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+2026-11-01T16:05:57.7397881Z #8 31.98 Requirement already satisfied: rapidfuzz in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (3.14.6)
+2026-11-01T16:05:57.7399125Z #8 31.98 Requirement already satisfied: requests>=2.31.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (2.34.2)
+2026-11-01T16:05:57.7400010Z #8 32.07 Collecting retrying (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:57.8509171Z #8 32.08   Downloading retrying-1.4.2-py3-none-any.whl (10 kB)
+2026-11-01T16:05:57.8509992Z #8 32.08 Requirement already satisfied: rich in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (15.0.0)
+2026-11-01T16:05:57.8510820Z #8 32.18 Collecting rouge (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:57.9620589Z #8 32.19   Downloading rouge-1.0.1-py3-none-any.whl (13 kB)
+2026-11-01T16:05:57.9621104Z #8 32.29 Collecting rouge_chinese (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:58.0667984Z #8 32.30   Downloading rouge_chinese-1.0.3-py3-none-any.whl (21 kB)
+2026-11-01T16:05:58.0669090Z #8 32.30 Requirement already satisfied: rouge_score in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.1.2)
+2026-11-01T16:05:58.0670318Z #8 32.30 Requirement already satisfied: sacrebleu in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (2.6.0)
+2026-11-01T16:05:58.0671551Z #8 32.30 Requirement already satisfied: scikit_learn>=1.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (1.9.1)
+2026-11-01T16:05:58.0672779Z #8 32.30 Requirement already satisfied: scipy in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (1.18.1)
+2026-11-01T16:05:58.0673770Z #8 32.38 Collecting seaborn (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:58.0674265Z #8 32.39   Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+2026-11-01T16:05:58.0675114Z #8 32.40 Requirement already satisfied: tabulate in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.10.0)
+2026-11-01T16:05:58.1774341Z #8 32.40 Requirement already satisfied: tiktoken in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.14.0)
+2026-11-01T16:05:58.1775240Z #8 32.51 Collecting timeout_decorator (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:05:58.3652013Z #8 32.54   Downloading timeout-decorator-0.5.0.tar.gz (4.8 kB)
+2026-11-01T16:05:58.3652457Z #8 32.55   Installing build dependencies: started
+2026-11-01T16:05:59.7711325Z #8 34.10   Installing build dependencies: finished with status 'done'
+2026-11-01T16:05:59.9202454Z #8 34.10   Getting requirements to build wheel: started
+2026-11-01T16:06:00.1462439Z #8 34.48   Getting requirements to build wheel: finished with status 'done'
+2026-11-01T16:06:00.2976071Z #8 34.48   Preparing metadata (pyproject.toml): started
+2026-11-01T16:06:00.3487778Z #8 34.68   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:00.5023625Z #8 34.68 Requirement already satisfied: tokenizers in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.23.3)
+2026-11-01T16:06:00.5024889Z #8 34.68 Requirement already satisfied: torch in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (2.10.0+cpu)
+2026-11-01T16:06:00.5026101Z #8 34.68 Requirement already satisfied: tqdm>=4.64.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (4.70.1)
+2026-11-01T16:06:00.5027448Z #8 34.68 Requirement already satisfied: transformers in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (5.19.0)
+2026-11-01T16:06:00.5216167Z #8 34.85 Collecting tree-sitter==0.21.3 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:00.6754610Z #8 34.86   Downloading tree_sitter-0.21.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (490 kB)
+2026-11-01T16:06:00.8247254Z #8 35.16 Collecting tree_sitter_languages>=1.10.2 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:01.0457582Z #8 35.16   Downloading tree_sitter_languages-1.10.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.7 MB)
+2026-11-01T16:06:01.0458631Z #8 35.22      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 156.4 MB/s  0:00:00
+2026-11-01T16:06:01.0459472Z #8 35.23 Requirement already satisfied: typer in /usr/local/python3.12.16/lib/python3.12/site-packages (from ais_bench_benchmark==3.1.20260609) (0.27.3)
+2026-11-01T16:06:01.3043178Z #8 35.64 Collecting Pillow==11.2.1 (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:01.4903265Z #8 35.64   Downloading pillow-11.2.1-cp312-cp312-manylinux_2_28_aarch64.whl (4.5 MB)
+2026-11-01T16:06:01.4904023Z #8 35.68      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 122.5 MB/s  0:00:00
+2026-11-01T16:06:01.4904854Z #8 35.82 Collecting janus (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:01.6315368Z #8 35.83   Downloading janus-2.0.0-py3-none-any.whl (12 kB)
+2026-11-01T16:06:01.6316059Z #8 35.96 Collecting latex2sympy2_extended==1.0.6 (from math-verify==0.5.2->-r requirements/extra.txt (line 5))
+2026-11-01T16:06:01.7630535Z #8 35.97   Downloading latex2sympy2_extended-1.0.6-py3-none-any.whl (82 kB)
+2026-11-01T16:06:01.7631390Z #8 36.10 Collecting antlr4-python3-runtime==4.13.2 (from latex2sympy2_extended==1.0.6->math-verify==0.5.2->-r requirements/extra.txt (line 5))
+2026-11-01T16:06:01.8853219Z #8 36.10   Downloading antlr4_python3_runtime-4.13.2-py3-none-any.whl (144 kB)
+2026-11-01T16:06:01.8854358Z #8 36.10 Requirement already satisfied: sympy in /usr/local/python3.12.16/lib/python3.12/site-packages (from latex2sympy2_extended==1.0.6->math-verify==0.5.2->-r requirements/extra.txt (line 5)) (1.14.0)
+2026-11-01T16:06:01.8855851Z #8 36.11 Requirement already satisfied: filelock in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (4.2.4)
+2026-11-01T16:06:01.8857285Z #8 36.11 Requirement already satisfied: pyarrow>=15.0.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (25.0.1)
+2026-11-01T16:06:01.8858367Z #8 36.22 Collecting dill<0.3.9,>=0.3.0 (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:02.0119587Z #8 36.22   Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+2026-11-01T16:06:02.0120494Z #8 36.23 Requirement already satisfied: xxhash in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (4.0.2)
+2026-11-01T16:06:02.0121570Z #8 36.34 Collecting multiprocess<0.70.17 (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:02.1600899Z #8 36.35   Downloading multiprocess-0.70.16-py312-none-any.whl (146 kB)
+2026-11-01T16:06:02.1601730Z #8 36.49 Collecting fsspec<=2025.3.0,>=2023.1.0 (from fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:02.3633210Z #8 36.50   Downloading fsspec-2025.3.0-py3-none-any.whl (193 kB)
+2026-11-01T16:06:02.3634203Z #8 36.52 Requirement already satisfied: huggingface-hub>=0.24.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (2.4.0)
+2026-11-01T16:06:02.3635642Z #8 36.52 Requirement already satisfied: packaging in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (26.3)
+2026-11-01T16:06:02.3637055Z #8 36.52 Requirement already satisfied: pyyaml>=5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (6.0.3)
+2026-11-01T16:06:02.3638680Z #8 36.52 Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (3.14.5)
+2026-11-01T16:06:02.3640653Z #8 36.53 Requirement already satisfied: anyio<5,>=4.10.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (4.15.1)
+2026-11-01T16:06:02.3641964Z #8 36.53 Requirement already satisfied: httpx2<3,>=2.12.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (2.16.0)
+2026-11-01T16:06:02.3643259Z #8 36.53 Requirement already satisfied: jiter<1,>=0.16.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (0.18.0)
+2026-11-01T16:06:02.3644659Z #8 36.53 Requirement already satisfied: pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (2.14.2)
+2026-11-01T16:06:02.3646033Z #8 36.53 Requirement already satisfied: sniffio in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (1.3.1)
+2026-11-01T16:06:02.3647367Z #8 36.53 Requirement already satisfied: typing-extensions<5,>=4.14 in /usr/local/python3.12.16/lib/python3.12/site-packages (from openai->-r requirements/api.txt (line 2)) (4.16.0)
+2026-11-01T16:06:02.3648751Z #8 36.53 Requirement already satisfied: idna>=2.8 in /usr/local/python3.12.16/lib/python3.12/site-packages (from anyio<5,>=4.10.0->openai->-r requirements/api.txt (line 2)) (3.20)
+2026-11-01T16:06:02.3650152Z #8 36.54 Requirement already satisfied: httpcore2==2.16.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpx2<3,>=2.12.0->openai->-r requirements/api.txt (line 2)) (2.16.0)
+2026-11-01T16:06:02.3651588Z #8 36.54 Requirement already satisfied: truststore>=0.10 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpx2<3,>=2.12.0->openai->-r requirements/api.txt (line 2)) (0.10.5)
+2026-11-01T16:06:02.3653063Z #8 36.54 Requirement already satisfied: h11>=0.16 in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpcore2==2.16.0->httpx2<3,>=2.12.0->openai->-r requirements/api.txt (line 2)) (0.16.0)
+2026-11-01T16:06:02.3654648Z #8 36.54 Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements/api.txt (line 2)) (0.8.0)
+2026-11-01T16:06:02.3656313Z #8 36.54 Requirement already satisfied: pydantic-core==2.50.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements/api.txt (line 2)) (2.50.2)
+2026-11-01T16:06:02.3657993Z #8 36.54 Requirement already satisfied: typing-inspection>=0.4.4 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai->-r requirements/api.txt (line 2)) (0.4.4)
+2026-11-01T16:06:02.3813393Z #8 36.71 Collecting fire (from human-eval->-r requirements/extra.txt (line 2))
+2026-11-01T16:06:02.4829081Z #8 36.72   Downloading fire-0.7.1-py3-none-any.whl (115 kB)
+2026-11-01T16:06:02.4829950Z #8 36.72 Requirement already satisfied: six in /usr/local/python3.12.16/lib/python3.12/site-packages (from langdetect->-r requirements/extra.txt (line 8)) (1.17.0)
+2026-11-01T16:06:02.4831271Z #8 36.73 Requirement already satisfied: psutil in /usr/local/python3.12.16/lib/python3.12/site-packages (from accelerate>=0.19.0->ais_bench_benchmark==3.1.20260609) (6.0.0)
+2026-11-01T16:06:02.4832655Z #8 36.73 Requirement already satisfied: safetensors>=0.4.3 in /usr/local/python3.12.16/lib/python3.12/site-packages (from accelerate>=0.19.0->ais_bench_benchmark==3.1.20260609) (0.8.0)
+2026-11-01T16:06:02.4834331Z #8 36.73 Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (2.7.1)
+2026-11-01T16:06:02.4836647Z #8 36.73 Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (1.4.0)
+2026-11-01T16:06:02.4838492Z #8 36.73 Requirement already satisfied: attrs>=17.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (24.2.0)
+2026-11-01T16:06:02.4840325Z #8 36.73 Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (1.8.0)
+2026-11-01T16:06:02.4842180Z #8 36.73 Requirement already satisfied: multidict<8.0,>=4.5 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (7.2.1)
+2026-11-01T16:06:02.4844040Z #8 36.73 Requirement already satisfied: propcache>=0.2.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (0.5.4)
+2026-11-01T16:06:02.4845883Z #8 36.73 Requirement already satisfied: yarl<2.0,>=1.25.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (1.25.1)
+2026-11-01T16:06:02.4848928Z #8 36.76 Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from huggingface-hub>=0.24.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (8.5.0)
+2026-11-01T16:06:02.4850550Z #8 36.76 Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from huggingface-hub>=0.24.0->datasets<=3.6.0,>=2.12.0->ais_bench_benchmark==3.1.20260609) (1.8.0)
+2026-11-01T16:06:02.4852010Z #8 36.78 Requirement already satisfied: defusedxml in /usr/local/python3.12.16/lib/python3.12/site-packages (from nltk>=3.7->ais_bench_benchmark==3.1.20260609) (0.7.1)
+2026-11-01T16:06:02.4853287Z #8 36.78 Requirement already satisfied: joblib in /usr/local/python3.12.16/lib/python3.12/site-packages (from nltk>=3.7->ais_bench_benchmark==3.1.20260609) (1.6.0)
+2026-11-01T16:06:02.4854577Z #8 36.78 Requirement already satisfied: regex>=2021.8.3 in /usr/local/python3.12.16/lib/python3.12/site-packages (from nltk>=3.7->ais_bench_benchmark==3.1.20260609) (2026.9.29)
+2026-11-01T16:06:02.4855960Z #8 36.79 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from requests>=2.31.0->ais_bench_benchmark==3.1.20260609) (3.5.2)
+2026-11-01T16:06:02.4857395Z #8 36.79 Requirement already satisfied: urllib3<3,>=1.26 in /usr/local/python3.12.16/lib/python3.12/site-packages (from requests>=2.31.0->ais_bench_benchmark==3.1.20260609) (2.8.0)
+2026-11-01T16:06:02.4858774Z #8 36.79 Requirement already satisfied: certifi>=2023.5.7 in /usr/local/python3.12.16/lib/python3.12/site-packages (from requests>=2.31.0->ais_bench_benchmark==3.1.20260609) (2026.10.23)
+2026-11-01T16:06:02.4860176Z #8 36.80 Requirement already satisfied: narwhals>=2.0.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from scikit_learn>=1.5.0->ais_bench_benchmark==3.1.20260609) (2.28.0)
+2026-11-01T16:06:02.4861601Z #8 36.80 Requirement already satisfied: threadpoolctl>=3.5.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from scikit_learn>=1.5.0->ais_bench_benchmark==3.1.20260609) (3.7.0)
+2026-11-01T16:06:02.4863019Z #8 36.80 Requirement already satisfied: cloudpickle>=3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from joblib->nltk>=3.7->ais_bench_benchmark==3.1.20260609) (3.1.2)
+2026-11-01T16:06:02.4864626Z #8 36.82 INFO: pip is looking at multiple versions of scipy to determine which version is compatible with other requirements. This could take a while.
+2026-11-01T16:06:02.8526682Z #8 37.18 Collecting scipy (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:03.0074739Z #8 37.19   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (34.0 MB)
+2026-11-01T16:06:03.2499267Z #8 37.38      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.0/34.0 MB 180.3 MB/s  0:00:00
+2026-11-01T16:06:03.2499979Z #8 37.43   Downloading scipy-1.17.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (32.9 MB)
+2026-11-01T16:06:03.4789089Z #8 37.63      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32.9/32.9 MB 169.1 MB/s  0:00:00
+2026-11-01T16:06:03.4790033Z #8 37.68 Requirement already satisfied: setuptools in /usr/local/python3.12.16/lib/python3.12/site-packages (from torch->ais_bench_benchmark==3.1.20260609) (80.10.2)
+2026-11-01T16:06:03.4791364Z #8 37.68 Requirement already satisfied: networkx>=2.5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from torch->ais_bench_benchmark==3.1.20260609) (3.7)
+2026-11-01T16:06:03.4792621Z #8 37.68 Requirement already satisfied: jinja2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from torch->ais_bench_benchmark==3.1.20260609) (3.1.6)
+2026-11-01T16:06:03.4794093Z #8 37.69 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from sympy->latex2sympy2_extended==1.0.6->math-verify==0.5.2->-r requirements/extra.txt (line 5)) (1.3.0)
+2026-11-01T16:06:03.4795283Z #8 37.81 Collecting termcolor (from fire->human-eval->-r requirements/extra.txt (line 2))
+2026-11-01T16:06:03.6210822Z #8 37.81   Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+2026-11-01T16:06:03.6211776Z #8 37.83 Requirement already satisfied: httpcore==1.* in /usr/local/python3.12.16/lib/python3.12/site-packages (from httpx->ais_bench_benchmark==3.1.20260609) (1.0.9)
+2026-11-01T16:06:03.6212787Z #8 37.95 Collecting zipp>=3.20 (from importlib-metadata->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:03.7562218Z #8 37.98   Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+2026-11-01T16:06:03.7563138Z #8 37.99 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from jinja2->torch->ais_bench_benchmark==3.1.20260609) (3.0.4)
+2026-11-01T16:06:03.7564137Z #8 38.09 Collecting addict (from mmengine-lite->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:03.8907499Z #8 38.09   Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
+2026-11-01T16:06:03.8908112Z #8 38.22 Collecting yapf (from mmengine-lite->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:04.0594635Z #8 38.23   Downloading yapf-0.43.0-py3-none-any.whl (256 kB)
+2026-11-01T16:06:04.0595536Z #8 38.24 INFO: pip is looking at multiple versions of opencv-python-headless to determine which version is compatible with other requirements. This could take a while.
+2026-11-01T16:06:04.0747883Z #8 38.41 Collecting opencv-python-headless (from ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:04.2302894Z #8 38.41   Downloading opencv_python_headless-4.14.0.94-cp37-abi3-manylinux_2_28_aarch64.whl (38.1 MB)
+2026-11-01T16:06:04.4858633Z #8 38.63      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.1/38.1 MB 176.7 MB/s  0:00:00
+2026-11-01T16:06:04.4859290Z #8 38.67   Downloading opencv_python_headless-4.13.0.92-cp37-abi3-manylinux_2_28_aarch64.whl (35.0 MB)
+2026-11-01T16:06:04.9108126Z #8 39.05      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 90.6 MB/s  0:00:00
+2026-11-01T16:06:04.9108776Z #8 39.09   Downloading opencv_python_headless-4.13.0.90-cp37-abi3-manylinux_2_28_aarch64.whl (36.6 MB)
+2026-11-01T16:06:05.1402146Z #8 39.28      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.6/36.6 MB 194.3 MB/s  0:00:00
+2026-11-01T16:06:05.1402941Z #8 39.32   Downloading opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (33.1 MB)
+2026-11-01T16:06:05.3590496Z #8 39.51      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.1/33.1 MB 182.1 MB/s  0:00:00
+2026-11-01T16:06:05.3591578Z #8 39.54   Downloading opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (29.5 MB)
+2026-11-01T16:06:05.7440490Z #8 39.90      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.5/29.5 MB 82.2 MB/s  0:00:00
+2026-11-01T16:06:05.7441553Z #8 39.94 Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from pandas->ais_bench_benchmark==3.1.20260609) (2.9.0.post0)
+2026-11-01T16:06:05.7442591Z #8 40.08 Collecting wcwidth>=0.3.5 (from prettytable->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:05.9081479Z #8 40.08   Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (789 kB)
+2026-11-01T16:06:05.9082434Z #8 40.09      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.0/789.0 kB 80.7 MB/s  0:00:00
+2026-11-01T16:06:06.1294119Z #8 40.46 Collecting Levenshtein==0.27.5 (from python-Levenshtein->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:06.3426837Z #8 40.46   Downloading levenshtein-0.27.5-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (139 kB)
+2026-11-01T16:06:06.3428272Z #8 40.48 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from rich->ais_bench_benchmark==3.1.20260609) (4.2.0)
+2026-11-01T16:06:06.3429613Z #8 40.48 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from rich->ais_bench_benchmark==3.1.20260609) (2.21.0)
+2026-11-01T16:06:06.3430985Z #8 40.48 Requirement already satisfied: mdurl~=0.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich->ais_bench_benchmark==3.1.20260609) (0.1.2)
+2026-11-01T16:06:06.3432368Z #8 40.49 Requirement already satisfied: portalocker in /usr/local/python3.12.16/lib/python3.12/site-packages (from sacrebleu->ais_bench_benchmark==3.1.20260609) (4.4.2)
+2026-11-01T16:06:06.3433730Z #8 40.50 Requirement already satisfied: colorama in /usr/local/python3.12.16/lib/python3.12/site-packages (from sacrebleu->ais_bench_benchmark==3.1.20260609) (0.4.6)
+2026-11-01T16:06:06.3434995Z #8 40.50 Requirement already satisfied: lxml in /usr/local/python3.12.16/lib/python3.12/site-packages (from sacrebleu->ais_bench_benchmark==3.1.20260609) (6.1.3)
+2026-11-01T16:06:06.3436299Z #8 40.51 Requirement already satisfied: matplotlib!=3.6.1,>=3.4 in /usr/local/python3.12.16/lib/python3.12/site-packages (from seaborn->ais_bench_benchmark==3.1.20260609) (3.11.2)
+2026-11-01T16:06:06.3437724Z #8 40.52 Requirement already satisfied: contourpy>=1.0.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609) (1.4.0)
+2026-11-01T16:06:06.3439194Z #8 40.52 Requirement already satisfied: cycler>=0.10 in /usr/local/python3.12.16/lib/python3.12/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609) (0.12.1)
+2026-11-01T16:06:06.3440679Z #8 40.52 Requirement already satisfied: fonttools>=4.28.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609) (4.68.0)
+2026-11-01T16:06:06.3442174Z #8 40.52 Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609) (1.5.1)
+2026-11-01T16:06:06.3443662Z #8 40.52 Requirement already satisfied: pyparsing>=3 in /usr/local/python3.12.16/lib/python3.12/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609) (3.3.3)
+2026-11-01T16:06:06.3444996Z #8 40.52 INFO: pip is looking at multiple versions of contourpy to determine which version is compatible with other requirements. This could take a while.
+2026-11-01T16:06:06.3709383Z #8 40.70 Collecting contourpy>=1.0.1 (from matplotlib!=3.6.1,>=3.4->seaborn->ais_bench_benchmark==3.1.20260609)
+2026-11-01T16:06:06.5969370Z #8 40.71   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (332 kB)
+2026-11-01T16:06:06.5971026Z #8 40.76 Requirement already satisfied: shellingham>=1.3.0 in /usr/local/python3.12.16/lib/python3.12/site-packages (from typer->ais_bench_benchmark==3.1.20260609) (1.5.4)
+2026-11-01T16:06:06.5972406Z #8 40.76 Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/python3.12.16/lib/python3.12/site-packages (from typer->ais_bench_benchmark==3.1.20260609) (0.0.5)
+2026-11-01T16:06:06.5973812Z #8 40.77 Requirement already satisfied: platformdirs>=3.5.1 in /usr/local/python3.12.16/lib/python3.12/site-packages (from yapf->mmengine-lite->ais_bench_benchmark==3.1.20260609) (4.14.2)
+2026-11-01T16:06:06.5975047Z #8 40.78 Building wheels for collected packages: ais_bench_benchmark, pyext, langdetect, func_timeout, jieba, timeout_decorator
+2026-11-01T16:06:06.5975842Z #8 40.78   Building editable for ais_bench_benchmark (pyproject.toml): started
+2026-11-01T16:06:06.9286619Z #8 41.26   Building editable for ais_bench_benchmark (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:07.0857635Z #8 41.26   Created wheel for ais_bench_benchmark: filename=ais_bench_benchmark-3.1.20260609-0.editable-py3-none-any.whl size=18840 sha256=24e04ad488603541d88aa9de78593c8b9e76b474fad33c2f9529b0e2b938d9bd
+2026-11-01T16:06:07.0859052Z #8 41.26   Stored in directory: /tmp/pip-ephem-wheel-cache-oexik2hm/wheels/b1/81/45/6384523b9260570bc50a0ce7f2f5c88be7894a78b3c1a61904
+2026-11-01T16:06:07.0859838Z #8 41.27   Building wheel for pyext (pyproject.toml): started
+2026-11-01T16:06:07.1726283Z #8 41.50   Building wheel for pyext (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:07.3260738Z #8 41.51   Created wheel for pyext: filename=pyext-0.5-py3-none-any.whl size=6323 sha256=b3a8239581e9e045bb15832556567a4395d2587474ce5cf0efa360a01e958d38
+2026-11-01T16:06:07.3261800Z #8 41.51   Stored in directory: /root/.cache/pip/wheels/06/46/04/8088f87d629aada69c7e7dbf507fd35595ba53f9b5d4e31695
+2026-11-01T16:06:07.3262513Z #8 41.51   Building wheel for langdetect (pyproject.toml): started
+2026-11-01T16:06:07.6748016Z #8 42.01   Building wheel for langdetect (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:07.8297477Z #8 42.01   Created wheel for langdetect: filename=langdetect-1.0.9-py3-none-any.whl size=993332 sha256=7824810af40044fdaf2b7e19fd381587491637eb96873a368ad12357d02381f7
+2026-11-01T16:06:07.8298602Z #8 42.01   Stored in directory: /root/.cache/pip/wheels/9d/73/6a/189fcb2d55a601ae750203bb4de9ceb780dbda58aa07b994cb
+2026-11-01T16:06:07.8299300Z #8 42.01   Building wheel for func_timeout (pyproject.toml): started
+2026-11-01T16:06:07.9225023Z #8 42.25   Building wheel for func_timeout (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:08.0765886Z #8 42.26   Created wheel for func_timeout: filename=func_timeout-4.3.5-py3-none-any.whl size=15161 sha256=bfb47ae209bdc4d030219fab66320fe4df9b7be93f1bc76c16fcbf129f851e38
+2026-11-01T16:06:08.0767030Z #8 42.26   Stored in directory: /root/.cache/pip/wheels/11/a7/7a/b6ce37d6b1872ccb2e34c2ff4908dc282291756f552d282fb8
+2026-11-01T16:06:08.0767711Z #8 42.26   Building wheel for jieba (pyproject.toml): started
+2026-11-01T16:06:09.9943845Z #8 44.33   Building wheel for jieba (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:10.1652330Z #8 44.34   Created wheel for jieba: filename=jieba-0.42.1-py3-none-any.whl size=19314509 sha256=f1d654e23d23da09805b05385a10667c699d98fd0e7dccdc2adf7eea97ad84d5
+2026-11-01T16:06:10.1653467Z #8 44.34   Stored in directory: /root/.cache/pip/wheels/66/67/28/272f9c1136319b442c44a905be92759287e3bdafef3e2d7b1b
+2026-11-01T16:06:10.1654193Z #8 44.35   Building wheel for timeout_decorator (pyproject.toml): started
+2026-11-01T16:06:10.2541500Z #8 44.59   Building wheel for timeout_decorator (pyproject.toml): finished with status 'done'
+2026-11-01T16:06:10.4071187Z #8 44.59   Created wheel for timeout_decorator: filename=timeout_decorator-0.5.0-py3-none-any.whl size=5041 sha256=9b9c0dfa6504210c65791ab991840e4d79f9bf03040046803e89cce3d9cbd5b7
+2026-11-01T16:06:10.4072905Z #8 44.59   Stored in directory: /root/.cache/pip/wheels/f9/b4/96/a8976c293add0057d07785547401b21c30317c17f9a8194862
+2026-11-01T16:06:10.4073747Z #8 44.59 Successfully built ais_bench_benchmark pyext langdetect func_timeout jieba timeout_decorator
+2026-11-01T16:06:10.6563092Z #8 44.99 Installing collected packages: timeout_decorator, pyext, jieba, fuzzywuzzy, func_timeout, cpm_kernels, antlr4-python3-runtime, addict, zipp, yapf, wcwidth, tree-sitter, termcolor, rouge_chinese, rouge, retrying, plotly, Pillow, orjson, numpy, Levenshtein, langdetect, jsonlines, json5, janus, immutabledict, fsspec, dill, tree_sitter_languages, scipy, rank_bm25, python-Levenshtein, prettytable, opencv-python-headless, multiprocess, latex2sympy2_extended, importlib-metadata, h5py, fire, contourpy, mmengine-lite, math-verify, human-eval, seaborn, gradio-client, datasets, accelerate, ais_bench_benchmark
+2026-11-01T16:06:14.9142989Z #8 49.25   Attempting uninstall: Pillow
+2026-11-01T16:06:15.1382244Z #8 49.26     Found existing installation: pillow 13.0.0
+2026-11-01T16:06:15.1382719Z #8 49.27     Uninstalling pillow-13.0.0:
+2026-11-01T16:06:15.1383102Z #8 49.32       Successfully uninstalled pillow-13.0.0
+2026-11-01T16:06:15.3502050Z #8 49.68   Attempting uninstall: numpy
+2026-11-01T16:06:15.4587381Z #8 49.74     Found existing installation: numpy 2.5.4
+2026-11-01T16:06:15.4588029Z #8 49.79     Uninstalling numpy-2.5.4:
+2026-11-01T16:06:15.6999727Z #8 50.03       Successfully uninstalled numpy-2.5.4
+2026-11-01T16:06:17.8619821Z #8 52.19   Attempting uninstall: fsspec
+2026-11-01T16:06:18.0460194Z #8 52.20     Found existing installation: fsspec 2026.7.0
+2026-11-01T16:06:18.0460615Z #8 52.21     Uninstalling fsspec-2026.7.0:
+2026-11-01T16:06:18.0460998Z #8 52.23       Successfully uninstalled fsspec-2026.7.0
+2026-11-01T16:06:18.0646551Z #8 52.40   Attempting uninstall: dill
+2026-11-01T16:06:18.2520244Z #8 52.41     Found existing installation: dill 0.4.1
+2026-11-01T16:06:18.2520662Z #8 52.42     Uninstalling dill-0.4.1:
+2026-11-01T16:06:18.2521005Z #8 52.43       Successfully uninstalled dill-0.4.1
+2026-11-01T16:06:18.4631176Z #8 52.80   Attempting uninstall: scipy
+2026-11-01T16:06:18.5771867Z #8 52.81     Found existing installation: scipy 1.18.1
+2026-11-01T16:06:18.5772250Z #8 52.91     Uninstalling scipy-1.18.1:
+2026-11-01T16:06:19.0140308Z #8 53.35       Successfully uninstalled scipy-1.18.1
+2026-11-01T16:06:23.8117425Z #8 58.14   Attempting uninstall: opencv-python-headless
+2026-11-01T16:06:24.0566125Z #8 58.16     Found existing installation: opencv-python-headless 5.0.0.93
+2026-11-01T16:06:24.0566704Z #8 58.16     Uninstalling opencv-python-headless-5.0.0.93:
+2026-11-01T16:06:24.0567213Z #8 58.24       Successfully uninstalled opencv-python-headless-5.0.0.93
+2026-11-01T16:06:24.3526408Z #8 58.68   Attempting uninstall: multiprocess
+2026-11-01T16:06:24.5348303Z #8 58.69     Found existing installation: multiprocess 0.70.19
+2026-11-01T16:06:24.5348822Z #8 58.70     Uninstalling multiprocess-0.70.19:
+2026-11-01T16:06:24.5349250Z #8 58.72       Successfully uninstalled multiprocess-0.70.19
+2026-11-01T16:06:25.0654585Z #8 59.40   Attempting uninstall: contourpy
+2026-11-01T16:06:25.2375385Z #8 59.41     Found existing installation: contourpy 1.4.0
+2026-11-01T16:06:25.2375785Z #8 59.41     Uninstalling contourpy-1.4.0:
+2026-11-01T16:06:25.2376173Z #8 59.42       Successfully uninstalled contourpy-1.4.0
+2026-11-01T16:06:25.6901883Z #8 60.02   Attempting uninstall: datasets
+2026-11-01T16:06:25.9320977Z #8 60.03     Found existing installation: datasets 5.1.0
+2026-11-01T16:06:25.9321382Z #8 60.05     Uninstalling datasets-5.1.0:
+2026-11-01T16:06:25.9321755Z #8 60.11       Successfully uninstalled datasets-5.1.0
+2026-11-01T16:06:26.3866151Z #8 60.72 
+2026-11-01T16:06:26.5635297Z #8 60.72 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-11-01T16:06:26.5636872Z #8 60.72 ms-service-profiler 26.0.0 requires msguard, which is not installed.
+2026-11-01T16:06:26.5637744Z #8 60.72 flash-linear-attention-npu-a2 26.9.1 requires expecttest, which is not installed.
+2026-11-01T16:06:26.5638460Z #8 60.72 ml-dtypes 0.6.0 requires numpy>=2.0.0, but you have numpy 1.26.4 which is incompatible.
+2026-11-01T16:06:26.5639165Z #8 60.72 librosa 1.0.0 requires numpy>=2.1.0, but you have numpy 1.26.4 which is incompatible.
+2026-11-01T16:06:26.5639905Z #8 60.72 triton-ascend 3.2.2 requires decorator==5.1.1, but you have decorator 5.3.1 which is incompatible.
+2026-11-01T16:06:26.5640670Z #8 60.72 triton-ascend 3.2.2 requires pytest==8.3.2, but you have pytest 8.4.2 which is incompatible.
+2026-11-01T16:06:26.5641494Z #8 60.72 triton-ascend 3.2.2 requires scipy==1.13.1; python_version < "3.13", but you have scipy 1.17.1 which is incompatible.
+2026-11-01T16:06:26.5642499Z #8 60.72 vllm 0.32.0+empty requires opencv-python-headless>=4.13.0, but you have opencv-python-headless 4.11.0.86 which is incompatible.
+2026-11-01T16:06:26.5643389Z #8 60.72 vllm 0.32.0+empty requires pillow>=12.3.0, but you have pillow 11.2.1 which is incompatible.
+2026-11-01T16:06:26.5647289Z #8 60.74 Successfully installed Levenshtein-0.27.5 Pillow-11.2.1 accelerate-1.15.0 addict-2.4.0 ais_bench_benchmark-3.1.20260609 antlr4-python3-runtime-4.13.2 contourpy-1.3.3 cpm_kernels-1.0.11 datasets-3.6.0 dill-0.3.8 fire-0.7.1 fsspec-2025.3.0 func_timeout-4.3.5 fuzzywuzzy-0.18.0 gradio-client-2.7.2 h5py-3.16.0 human-eval-1.0.3 immutabledict-4.3.1 importlib-metadata-10.1.0 janus-2.0.0 jieba-0.42.1 json5-0.17.3 jsonlines-4.0.0 langdetect-1.0.9 latex2sympy2_extended-1.0.6 math-verify-0.5.2 mmengine-lite-0.10.7 multiprocess-0.70.16 numpy-1.26.4 opencv-python-headless-4.11.0.86 orjson-3.13.0 plotly-7.1.0 prettytable-3.18.0 pyext-0.5 python-Levenshtein-0.27.5 rank_bm25-0.2.2 retrying-1.4.2 rouge-1.0.1 rouge_chinese-1.0.3 scipy-1.17.1 seaborn-0.13.2 termcolor-3.3.0 timeout_decorator-0.5.0 tree-sitter-0.21.3 tree_sitter_languages-1.10.2 wcwidth-0.9.4 yapf-0.43.0 zipp-4.1.2
+2026-11-01T16:06:26.5652305Z #8 60.74 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-01T16:06:27.0549228Z #8 61.39 Files removed: 123 (331.0 MB)
+2026-11-01T16:06:27.2053741Z #8 61.39 Directories removed: 268
+2026-11-01T16:06:28.6507248Z #8 62.98 proxy network requests:
+2026-11-01T16:06:28.6507972Z #8 62.98 - GET https://github.com/AISBench/benchmark.git/info/refs?service=git-upload-pack -> 200
+2026-11-01T16:06:28.6508700Z #8 62.98 - POST https://github.com/AISBench/benchmark.git/git-upload-pack -> 200
+2026-11-01T16:06:28.6509384Z #8 62.98 - POST https://github.com/AISBench/benchmark.git/git-upload-pack -> 200
+2026-11-01T16:06:28.6509950Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.6510488Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.6511478Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6512311Z #8 62.98 - GET https://pypi.org/simple/nltk/ -> 200
+2026-11-01T16:06:28.6512789Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/nltk/ -> 404
+2026-11-01T16:06:28.6513664Z #8 62.98 - GET https://pypi.org/packages/35/45/64f4abaa5b36b698aaeb556ae6dc533e57a6b9e72ac6fc7f0d7f9cb15bb4/nltk-3.8-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6514456Z #8 62.98 - GET https://pypi.org/simple/click/ -> 200
+2026-11-01T16:06:28.6514940Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/click/ -> 404
+2026-11-01T16:06:28.6515809Z #8 62.98 - GET https://pypi.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6516991Z #8 62.98 - GET https://pypi.org/simple/joblib/ -> 200
+2026-11-01T16:06:28.6517641Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/joblib/ -> 404
+2026-11-01T16:06:28.6518527Z #8 62.98 - GET https://pypi.org/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6519323Z #8 62.98 - GET https://pypi.org/simple/regex/ -> 200
+2026-11-01T16:06:28.6519812Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/regex/ -> 404
+2026-11-01T16:06:28.6520993Z #8 62.98 - GET https://pypi.org/packages/c9/72/67e7a8ce17f1aea49df215564048efb49cc8c2b31a0e0fc30f36838f8516/regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.6522110Z #8 62.98 - GET https://pypi.org/simple/tqdm/ -> 200
+2026-11-01T16:06:28.6522589Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tqdm/ -> 404
+2026-11-01T16:06:28.6523469Z #8 62.98 - GET https://pypi.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6524293Z #8 62.98 - GET https://pypi.org/simple/cloudpickle/ -> 200
+2026-11-01T16:06:28.6524832Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/cloudpickle/ -> 404
+2026-11-01T16:06:28.6525759Z #8 62.98 - GET https://pypi.org/packages/88/39/799be3f2f0f38cc727ee3b4f1445fe6d5e4133064ec2e4115069418a5bb6/cloudpickle-3.1.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6526594Z #8 62.98 - GET https://pypi.org/simple/human-eval/ -> 200
+2026-11-01T16:06:28.6527114Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/human-eval/ -> 404
+2026-11-01T16:06:28.6528028Z #8 62.98 - GET https://pypi.org/packages/c0/af/85d39b927626279710c27c37cc6ea16257b2035a314ad6a3277c6dc15e82/human_eval-1.0.3-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6528845Z #8 62.98 - GET https://pypi.org/simple/math-verify/ -> 200
+2026-11-01T16:06:28.6529382Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/math-verify/ -> 404
+2026-11-01T16:06:28.6530313Z #8 62.98 - GET https://pypi.org/packages/3d/7e/52106f77b86fef6565d005f7afd78e3986edad79900677bfe05f02fd621b/math_verify-0.5.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6531147Z #8 62.98 - GET https://pypi.org/simple/langdetect/ -> 200
+2026-11-01T16:06:28.6531672Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/langdetect/ -> 404
+2026-11-01T16:06:28.6532546Z #8 62.98 - GET https://pypi.org/packages/0e/72/a3add0e4eec4eb9e2569554f7c70f4a3c27712f40e3284d483e88094cc0e/langdetect-1.0.9.tar.gz -> 200
+2026-11-01T16:06:28.6533335Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.6533855Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.6534781Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:06:28.6535632Z #8 62.98 - GET https://pypi.org/simple/accelerate/ -> 200
+2026-11-01T16:06:28.6536158Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/accelerate/ -> 404
+2026-11-01T16:06:28.6537066Z #8 62.98 - GET https://pypi.org/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.6537890Z #8 62.98 - GET https://pypi.org/simple/cpm-kernels/ -> 200
+2026-11-01T16:06:28.8100019Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/cpm-kernels/ -> 404
+2026-11-01T16:06:28.8100986Z #8 62.98 - GET https://pypi.org/packages/af/84/1831ce6ffa87b8fd4d9673c3595d0fc4e6631c0691eb43f406d3bf89b951/cpm_kernels-1.0.11-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8101829Z #8 62.98 - GET https://pypi.org/simple/datasets/ -> 200
+2026-11-01T16:06:28.8102374Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/datasets/ -> 404
+2026-11-01T16:06:28.8103362Z #8 62.98 - GET https://pypi.org/packages/20/34/a08b0ee99715eaba118cbe19a71f7b5e2425c2718ef96007c325944a1152/datasets-3.6.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8104664Z #8 62.98 - GET https://pypi.org/simple/func-timeout/ -> 200
+2026-11-01T16:06:28.8105210Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/func-timeout/ -> 404
+2026-11-01T16:06:28.8106092Z #8 62.98 - GET https://pypi.org/packages/b3/0d/bf0567477f7281d9a3926c582bfef21bff7498fc0ffd3e9de21811896a0b/func_timeout-4.3.5.tar.gz -> 200
+2026-11-01T16:06:28.8106881Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.8107404Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.8108433Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:06:28.8109385Z #8 62.98 - GET https://pypi.org/simple/fuzzywuzzy/ -> 200
+2026-11-01T16:06:28.8109908Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/fuzzywuzzy/ -> 404
+2026-11-01T16:06:28.8110864Z #8 62.98 - GET https://pypi.org/packages/43/ff/74f23998ad2f93b945c0309f825be92e04e0348e062026998b5eefef4c33/fuzzywuzzy-0.18.0-py2.py3-none-any.whl -> 200
+2026-11-01T16:06:28.8111724Z #8 62.98 - GET https://pypi.org/simple/gradio-client/ -> 200
+2026-11-01T16:06:28.8112268Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/gradio-client/ -> 404
+2026-11-01T16:06:28.8113207Z #8 62.98 - GET https://pypi.org/packages/b5/56/ce1104ac287709af37628c4bd3b24f0e78c925facda3dc8915d10b787846/gradio_client-2.7.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8114032Z #8 62.98 - GET https://pypi.org/simple/h5py/ -> 200
+2026-11-01T16:06:28.8114509Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/h5py/ -> 404
+2026-11-01T16:06:28.8115455Z #8 62.98 - GET https://pypi.org/packages/89/84/06281c82d4d1686fde1ac6b0f307c50918f1c0151062445ab3b6fa5a921d/h5py-3.16.0-cp312-cp312-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8116360Z #8 62.98 - GET https://pypi.org/simple/immutabledict/ -> 200
+2026-11-01T16:06:28.8116911Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/immutabledict/ -> 404
+2026-11-01T16:06:28.8117861Z #8 62.98 - GET https://pypi.org/packages/a3/ce/f9018bf69ae91b273b6391a095e7c93fa5e1617f25b6ba81ad4b20c9df10/immutabledict-4.3.1-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8118735Z #8 62.98 - GET https://pypi.org/simple/importlib-metadata/ -> 200
+2026-11-01T16:06:28.8119329Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/importlib-metadata/ -> 404
+2026-11-01T16:06:28.8120321Z #8 62.98 - GET https://pypi.org/packages/65/b6/495438ad95e0102aff8f6786b5474202f38cd5d4700d03a72b77977dec10/importlib_metadata-10.1.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8121170Z #8 62.98 - GET https://pypi.org/simple/jieba/ -> 200
+2026-11-01T16:06:28.8121659Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/jieba/ -> 404
+2026-11-01T16:06:28.8122493Z #8 62.98 - GET https://pypi.org/packages/c6/cb/18eeb235f833b726522d7ebed54f2278ce28ba9438e3135ab0278d9792a2/jieba-0.42.1.tar.gz -> 200
+2026-11-01T16:06:28.8123261Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.8123788Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.8124721Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:06:28.8125550Z #8 62.98 - GET https://pypi.org/simple/json5/ -> 200
+2026-11-01T16:06:28.8126034Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/json5/ -> 404
+2026-11-01T16:06:28.8126899Z #8 62.98 - GET https://pypi.org/packages/ae/39/e689b616c4279a821d5842a8a85c1874540f8d58e35028df93f2182120c2/json5-0.17.3-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8127698Z #8 62.98 - GET https://pypi.org/simple/jsonlines/ -> 200
+2026-11-01T16:06:28.8128210Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/jsonlines/ -> 404
+2026-11-01T16:06:28.8129121Z #8 62.98 - GET https://pypi.org/packages/f8/62/d9ba6323b9202dd2fe166beab8a86d29465c41a0288cbe229fac60c1ab8d/jsonlines-4.0.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8130305Z #8 62.98 - GET https://pypi.org/simple/mmengine-lite/ -> 200
+2026-11-01T16:06:28.8130859Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/mmengine-lite/ -> 404
+2026-11-01T16:06:28.8131799Z #8 62.98 - GET https://pypi.org/packages/38/2d/06997f8e4dcd6e009d2f1dd6d02b0cf089025a418e9a239663b0d23e6037/mmengine_lite-0.10.7-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8132628Z #8 62.98 - GET https://pypi.org/simple/numpy/ -> 200
+2026-11-01T16:06:28.8133115Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/numpy/ -> 404
+2026-11-01T16:06:28.8134177Z #8 62.98 - GET https://pypi.org/packages/79/f8/97f10e6755e2a7d027ca783f63044d5b1bc1ae7acb12afe6a9b4286eac17/numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl -> 200
+2026-11-01T16:06:28.8135163Z #8 62.98 - GET https://pypi.org/simple/orjson/ -> 200
+2026-11-01T16:06:28.8135666Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/orjson/ -> 404
+2026-11-01T16:06:28.8136744Z #8 62.98 - GET https://pypi.org/packages/46/07/5d1a151bc11600434fe799e73abfc6a4d463d02e149a20e47c59d3a985ae/orjson-3.13.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl -> 200
+2026-11-01T16:06:28.8137732Z #8 62.98 - GET https://pypi.org/simple/plotly/ -> 200
+2026-11-01T16:06:28.8138228Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/plotly/ -> 404
+2026-11-01T16:06:28.8139110Z #8 62.98 - GET https://pypi.org/packages/e5/7d/905a3a3d51087515719058c94cfbda2ff0fc14417c20d557ae3e82d8b250/plotly-7.1.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8139923Z #8 62.98 - GET https://pypi.org/simple/prettytable/ -> 200
+2026-11-01T16:06:28.8140452Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/prettytable/ -> 404
+2026-11-01T16:06:28.8141388Z #8 62.98 - GET https://pypi.org/packages/fe/be/2e6798ace5cc036f5d05d36b7b2fd85346f1a708c87060890b070d0ec607/prettytable-3.18.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8142229Z #8 62.98 - GET https://pypi.org/simple/pyext/ -> 200
+2026-11-01T16:06:28.8142720Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pyext/ -> 404
+2026-11-01T16:06:28.8143534Z #8 62.98 - GET https://pypi.org/packages/2d/92/1db296a5071a2cf25e8976370d46649070ec4a70526f94c8ffc76d3dd891/pyext-0.5.tar.gz -> 200
+2026-11-01T16:06:28.8144281Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.8144805Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.8145729Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:06:28.8146598Z #8 62.98 - GET https://pypi.org/simple/python-levenshtein/ -> 200
+2026-11-01T16:06:28.8147185Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/python-levenshtein/ -> 404
+2026-11-01T16:06:28.8148328Z #8 62.98 - GET https://pypi.org/packages/4a/2c/9bcea060eb5231d33ca753e6e6a7c2fa42cbfd068a1cbb46f8b1f62d9d14/python_levenshtein-0.27.5-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8149312Z #8 62.98 - GET https://pypi.org/simple/rank-bm25/ -> 200
+2026-11-01T16:06:28.8149832Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/rank-bm25/ -> 404
+2026-11-01T16:06:28.8150727Z #8 62.98 - GET https://pypi.org/packages/2a/21/f691fb2613100a62b3fa91e9988c991e9ca5b89ea31c0d3152a3210344f9/rank_bm25-0.2.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8151532Z #8 62.98 - GET https://pypi.org/simple/retrying/ -> 200
+2026-11-01T16:06:28.8152039Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/retrying/ -> 404
+2026-11-01T16:06:28.8152931Z #8 62.98 - GET https://pypi.org/packages/67/f3/6cd296376653270ac1b423bb30bd70942d9916b6978c6f40472d6ac038e7/retrying-1.4.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8153729Z #8 62.98 - GET https://pypi.org/simple/rouge/ -> 200
+2026-11-01T16:06:28.8154212Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/rouge/ -> 404
+2026-11-01T16:06:28.8155396Z #8 62.98 - GET https://pypi.org/packages/32/7c/650ae86f92460e9e8ef969cc5008b24798dcf56a9a8947d04c78f550b3f5/rouge-1.0.1-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8156210Z #8 62.98 - GET https://pypi.org/simple/rouge-chinese/ -> 200
+2026-11-01T16:06:28.8156755Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/rouge-chinese/ -> 404
+2026-11-01T16:06:28.8157697Z #8 62.98 - GET https://pypi.org/packages/03/0f/394cf877be7b903881020ef7217f7dc644dad158d52a9353fcab22e3464d/rouge_chinese-1.0.3-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8158532Z #8 62.98 - GET https://pypi.org/simple/seaborn/ -> 200
+2026-11-01T16:06:28.8159040Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/seaborn/ -> 404
+2026-11-01T16:06:28.8159930Z #8 62.98 - GET https://pypi.org/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8160774Z #8 62.98 - GET https://pypi.org/simple/timeout-decorator/ -> 200
+2026-11-01T16:06:28.8161356Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/timeout-decorator/ -> 404
+2026-11-01T16:06:28.8162304Z #8 62.98 - GET https://pypi.org/packages/80/f8/0802dd14c58b5d3d72bb9caa4315535f58787a1dc50b81bbbcaaa15451be/timeout-decorator-0.5.0.tar.gz -> 200
+2026-11-01T16:06:28.8163125Z #8 62.98 - GET https://pypi.org/simple/setuptools/ -> 200
+2026-11-01T16:06:28.8163653Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/setuptools/ -> 404
+2026-11-01T16:06:28.8164583Z #8 62.98 - GET https://pypi.org/packages/ef/55/6dc6d6bb953bdfc52519a0059592c52b6e3b8ad51cf8256dffceb55b0610/setuptools-84.2.1-py3-none-any.whl -> 304
+2026-11-01T16:06:28.8165424Z #8 62.98 - GET https://pypi.org/simple/tree-sitter/ -> 200
+2026-11-01T16:06:28.8165950Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tree-sitter/ -> 404
+2026-11-01T16:06:28.8167071Z #8 62.98 - GET https://pypi.org/packages/c2/df/76dbf830126e566c48db0d1bf2bef3f9d8cac938302a9b0f762ded8206c2/tree_sitter-0.21.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl -> 200
+2026-11-01T16:06:28.8168151Z #8 62.98 - GET https://pypi.org/simple/tree-sitter-languages/ -> 200
+2026-11-01T16:06:28.8168765Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/tree-sitter-languages/ -> 404
+2026-11-01T16:06:28.8169972Z #8 62.98 - GET https://pypi.org/packages/20/6c/1855a65c9d6b50600f7a68e0182153db7cb12ff81fdebd93e87851dfdd8f/tree_sitter_languages-1.10.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl -> 200
+2026-11-01T16:06:28.8171023Z #8 62.98 - GET https://pypi.org/simple/pillow/ -> 200
+2026-11-01T16:06:28.8171517Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/pillow/ -> 404
+2026-11-01T16:06:28.8172502Z #8 62.98 - GET https://pypi.org/packages/e4/3a/427e4cb0b9e177efbc1a84798ed20498c4f233abde003c06d2650a6d60cb/pillow-11.2.1-cp312-cp312-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8173398Z #8 62.98 - GET https://pypi.org/simple/janus/ -> 200
+2026-11-01T16:06:28.8173892Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/janus/ -> 404
+2026-11-01T16:06:28.8174764Z #8 62.98 - GET https://pypi.org/packages/68/34/65604740edcb20e1bda6a890348ed7d282e7dd23aa00401cbe36fd0edbd9/janus-2.0.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8175609Z #8 62.98 - GET https://pypi.org/simple/latex2sympy2-extended/ -> 200
+2026-11-01T16:06:28.8176225Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/latex2sympy2-extended/ -> 404
+2026-11-01T16:06:28.8177241Z #8 62.98 - GET https://pypi.org/packages/15/f3/ea8c08d9c279e9088a039cc9a7eaf9d036fff216d79b608483e7fd906fe0/latex2sympy2_extended-1.0.6-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8178162Z #8 62.98 - GET https://pypi.org/simple/antlr4-python3-runtime/ -> 200
+2026-11-01T16:06:28.8178789Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/antlr4-python3-runtime/ -> 404
+2026-11-01T16:06:28.8179815Z #8 62.98 - GET https://pypi.org/packages/89/03/a851e84fcbb85214dc637b6378121ef9a0dd61b4c65264675d8a5c9b1ae7/antlr4_python3_runtime-4.13.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8180846Z #8 62.98 - GET https://pypi.org/simple/dill/ -> 200
+2026-11-01T16:06:28.8181456Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/dill/ -> 404
+2026-11-01T16:06:28.8182340Z #8 62.98 - GET https://pypi.org/packages/c9/7a/cef76fd8438a42f96db64ddaa85280485a9c395e7df3db8158cfec1eee34/dill-0.3.8-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8183154Z #8 62.98 - GET https://pypi.org/simple/multiprocess/ -> 200
+2026-11-01T16:06:28.8183693Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/multiprocess/ -> 404
+2026-11-01T16:06:28.8184661Z #8 62.98 - GET https://pypi.org/packages/0a/7d/a988f258104dcd2ccf1ed40fdc97e26c4ac351eeaf81d76e266c52d84e2f/multiprocess-0.70.16-py312-none-any.whl -> 200
+2026-11-01T16:06:28.8185521Z #8 62.98 - GET https://pypi.org/simple/fsspec/ -> 200
+2026-11-01T16:06:28.8186015Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/fsspec/ -> 404
+2026-11-01T16:06:28.8186928Z #8 62.98 - GET https://pypi.org/packages/56/53/eb690efa8513166adef3e0669afd31e95ffde69fb3c52ec2ac7223ed6018/fsspec-2025.3.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8187742Z #8 62.98 - GET https://pypi.org/simple/fire/ -> 200
+2026-11-01T16:06:28.8188316Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/fire/ -> 404
+2026-11-01T16:06:28.8189302Z #8 62.98 - GET https://pypi.org/packages/e5/4c/93d0f85318da65923e4b91c1c2ff03d8a458cbefebe3bc612a6693c7906d/fire-0.7.1-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8203548Z #8 62.98 - GET https://pypi.org/simple/scipy/ -> 200
+2026-11-01T16:06:28.8204067Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/scipy/ -> 404
+2026-11-01T16:06:28.8205151Z #8 62.98 - GET https://pypi.org/packages/3c/23/21f5e703643d66f21faa6b4c73195bfcad70c55efcb4f1ab327cd7c4101a/scipy-1.18.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8206693Z #8 62.98 - GET https://pypi.org/packages/da/34/16f10e3042d2f1d6b66e0428308ab52224b6a23049cb2f5c1756f713815f/scipy-1.17.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8207725Z #8 62.98 - GET https://pypi.org/simple/termcolor/ -> 200
+2026-11-01T16:06:28.8208245Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/termcolor/ -> 404
+2026-11-01T16:06:28.8209154Z #8 62.98 - GET https://pypi.org/packages/33/d1/8bb87d21e9aeb323cc03034f5eaf2c8f69841e40e4853c2627edf8111ed3/termcolor-3.3.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8209975Z #8 62.98 - GET https://pypi.org/simple/zipp/ -> 200
+2026-11-01T16:06:28.8210454Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/zipp/ -> 404
+2026-11-01T16:06:28.8211329Z #8 62.98 - GET https://pypi.org/packages/b8/44/7bd2007260da11cccca29ba2d4c345f1287aa663db38ee7cefeabf6386a5/zipp-4.1.2-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8212128Z #8 62.98 - GET https://pypi.org/simple/addict/ -> 200
+2026-11-01T16:06:28.8212631Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/addict/ -> 404
+2026-11-01T16:06:28.8213520Z #8 62.98 - GET https://pypi.org/packages/6a/00/b08f23b7d7e1e14ce01419a467b583edbb93c6cdb8654e54a9cc579cd61f/addict-2.4.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8214323Z #8 62.98 - GET https://pypi.org/simple/yapf/ -> 200
+2026-11-01T16:06:28.8214843Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/yapf/ -> 404
+2026-11-01T16:06:28.8215703Z #8 62.98 - GET https://pypi.org/packages/37/81/6acd6601f61e31cfb8729d3da6d5df966f80f374b78eff83760714487338/yapf-0.43.0-py3-none-any.whl -> 200
+2026-11-01T16:06:28.8216547Z #8 62.98 - GET https://pypi.org/simple/opencv-python-headless/ -> 200
+2026-11-01T16:06:28.8217175Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/opencv-python-headless/ -> 404
+2026-11-01T16:06:28.8218308Z #8 62.98 - GET https://pypi.org/packages/3f/0e/0b98bd582582253f61c4506f9b465cf5a8aa7fa4f7237dd99e1b5151a159/opencv_python_headless-4.14.0.94-cp37-abi3-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8219815Z #8 62.98 - GET https://pypi.org/packages/8f/b4/b7bcbf7c874665825a8c8e1097e93ea25d1f1d210a3e20d4451d01da30aa/opencv_python_headless-4.13.0.92-cp37-abi3-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8221769Z #8 62.98 - GET https://pypi.org/packages/cd/47/baab2a3b6d8da8c52e73d00207d1ed3155601c2c332ea855455b3fbc8ff4/opencv_python_headless-4.13.0.90-cp37-abi3-manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8223407Z #8 62.98 - GET https://pypi.org/packages/69/4e/116720df7f1f7f3b59abc608ca30fbec9d2b3ae810afe4e4d26483d9dfa0/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl -> 200
+2026-11-01T16:06:28.8225109Z #8 62.98 - GET https://pypi.org/packages/45/be/1438ce43ebe65317344a87e4b150865c5585f4c0db880a34cdae5ac46881/opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl -> 200
+2026-11-01T16:06:28.8226161Z #8 62.98 - GET https://pypi.org/simple/wcwidth/ -> 200
+2026-11-01T16:06:28.8226669Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/wcwidth/ -> 404
+2026-11-01T16:06:28.8227759Z #8 62.98 - GET https://pypi.org/packages/7d/5b/42bdf9a4b0e4f9126584af2ec73642de495f3bd8add907430f13c3bb98d2/wcwidth-0.9.4-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl -> 200
+2026-11-01T16:06:28.8228984Z #8 62.98 - GET https://pypi.org/simple/levenshtein/ -> 200
+2026-11-01T16:06:28.8229535Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/levenshtein/ -> 404
+2026-11-01T16:06:28.8230670Z #8 62.98 - GET https://pypi.org/packages/8e/11/a4da05fa15d474fe69f96ccf74ae3cabb9b8a1f436c2d3f3498927e432a1/levenshtein-0.27.5-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8231706Z #8 62.98 - GET https://pypi.org/simple/contourpy/ -> 200
+2026-11-01T16:06:28.8232226Z #8 62.98 - GET https://repo.huaweicloud.com/ascend/repos/pypi/contourpy/ -> 404
+2026-11-01T16:06:28.8233327Z #8 62.98 - GET https://pypi.org/packages/d4/1c/a12359b9b2ca3a845e8f7f9ac08bdf776114eb931392fcad91743e2ea17b/contourpy-1.3.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl -> 200
+2026-11-01T16:06:28.8234277Z #8 DONE 63.0s
+2026-11-01T16:06:28.8234414Z 
+2026-11-01T16:06:28.8234510Z #9 exporting to image
+2026-11-01T16:06:28.8234766Z #9 exporting layers
+2026-11-01T16:06:49.7667570Z #9 exporting layers 21.1s done
+2026-11-01T16:06:49.9461452Z #9 ...
+2026-11-01T16:06:49.9461603Z 
+2026-11-01T16:06:49.9461932Z #10 [auth] atlas_ci/vllm-atlas-temp:,pull,push token for swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:06:49.9462633Z #10 DONE 0.0s
+2026-11-01T16:06:49.9462800Z 
+2026-11-01T16:06:49.9463475Z #9 exporting to image
+2026-11-01T16:06:49.9464087Z #9 exporting manifest sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df done
+2026-11-01T16:06:49.9464899Z #9 exporting config sha256:0d151a0d9469db0cb9152a5303f849371b0d3c75fb0a4fc0565d70017da6fcf9 done
+2026-11-01T16:06:49.9465452Z #9 pushing layers
+2026-11-01T16:06:55.2714026Z #9 pushing layers 5.5s done
+2026-11-01T16:06:55.2715140Z #9 pushing manifest for swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-arm64@sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df
+2026-11-01T16:06:55.3577840Z #9 pushing manifest for swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-arm64@sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df 0.1s done
+2026-11-01T16:06:55.3578927Z #9 DONE 26.7s
+2026-11-01T16:06:55.3579615Z WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+2026-11-01T16:06:55.8816781Z ##[group]Run echo "nightly test image pushed: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2, swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2"
+2026-11-01T16:06:55.8818634Z [36;1mecho "nightly test image pushed: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2, swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2"[0m
+2026-11-01T16:06:55.8820098Z shell: sh -e {0}
+2026-11-01T16:06:55.8820321Z ##[endgroup]
+2026-11-01T16:06:55.8888784Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:06:55.8889808Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:06:55.8890150Z ##[endgroup]
+2026-11-01T16:06:56.1279951Z (node:483) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:06:56.1280753Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:06:56.1494153Z (node:483) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:06:56.1912992Z (node:483) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:06:56.5069850Z nightly test image pushed: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2, swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2
+2026-11-01T16:06:57.0904880Z Post job cleanup.
+2026-11-01T16:06:57.0931041Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:06:57.0932144Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:06:57.0932492Z ##[endgroup]
+2026-11-01T16:06:57.3332104Z (node:566) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:06:57.3332908Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:06:57.3546570Z (node:566) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:06:57.3980706Z (node:566) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:06:57.9626715Z ##[group]Logout from swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:06:57.9657549Z [command]/root/.cache/buildkit/bin/arm64/docker logout swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:06:57.9841270Z Removing login credentials for swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:06:57.9866155Z ##[endgroup]
+2026-11-01T16:06:57.9866794Z ##[group]Post cache
+2026-11-01T16:06:57.9867162Z State not set
+2026-11-01T16:06:57.9867867Z ##[endgroup]
+2026-11-01T16:06:58.6538749Z Post job cleanup.
+2026-11-01T16:06:58.6570399Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:06:58.6571418Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:06:58.6571767Z ##[endgroup]
+2026-11-01T16:06:58.8951840Z (node:662) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:06:58.8952666Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:06:58.9171159Z (node:662) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:06:58.9611596Z (node:662) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-01T16:06:59.4197284Z [command]/usr/bin/git version
+2026-11-01T16:06:59.4234968Z git version 2.34.1
+2026-11-01T16:06:59.4266684Z Temporarily overriding HOME='/__w/_temp/d6586ae5-b31f-4ca7-99e5-5465d1ada1cc' before making global git config changes
+2026-11-01T16:06:59.4267518Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T16:06:59.4280248Z [command]/usr/bin/git config --global --add safe.directory /__w/vllm-ascend/vllm-ascend
+2026-11-01T16:06:59.4314768Z Removing SSH command configuration
+2026-11-01T16:06:59.4320775Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T16:06:59.4354847Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T16:06:59.4650463Z Removing HTTP extra header
+2026-11-01T16:06:59.4655140Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T16:06:59.4690593Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T16:06:59.4981105Z Removing includeIf entries pointing to credentials config files
+2026-11-01T16:06:59.4986106Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T16:06:59.5014369Z includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git.path
+2026-11-01T16:06:59.5014871Z includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git/worktrees/*.path
+2026-11-01T16:06:59.5015343Z includeif.gitdir:/github/workspace/.git.path
+2026-11-01T16:06:59.5015764Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-01T16:06:59.5019493Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git.path
+2026-11-01T16:06:59.5045258Z /__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:06:59.5054366Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git.path \/__w\/_temp\/git\-credentials\-35587f86\-ee25\-45d9\-8c8e\-985d938a1f0a\.config
+2026-11-01T16:06:59.5090140Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git/worktrees/*.path
+2026-11-01T16:06:59.5115052Z /__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:06:59.5123346Z [command]/usr/bin/git config --local --unset includeif.gitdir:/__w/vllm-ascend/vllm-ascend/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-35587f86\-ee25\-45d9\-8c8e\-985d938a1f0a\.config
+2026-11-01T16:06:59.5163623Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-01T16:06:59.5188057Z /github/runner_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:06:59.5196100Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-35587f86\-ee25\-45d9\-8c8e\-985d938a1f0a\.config
+2026-11-01T16:06:59.5231631Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-01T16:06:59.5254899Z /github/runner_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config
+2026-11-01T16:06:59.5262494Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-35587f86\-ee25\-45d9\-8c8e\-985d938a1f0a\.config
+2026-11-01T16:06:59.5296815Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T16:06:59.5583864Z Removing credentials config '/__w/_temp/git-credentials-35587f86-ee25-45d9-8c8e-985d938a1f0a.config'
+2026-11-01T16:07:00.2435413Z ##[group]Run '/home/runner/k8s/index.js'
+2026-11-01T16:07:00.2436533Z shell: /home/runner/externals/node24/bin/node {0}
+2026-11-01T16:07:00.2436884Z ##[endgroup]
+2026-11-01T16:07:00.4823477Z (node:770) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T16:07:00.4824288Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T16:07:00.5041571Z (node:770) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T16:07:00.6357309Z Cleaning up orphan processes
+

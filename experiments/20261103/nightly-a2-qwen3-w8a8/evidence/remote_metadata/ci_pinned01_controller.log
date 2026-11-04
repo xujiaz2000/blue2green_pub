@@ -1,0 +1,1 @@
+RuntimeError: could not verify exactly four visible NPU devices

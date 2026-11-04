@@ -1,0 +1,8 @@
+{
+  "source_job": "https://github.com/vllm-project/vllm-ascend/actions/runs/41327490550/job/124914290773",
+  "started_ns": 1793697980581215900,
+  "success": false,
+  "measurement_kind": "historical_ci_image_pinned_by_arm64_digest",
+  "error": "RuntimeError: could not verify exactly four visible NPU devices",
+  "finished_ns": 1793697991664564160
+}

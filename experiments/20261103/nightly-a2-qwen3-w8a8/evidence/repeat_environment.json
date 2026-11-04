@@ -1,0 +1,198 @@
+{
+  "captured_at_ns": 1793704273144131080,
+  "commands": {
+    "uname": {
+      "returncode": 0,
+      "stdout": "Linux a2-local.example 5.15.0-94-generic #104-Ubuntu SMP Tue Jan 9 15:26:57 UTC 2024 aarch64 aarch64 aarch64 GNU/Linux\n",
+      "stderr": ""
+    },
+    "cpu": {
+      "returncode": 0,
+      "stdout": "Architecture:                       aarch64\nCPU op-mode(s):                     64-bit\nByte Order:                         Little Endian\nCPU(s):                             256\nOn-line CPU(s) list:                0-255\nVendor ID:                          HiSilicon\nModel name:                         Kunpeng-920\nModel:                              0\nThread(s) per core:                 1\nCore(s) per cluster:                64\nSocket(s):                          -\nCluster(s):                         4\nStepping:                           0x1\nFrequency boost:                    disabled\nCPU max MHz:                        3000.0000\nCPU min MHz:                        200.0000\nBogoMIPS:                           200.00\nFlags:                              fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma dcpop asimddp asimdfhm ssbs\nL1d cache:                          16 MiB (256 instances)\nL1i cache:                          16 MiB (256 instances)\nL2 cache:                           128 MiB (256 instances)\nL3 cache:                           256 MiB (8 instances)\nNUMA node(s):                       8\nNUMA node0 CPU(s):                  0-31\nNUMA node1 CPU(s):                  32-63\nNUMA node2 CPU(s):                  64-95\nNUMA node3 CPU(s):                  96-127\nNUMA node4 CPU(s):                  128-159\nNUMA node5 CPU(s):                  160-191\nNUMA node6 CPU(s):                  192-223\nNUMA node7 CPU(s):                  224-255\nVulnerability Gather data sampling: Not affected\nVulnerability Itlb multihit:        Not affected\nVulnerability L1tf:                 Not affected\nVulnerability Mds:                  Not affected\nVulnerability Meltdown:             Not affected\nVulnerability Mmio stale data:      Not affected\nVulnerability Retbleed:             Not affected\nVulnerability Spec rstack overflow: Not affected\nVulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:           Mitigation; __user pointer sanitization\nVulnerability Spectre v2:           Not affected\nVulnerability Srbds:                Not affected\nVulnerability Tsx async abort:      Not affected\n",
+      "stderr": ""
+    },
+    "numa": {
+      "returncode": 0,
+      "stdout": "available: 8 nodes (0-7)\nnode 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\nnode 0 size: 257704 MB\nnode 0 free: 247472 MB\nnode 1 cpus: 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63\nnode 1 size: 258007 MB\nnode 1 free: 254111 MB\nnode 2 cpus: 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95\nnode 2 size: 258044 MB\nnode 2 free: 236070 MB\nnode 3 cpus: 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127\nnode 3 size: 193532 MB\nnode 3 free: 178836 MB\nnode 4 cpus: 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159\nnode 4 size: 258044 MB\nnode 4 free: 249191 MB\nnode 5 cpus: 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191\nnode 5 size: 258044 MB\nnode 5 free: 253743 MB\nnode 6 cpus: 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223\nnode 6 size: 258044 MB\nnode 6 free: 247412 MB\nnode 7 cpus: 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255\nnode 7 size: 254059 MB\nnode 7 free: 223856 MB\nnode distances:\nnode   0   1   2   3   4   5   6   7 \n  0:  10  11  24  25  24  25  24  25 \n  1:  11  10  25  32  25  32  25  32 \n  2:  24  25  10  11  24  25  24  25 \n  3:  25  32  11  10  25  32  25  32 \n  4:  24  25  24  25  10  11  24  25 \n  5:  25  32  25  32  11  10  25  32 \n  6:  24  25  24  25  24  25  10  11 \n  7:  25  32  25  32  25  32  11  10 \n",
+      "stderr": ""
+    },
+    "npu": {
+      "returncode": 0,
+      "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.2                   Version: 25.5.2                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 97.5        51                0    / 0             |\n| 0                         | 0000:C1:00.0  | 0           0    / 0          3439 / 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 98.5        53                0    / 0             |\n| 0                         | 0000:C2:00.0  | 0           0    / 0          3439 / 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 91.0        52                0    / 0             |\n| 0                         | 0000:81:00.0  | 0           0    / 0          3440 / 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 93.7        52                0    / 0             |\n| 0                         | 0000:82:00.0  | 0           0    / 0          3439 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 0                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 1                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 2                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n",
+      "stderr": ""
+    },
+    "npu_topology": {
+      "returncode": 0,
+      "stdout": "\t   NPU0       NPU1       NPU2       NPU3       CPU Affinity\nNPU0       X          HCCS       HCCS       HCCS       192-223\nNPU1       HCCS       X          HCCS       HCCS       192-223\nNPU2       HCCS       HCCS       X          HCCS       128-159\nNPU3       HCCS       HCCS       HCCS       X          128-159\n\nLegend:\n\n  X    = Self\n  SYS  = Path traversing PCIe and NUMA nodes. Nodes are connected through SMP, such as QPI, UPI.\n  PHB  = Path traversing PCIe and the PCIe host bridge of a CPU.\n  PIX  = Path traversing a single PCIe switch\n  PXB  = Path traversing multipul PCIe switches\n  HCCS = Connection traversing HCCS.\n  NA   = Unknown relationship.\n",
+      "stderr": ""
+    },
+    "compiler": {
+      "returncode": 0,
+      "stdout": "Ubuntu clang version 15.0.7\nTarget: aarch64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+      "stderr": ""
+    },
+    "npu_board_0": {
+      "returncode": 0,
+      "stdout": "\tNPU ID                         : 0\n\tChip ID                        : 0\n\tChip Type                      : Ascend\n\tChip Name                      : 910B3\n\tChip Version                   : V1\n\tBoard ID                       : 0x32\n\tPCB ID                         : NA\n\tBOM ID                         : 1\n\tVDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tNDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tChip Position ID               : 0\n\tPCIe Bus Info                  : 0000:C1:00.0\n\tFirmware Version               : 7.8.0.6.201\n",
+      "stderr": ""
+    },
+    "npu_sensors_0": {
+      "returncode": 0,
+      "stdout": "\tSoc Max Temperature (C)        : 51\n\tSFP Temperature (C)            : 49\n\tNDIE Temperature (C)           : 51\n\tHBM Temperature (C)            : 51\n",
+      "stderr": ""
+    },
+    "npu_board_1": {
+      "returncode": 0,
+      "stdout": "\tNPU ID                         : 1\n\tChip ID                        : 0\n\tChip Type                      : Ascend\n\tChip Name                      : 910B3\n\tChip Version                   : V1\n\tBoard ID                       : 0x32\n\tPCB ID                         : NA\n\tBOM ID                         : 1\n\tVDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tNDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tChip Position ID               : 0\n\tPCIe Bus Info                  : 0000:C2:00.0\n\tFirmware Version               : 7.8.0.6.201\n",
+      "stderr": ""
+    },
+    "npu_sensors_1": {
+      "returncode": 0,
+      "stdout": "\tSoc Max Temperature (C)        : 53\n\tSFP Temperature (C)            : 49\n\tNDIE Temperature (C)           : 53\n\tHBM Temperature (C)            : 53\n",
+      "stderr": ""
+    },
+    "npu_board_2": {
+      "returncode": 0,
+      "stdout": "\tNPU ID                         : 2\n\tChip ID                        : 0\n\tChip Type                      : Ascend\n\tChip Name                      : 910B3\n\tChip Version                   : V1\n\tBoard ID                       : 0x32\n\tPCB ID                         : NA\n\tBOM ID                         : 1\n\tVDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tNDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tChip Position ID               : 0\n\tPCIe Bus Info                  : 0000:81:00.0\n\tFirmware Version               : 7.8.0.6.201\n",
+      "stderr": ""
+    },
+    "npu_sensors_2": {
+      "returncode": 0,
+      "stdout": "\tSoc Max Temperature (C)        : 52\n\tSFP Temperature (C)            : 54\n\tNDIE Temperature (C)           : 52\n\tHBM Temperature (C)            : 52\n",
+      "stderr": ""
+    },
+    "npu_board_3": {
+      "returncode": 0,
+      "stdout": "\tNPU ID                         : 3\n\tChip ID                        : 0\n\tChip Type                      : Ascend\n\tChip Name                      : 910B3\n\tChip Version                   : V1\n\tBoard ID                       : 0x32\n\tPCB ID                         : NA\n\tBOM ID                         : 1\n\tVDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tNDie ID                        : [REDACTED_UNIQUE_IDENTIFIER]\n\tChip Position ID               : 0\n\tPCIe Bus Info                  : 0000:82:00.0\n\tFirmware Version               : 7.8.0.6.201\n",
+      "stderr": ""
+    },
+    "npu_sensors_3": {
+      "returncode": 0,
+      "stdout": "\tSoc Max Temperature (C)        : 51\n\tSFP Temperature (C)            : 53\n\tNDIE Temperature (C)           : 52\n\tHBM Temperature (C)            : 51\n",
+      "stderr": ""
+    }
+  },
+  "files": {
+    "/proc/self/status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t9306\nNgid:\t0\nPid:\t9306\nPPid:\t0\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t64\nGroups:\t0 \nNStgid:\t9306\nNSpid:\t9306\nNSpgid:\t9306\nNSsid:\t9306\nVmPeak:\t   22308 kB\nVmSize:\t   22244 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t   17764 kB\nVmRSS:\t   17764 kB\nRssAnon:\t   10608 kB\nRssFile:\t    7156 kB\nRssShmem:\t       0 kB\nVmData:\t   11408 kB\nVmStk:\t     132 kB\nVmExe:\t       4 kB\nVmLib:\t    8260 kB\nVmPTE:\t      80 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nThreads:\t1\nSigQ:\t82/7981357\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000000000002\nCapInh:\t0000000000000000\nCapPrm:\t00000000a80425fb\nCapEff:\t00000000a80425fb\nCapBnd:\t00000000a80425fb\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tunknown\nCpus_allowed:\tffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff\nCpus_allowed_list:\t0-255\nMems_allowed:\t00000000,000000ff\nMems_allowed_list:\t0-7\nvoluntary_ctxt_switches:\t127\nnonvoluntary_ctxt_switches:\t44\n",
+    "/proc/self/cgroup": "0::/\n",
+    "/proc/self/mountinfo": "994 954 0:52 / / rw,relatime - overlay overlay rw,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/38/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/35/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/34/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/33/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/32/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/31/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/30/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/29/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/28/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/27/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/26/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/25/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/9/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/8/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/7/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/5/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/4/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/3/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/2/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/39/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/39/work\n996 994 0:61 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n997 994 0:62 / /dev rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755,inode64\n998 997 0:63 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n999 994 0:24 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n1000 999 0:32 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot\n1001 997 0:59 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n1002 997 0:64 / /dev/shm rw,nosuid,nodev,noexec,relatime - tmpfs shm rw,size=33554432k,inode64\n1003 994 253:0 /home/ubuntu/qwen_nightly_setup /setup ro,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1004 994 0:48 / /results rw,relatime - nfs suzblue.server:/share/z00943141/qwen3_nightly_20261103_124914290773/outputs rw,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,nolock,proto=tcp,nconnect=8,timeo=600,retrans=2,sec=sys,mountaddr=178.27.1.16,mountvers=3,mountport=2050,mountproto=udp,local_lock=all,addr=178.27.1.16\n1005 994 0:48 / /inputs/dataset ro,relatime - nfs suzblue.server:/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/vllm-ascend/GSM8K-in3500-bs400 rw,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,nolock,proto=tcp,nconnect=8,timeo=600,retrans=2,sec=sys,mountaddr=178.27.1.16,mountvers=3,mountport=2050,mountproto=udp,local_lock=all,addr=178.27.1.16\n1006 994 253:0 /etc/ascend_install.info /etc/ascend_install.info ro,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1007 994 0:48 / /inputs/model ro,relatime - nfs suzblue.server:/share/z00943141/qwen3_nightly_20261103_124914290773/inputs/modelscope/Eco-Tech/Qwen3-30B-A3B-w8a8 rw,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,nolock,proto=tcp,nconnect=8,timeo=600,retrans=2,sec=sys,mountaddr=178.27.1.16,mountvers=3,mountport=2050,mountproto=udp,local_lock=all,addr=178.27.1.16\n1008 994 253:0 /var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/resolv.conf /etc/resolv.conf rw,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1009 994 253:0 /var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/hostname /etc/hostname rw,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1010 994 253:0 /var/lib/docker/containers/a9b51efc7af953fb116ed57d78289b2aead7374d560012518a75e877b854dee2/hosts /etc/hosts rw,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1011 994 253:0 /usr/local/dcmi /usr/local/dcmi ro,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1012 994 253:0 /usr/local/Ascend/driver /usr/local/Ascend/driver ro,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n1013 994 253:0 /usr/local/bin/npu-smi /usr/local/bin/npu-smi ro,relatime - ext4 /dev/mapper/ubuntu--vg-ubuntu--lv rw\n955 996 0:61 /bus /proc/bus ro,nosuid,nodev,noexec,relatime - proc proc rw\n956 996 0:61 /fs /proc/fs ro,nosuid,nodev,noexec,relatime - proc proc rw\n957 996 0:61 /irq /proc/irq ro,nosuid,nodev,noexec,relatime - proc proc rw\n958 996 0:61 /sys /proc/sys ro,nosuid,nodev,noexec,relatime - proc proc rw\n959 996 0:61 /sysrq-trigger /proc/sysrq-trigger ro,nosuid,nodev,noexec,relatime - proc proc rw\n960 996 0:65 / /proc/acpi ro,relatime - tmpfs tmpfs ro,inode64\n961 996 0:62 /null /proc/interrupts rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755,inode64\n962 996 0:62 /null /proc/kcore rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755,inode64\n963 996 0:62 /null /proc/keys rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755,inode64\n964 996 0:66 / /proc/scsi ro,relatime - tmpfs tmpfs ro,inode64\n965 996 0:62 /null /proc/timer_list rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755,inode64\n966 999 0:67 / /sys/devices/virtual/powercap ro,relatime - tmpfs tmpfs ro,inode64\n967 999 0:68 / /sys/firmware ro,relatime - tmpfs tmpfs ro,inode64\n",
+    "/proc/loadavg": "10.96 14.48 12.40 2/3509 9499\n",
+    "/proc/pressure/cpu": "some avg10=0.00 avg60=0.32 avg300=0.82 total=110429489\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "/proc/pressure/memory": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "/proc/meminfo": "MemTotal:       2043371808 kB\nMemFree:        1935980504 kB\nMemAvailable:   2018910080 kB\nBuffers:          630756 kB\nCached:         87197768 kB\nSwapCached:            0 kB\nActive:         34108848 kB\nInactive:       55349700 kB\nActive(anon):       2160 kB\nInactive(anon):  1640048 kB\nActive(file):   34106688 kB\nInactive(file): 53709652 kB\nUnevictable:       26188 kB\nMlocked:           26188 kB\nSwapTotal:       8388604 kB\nSwapFree:        8388604 kB\nDirty:                 4 kB\nWriteback:             0 kB\nAnonPages:       1656320 kB\nMapped:           787380 kB\nShmem:              4792 kB\nKReclaimable:    4918400 kB\nSlab:            6567440 kB\nSReclaimable:    4918400 kB\nSUnreclaim:      1649040 kB\nKernelStack:       58960 kB\nPageTables:        15316 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    1030074508 kB\nCommitted_AS:    6349036 kB\nVmallocTotal:   133143592960 kB\nVmallocUsed:     1843568 kB\nVmallocChunk:          0 kB\nPercpu:           526336 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:      2048 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:          32768 kB\nCmaFree:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\n",
+    "/etc/os-release": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+    "/sys/fs/cgroup/cpu.max": "max 100000\n",
+    "/sys/fs/cgroup/cpu.stat": "usage_usec 4948700550\nuser_usec 3966042054\nsystem_usec 982658495\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\n",
+    "/sys/fs/cgroup/cpu.weight": "100\n",
+    "/sys/fs/cgroup/cpuset.cpus.effective": "0-255\n",
+    "/sys/fs/cgroup/cpuset.mems.effective": "0-7\n",
+    "/sys/fs/cgroup/memory.max": "max\n",
+    "/sys/fs/cgroup/memory.current": "1629061120\n",
+    "/sys/fs/cgroup/memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n"
+  },
+  "packages": {
+    "vllm": "0.32.0+empty",
+    "vllm-ascend": "0.19.1rc2.dev3242+gb3b82c137",
+    "torch": "2.10.0+cpu",
+    "torch-npu": "2.10.0.post4",
+    "triton": "3.5.0",
+    "triton-ascend": "3.2.2",
+    "transformers": "5.19.0",
+    "ais_bench_benchmark": "3.1.20260609",
+    "numpy": "1.26.4",
+    "uv": null
+  },
+  "cpu_frequency": {
+    "policy96": {
+      "affected_cpus": "96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "256000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy64": {
+      "affected_cpus": "64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "256000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy32": {
+      "affected_cpus": "32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "312000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy0": {
+      "affected_cpus": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "3000000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy224": {
+      "affected_cpus": "224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "1824000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy128": {
+      "affected_cpus": "128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "256000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy192": {
+      "affected_cpus": "192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "200000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    },
+    "policy160": {
+      "affected_cpus": "160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191",
+      "scaling_governor": "ondemand",
+      "scaling_cur_freq": "200000",
+      "scaling_min_freq": "200000",
+      "scaling_max_freq": "3000000",
+      "cpuinfo_max_freq": "3000000",
+      "cpuinfo_min_freq": "200000"
+    }
+  },
+  "environment": {
+    "ASCEND_RT_VISIBLE_DEVICES": "0,1,2,3",
+    "ASCEND_VISIBLE_DEVICES": "0,1,2,3",
+    "OMP_NUM_THREADS": "1",
+    "OMP_PROC_BIND": null,
+    "HCCL_BUFFSIZE": null,
+    "HCCL_OP_EXPANSION_MODE": null,
+    "TASK_QUEUE_ENABLE": "1",
+    "VLLM_ASCEND_ENABLE_NZ": null,
+    "VLLM_USE_V2_MODEL_RUNNER": null,
+    "VLLM_WORKER_MULTIPROC_METHOD": null,
+    "MAX_JOBS": null,
+    "ASCEND_HOME_PATH": "/usr/local/Ascend/cann-9.2.1",
+    "ASCEND_OPP_PATH": "/usr/local/Ascend/cann-9.2.1/opp",
+    "LD_LIBRARY_PATH": "/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/cann-9.2.1/lib64:/usr/local/Ascend/cann-9.2.1/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.2.1/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.2.1/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.16/lib:",
+    "VLLM_CACHE_ROOT": null,
+    "TRITON_CACHE_DIR": null,
+    "TORCHINDUCTOR_CACHE_DIR": null
+  }
+}

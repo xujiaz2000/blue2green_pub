@@ -1,0 +1,166 @@
+2026-11-01T16:07:38.5361258Z Current runner version: '2.338.0'
+2026-11-01T16:07:38.5366617Z Runner name: 'linux-amd64-cpu-4-cn12-001-jgg5z-runner-xwddm'
+2026-11-01T16:07:38.5367515Z Runner group name: 'Default'
+2026-11-01T16:07:38.5368452Z Machine name: 'linux-amd64-cpu-4-cn12-001-jgg5z-runner-xwddm'
+2026-11-01T16:07:38.5370908Z ##[group]GITHUB_TOKEN Permissions
+2026-11-01T16:07:38.5372614Z Contents: read
+2026-11-01T16:07:38.5373126Z Metadata: read
+2026-11-01T16:07:38.5373566Z Packages: write
+2026-11-01T16:07:38.5374036Z ##[endgroup]
+2026-11-01T16:07:38.5376189Z Secret source: Actions
+2026-11-01T16:07:38.5377077Z Cache mode: write
+2026-11-01T16:07:38.5377995Z Runner is running behind proxy server 'http://squid-cache.squid.svc.cluster.local:3128' for all HTTP requests.
+2026-11-01T16:07:38.5379186Z Runner is running behind proxy server 'http://squid-cache.squid.svc.cluster.local:3128' for all HTTPS requests.
+2026-11-01T16:07:38.5380106Z Prepare workflow directory
+2026-11-01T16:07:38.5789539Z Prepare all required actions
+2026-11-01T16:07:38.5827179Z Getting action download info
+2026-11-01T16:07:39.7507958Z Download action repository 'docker/login-action@v4' (SHA:81c6f93d4bc991e510b342a00b419b3bb4efc5c6)
+2026-11-01T16:07:41.3744093Z Download action repository 'actions/github-script@v7' (SHA:f28e40c7f34bde8b3046d885e986cb6290c5673b)
+2026-11-01T16:07:44.4326393Z Uses: vllm-project/vllm-ascend/.github/workflows/_nightly_image_build.yaml@refs/heads/main (b3b82c137ee242a774c29b56325133771f5f069d)
+2026-11-01T16:07:44.4329445Z ##[group] Inputs
+2026-11-01T16:07:44.4329672Z   target: a2
+2026-11-01T16:07:44.4329859Z   vllm_ascend_branch: main
+2026-11-01T16:07:44.4330077Z   base_image_branch: main
+2026-11-01T16:07:44.4330281Z   build_type: full
+2026-11-01T16:07:44.4330503Z   swr_registry: swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:07:44.4331034Z   should_push: true
+2026-11-01T16:07:44.4331312Z   cann_swr_url: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/cann
+2026-11-01T16:07:44.4331647Z   cann_image_version: 9.1.0
+2026-11-01T16:07:44.4331860Z   soc: 910b
+2026-11-01T16:07:44.4332022Z   os_filter: ubuntu
+2026-11-01T16:07:44.4332224Z   chips: ["a2","a3","310p","a5"]
+2026-11-01T16:07:44.4332435Z   skip_base: false
+2026-11-01T16:07:44.4332626Z ##[endgroup]
+2026-11-01T16:07:44.4332973Z Complete job name: Build nightly-a2 (ubuntu) / Build nightly-a2 (ubuntu) / Merge multi-arch nightly-a2
+2026-11-01T16:07:44.5256968Z ##[group]Run docker/login-action@v4
+2026-11-01T16:07:44.5257543Z with:
+2026-11-01T16:07:44.5257760Z   registry: swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:07:44.5258229Z   username: ***
+2026-11-01T16:07:44.5258538Z   password: ***
+2026-11-01T16:07:44.5258721Z   logout: true
+2026-11-01T16:07:44.5259016Z ##[endgroup]
+2026-11-01T16:07:44.7181091Z Logging into swr.cn-north-12.myhuaweicloud.com...
+2026-11-01T16:07:44.9545728Z Login Succeeded!
+2026-11-01T16:07:45.0143035Z ##[group]Run set -euo pipefail
+2026-11-01T16:07:45.0143402Z [36;1mset -euo pipefail[0m
+2026-11-01T16:07:45.0143677Z [36;1mBRANCH_TAG="${VLLM_ASCEND_BRANCH//\//-}"[0m
+2026-11-01T16:07:45.0143987Z [36;1m[0m
+2026-11-01T16:07:45.0144240Z [36;1m# Restrict to the requested OS variant so ubuntu and openeuler[0m
+2026-11-01T16:07:45.0144587Z [36;1m# pipelines merge independently of each other.[0m
+2026-11-01T16:07:45.0144866Z [36;1mcase "$OS_FILTER" in[0m
+2026-11-01T16:07:45.0145083Z [36;1m  ubuntu) OS_LIST="ubuntu" ;;[0m
+2026-11-01T16:07:45.0145518Z [36;1m  openeuler) OS_LIST="openeuler" ;;[0m
+2026-11-01T16:07:45.0145774Z [36;1m  *) OS_LIST="ubuntu openeuler" ;;[0m
+2026-11-01T16:07:45.0145997Z [36;1mesac[0m
+2026-11-01T16:07:45.0146166Z [36;1m[0m
+2026-11-01T16:07:45.0146342Z [36;1mMISSING_VARIANT=0[0m
+2026-11-01T16:07:45.0146548Z [36;1mMERGED_VARIANT=0[0m
+2026-11-01T16:07:45.0146751Z [36;1mfor OS_NAME in $OS_LIST; do[0m
+2026-11-01T16:07:45.0147026Z [36;1m  if [ "$OS_NAME" = "openeuler" ]; then[0m
+2026-11-01T16:07:45.0147319Z [36;1m    OS_MARK="-openeuler"[0m
+2026-11-01T16:07:45.0147551Z [36;1m    TAG_SUFFIX="${TAG_SUFFIX_OPENEULER}"[0m
+2026-11-01T16:07:45.0148144Z [36;1m    # openEuler nightly images only live in the release-shaped repo[0m
+2026-11-01T16:07:45.0148515Z [36;1m    # that the sync-tools workflow mirrors to swr.cn-north-4.[0m
+2026-11-01T16:07:45.0148847Z [36;1m    DESTS="${SWR_REGISTRY}/atlas_inference/vllm-ascend"[0m
+2026-11-01T16:07:45.0149109Z [36;1m  else[0m
+2026-11-01T16:07:45.0149283Z [36;1m    OS_MARK=""[0m
+2026-11-01T16:07:45.0149488Z [36;1m    TAG_SUFFIX="${TAG_SUFFIX_UBUNTU}"[0m
+2026-11-01T16:07:45.0149794Z [36;1m    # ubuntu nightly images serve the CI contract (test workflows[0m
+2026-11-01T16:07:45.0150157Z [36;1m    # pull from ascend-ci) and the north-4 consumers through the[0m
+2026-11-01T16:07:45.0150539Z [36;1m    # atlas_inference mirror, matching the retired daily pipeline.[0m
+2026-11-01T16:07:45.0151037Z [36;1m    DESTS="${SWR_REGISTRY}/base_image/ascend-ci/vllm-ascend ${SWR_REGISTRY}/atlas_inference/vllm-ascend"[0m
+2026-11-01T16:07:45.0151431Z [36;1m  fi[0m
+2026-11-01T16:07:45.0151650Z [36;1m  TAG="nightly-ci-${BRANCH_TAG}-${TARGET}${OS_MARK}"[0m
+2026-11-01T16:07:45.0152015Z [36;1m  # The build step pushed the per-arch images under the unique tag.[0m
+2026-11-01T16:07:45.0152332Z [36;1m  UNIQUE_TAG="${TAG}${TAG_SUFFIX}"[0m
+2026-11-01T16:07:45.0152626Z [36;1m  TEMP="${SWR_REGISTRY}/atlas_ci/vllm-atlas-temp:${UNIQUE_TAG}"[0m
+2026-11-01T16:07:45.0152987Z [36;1m[0m
+2026-11-01T16:07:45.0153201Z [36;1m  # A variant merges only when BOTH arch images exist.[0m
+2026-11-01T16:07:45.0153471Z [36;1m  MISSING_ARCH=0[0m
+2026-11-01T16:07:45.0153681Z [36;1m  for ARCH in amd64 arm64; do[0m
+2026-11-01T16:07:45.0154003Z [36;1m    if ! docker buildx imagetools inspect "${TEMP}-${ARCH}" >/dev/null 2>&1; then[0m
+2026-11-01T16:07:45.0154420Z [36;1m      echo "::warning::Skipping ${UNIQUE_TAG}: missing ${TEMP}-${ARCH}"[0m
+2026-11-01T16:07:45.0154731Z [36;1m      MISSING_ARCH=1[0m
+2026-11-01T16:07:45.0154927Z [36;1m      break[0m
+2026-11-01T16:07:45.0155104Z [36;1m    fi[0m
+2026-11-01T16:07:45.0155381Z [36;1m  done[0m
+2026-11-01T16:07:45.0155568Z [36;1m  if [ "$MISSING_ARCH" = "1" ]; then[0m
+2026-11-01T16:07:45.0155802Z [36;1m    MISSING_VARIANT=1[0m
+2026-11-01T16:07:45.0156009Z [36;1m    continue[0m
+2026-11-01T16:07:45.0156184Z [36;1m  fi[0m
+2026-11-01T16:07:45.0156348Z [36;1m[0m
+2026-11-01T16:07:45.0156588Z [36;1m  # Publish both tags on the same manifest in every destination: the[0m
+2026-11-01T16:07:45.0156961Z [36;1m  # stable tag keeps being overwritten by the newest nightly, the[0m
+2026-11-01T16:07:45.0157361Z [36;1m  # unique tag preserves this build in history.[0m
+2026-11-01T16:07:45.0157619Z [36;1m  for DEST in $DESTS; do[0m
+2026-11-01T16:07:45.0157951Z [36;1m    echo "Creating multi-arch manifests: ${DEST}:${TAG} and ${DEST}:${UNIQUE_TAG}"[0m
+2026-11-01T16:07:45.0158414Z [36;1m    docker buildx imagetools create \[0m
+2026-11-01T16:07:45.0158661Z [36;1m      -t "${DEST}:${TAG}" \[0m
+2026-11-01T16:07:45.0158896Z [36;1m      -t "${DEST}:${UNIQUE_TAG}" \[0m
+2026-11-01T16:07:45.0159128Z [36;1m      "${TEMP}-amd64" \[0m
+2026-11-01T16:07:45.0159335Z [36;1m      "${TEMP}-arm64"[0m
+2026-11-01T16:07:45.0159533Z [36;1m  done[0m
+2026-11-01T16:07:45.0159710Z [36;1m  MERGED_VARIANT=1[0m
+2026-11-01T16:07:45.0159902Z [36;1mdone[0m
+2026-11-01T16:07:45.0160068Z [36;1m[0m
+2026-11-01T16:07:45.0160325Z [36;1m# No variant merged at all -> fail loudly so the job is not silently green.[0m
+2026-11-01T16:07:45.0160658Z [36;1mif [ "${MERGED_VARIANT}" = "0" ]; then[0m
+2026-11-01T16:07:45.0160991Z [36;1m  echo "::error::No variant could be merged; all arch images are missing."[0m
+2026-11-01T16:07:45.0161302Z [36;1m  exit 1[0m
+2026-11-01T16:07:45.0161466Z [36;1mfi[0m
+2026-11-01T16:07:45.0161713Z [36;1m# At least one variant merged, others skipped -> surface a warning.[0m
+2026-11-01T16:07:45.0162034Z [36;1mif [ "${MISSING_VARIANT}" = "1" ]; then[0m
+2026-11-01T16:07:45.0162354Z [36;1m  echo "::warning::Some variants were skipped due to missing arch images."[0m
+2026-11-01T16:07:45.0162906Z [36;1mfi[0m
+2026-11-01T16:07:45.0163232Z [36;1mecho "merged=${MERGED_VARIANT}" >> "$GITHUB_OUTPUT"[0m
+2026-11-01T16:07:45.0170795Z shell: /usr/bin/bash -e {0}
+2026-11-01T16:07:45.0171130Z env:
+2026-11-01T16:07:45.0171464Z   SWR_REGISTRY: swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:07:45.0171789Z   TARGET: a2
+2026-11-01T16:07:45.0172027Z   VLLM_ASCEND_BRANCH: main
+2026-11-01T16:07:45.0172353Z   OS_FILTER: ubuntu
+2026-11-01T16:07:45.0172635Z   TAG_SUFFIX_UBUNTU: -cann9.2.1-20261101-r63
+2026-11-01T16:07:45.0172984Z   TAG_SUFFIX_OPENEULER: -cann9.2.1-20261101-r63
+2026-11-01T16:07:45.0173325Z ##[endgroup]
+2026-11-01T16:07:45.5571864Z Creating multi-arch manifests: swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2 and swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2-cann9.2.1-20261101-r63
+2026-11-01T16:07:45.9922742Z #1 [internal] pushing swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend
+2026-11-01T16:07:46.1431129Z #1 0.000 copying sha256:45c556ac7205638522dfa2c2ec89fcd6a01a8153d7181c7839b97d8a07ecafc7 from swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-amd64 to swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend
+2026-11-01T16:07:48.3190286Z #1 0.000 copying sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df from swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-arm64 to swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend
+2026-11-01T16:07:48.3191693Z #1 2.327 pushing sha256:3a81a4e18d8a4d98b154f2e6e03e6849ae1dd0595a860411d2516f5be43429e8 to swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2
+2026-11-01T16:07:48.4852728Z #1 2.493 pushing sha256:3a81a4e18d8a4d98b154f2e6e03e6849ae1dd0595a860411d2516f5be43429e8 to swr.cn-north-12.myhuaweicloud.com/base_image/ascend-ci/vllm-ascend:nightly-ci-main-a2-cann9.2.1-20261101-r63
+2026-11-01T16:07:48.6166005Z #1 DONE 2.6s
+2026-11-01T16:07:48.6190291Z Creating multi-arch manifests: swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2 and swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2-cann9.2.1-20261101-r63
+2026-11-01T16:07:49.0800194Z #1 [internal] pushing swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend
+2026-11-01T16:07:49.2303948Z #1 0.000 copying sha256:51acbdd308d677c4add19eee604174fbc29eff784d46675968e82c8e1299b9df from swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-arm64 to swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend
+2026-11-01T16:07:49.2306028Z #1 0.000 copying sha256:45c556ac7205638522dfa2c2ec89fcd6a01a8153d7181c7839b97d8a07ecafc7 from swr.cn-north-12.myhuaweicloud.com/atlas_ci/vllm-atlas-temp:nightly-ci-main-a2-cann9.2.1-20261101-r63-amd64 to swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend
+2026-11-01T16:08:07.2559319Z #1 18.18 pushing sha256:3a81a4e18d8a4d98b154f2e6e03e6849ae1dd0595a860411d2516f5be43429e8 to swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2
+2026-11-01T16:08:07.3777926Z #1 18.30 pushing sha256:3a81a4e18d8a4d98b154f2e6e03e6849ae1dd0595a860411d2516f5be43429e8 to swr.cn-north-12.myhuaweicloud.com/atlas_inference/vllm-ascend:nightly-ci-main-a2-cann9.2.1-20261101-r63
+2026-11-01T16:08:07.5470056Z #1 DONE 18.5s
+2026-11-01T16:08:07.6169217Z ##[group]Run actions/github-script@v7
+2026-11-01T16:08:07.6169497Z with:
+2026-11-01T16:08:07.6169954Z   github-token: ***
+2026-11-01T16:08:07.6170499Z   script: await github.rest.actions.createWorkflowDispatch({
+  owner: 'ascend-gha-runners',
+  repo: 'sync-tools',
+  workflow_id: 'sync-vllm-ascend.yml',
+  ref: 'main',
+});
+
+2026-11-01T16:08:07.6171128Z   debug: false
+2026-11-01T16:08:07.6171332Z   user-agent: actions/github-script
+2026-11-01T16:08:07.6171552Z   result-encoding: json
+2026-11-01T16:08:07.6171740Z   retries: 0
+2026-11-01T16:08:07.6171936Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-11-01T16:08:07.6172357Z ##[endgroup]
+2026-11-01T16:08:09.3592349Z [@octokit/request] "POST https://api.github.com/repos/ascend-gha-runners/sync-tools/actions/workflows/sync-vllm-ascend.yml/dispatches" is deprecated. It is scheduled to be removed on Fri, 10 Mar 2028 00:00:00 GMT. See https://docs.github.com/en/rest/about-the-rest-api/api-versions
+2026-11-01T16:08:09.4370763Z Post job cleanup.
+2026-11-01T16:08:09.6060674Z ##[group]Logout from swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:08:09.6081091Z [command]/usr/bin/docker logout swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:08:09.6214426Z Removing login credentials for swr.cn-north-12.myhuaweicloud.com
+2026-11-01T16:08:09.6235404Z ##[endgroup]
+2026-11-01T16:08:09.6235774Z ##[group]Post cache
+2026-11-01T16:08:09.6236077Z State not set
+2026-11-01T16:08:09.6237023Z ##[endgroup]
+2026-11-01T16:08:09.6433801Z Cleaning up orphan processes
+2026-11-01T16:08:09.6511106Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/github-script@v7. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

@@ -1,0 +1,9 @@
+{
+  "started_at": 1793696491.7461622,
+  "model_id": "Eco-Tech/Qwen3-30B-A3B-w8a8",
+  "dataset_id": "vllm-ascend/GSM8K-in3500-bs400",
+  "phase": "complete",
+  "dataset_path": "/results/inputs/modelscope/vllm-ascend/GSM8K-in3500-bs400",
+  "model_path": "/results/inputs/modelscope/Eco-Tech/Qwen3-30B-A3B-w8a8",
+  "finished_at": 1793696882.5765274
+}
